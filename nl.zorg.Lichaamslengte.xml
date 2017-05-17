@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.12.2"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.2"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Lichaamslengte"/>
    <fhir:title value="nl.zorg.Lichaamslengte"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De lichaamslengte van een persoon.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A person’s body height.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De lichaamslengte wordt voor verschillende redenen gebruikt, zoals het meten van de groei, bijvoorbeeld voor een baby, kind of jongere, het berekenen van de lichaamsoppervlakte, bijvoorbeeld voor het berekenen van de juiste hoeveelheid medicatie, of gecombineerd met lichaamsgewicht om de Body Mass Index te berekenen. Ook voor het bepalen van de voedingstoestand van een persoon wordt de lengte gebruikt.&#xA;&#xA;Deze zorginformatiebouwsteen biedt de mogelijkheid om het lichaamslengte van een persoon vast te leggen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Body height is used for various reasons, including to measure growth, such as in babies, children or adolescents, to calculate body surface area, to for example calculate the correct amount of medication, or in combination with body weight to calculate the Body Mass Index. Height is also used to determine a person’s nutritional state. &#xA; &#xA;This healthcare information information model offers the option to record a person’s body height.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.2.1">
          <fhir:path value="Lichaamslengte"/>
-         <fhir:label value="Lichaamslengte"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Lichaamslengte. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamslengte.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the BodyHeight information model. This root concept contains all data elements of the BodyHeight information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.2.2">
          <fhir:path value="Lichaamslengte.LengteWaarde"/>
          <fhir:label value="LengteWaarde"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het element bevat de waarde van de gemeten lichaamslengte. &#xA;De lichaamslengte is de lengte van het menselijk lichaam van hielbodem tot kruin, in het algemeen gemeten in staande houding. Bij zeer kleine kinderen of patiënten die niet kunnen staan wordt de lichaamslengte in gestrekte liggende houding gemeten. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The element contains the value of the measured body height.  &#xA;Body height is the height of the human body from heel to scalp, generally measured when standing. Body height is measured in a stretched, horizontal position for very small children or patients that are unable to stand.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.2.4">
          <fhir:path value="Lichaamslengte.LengteDatumTijd"/>
          <fhir:label value="LengteDatumTijd"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en (eventueel) tijd van de waarneming van de lichaamslengte.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date and if possible time of body height measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="7887"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.2.3">
          <fhir:path value="Lichaamslengte.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Toelichting op de meting van de lichaamslengte. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Explanation of the body height measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.2.5">
          <fhir:path value="Lichaamslengte.Positie"/>
          <fhir:label value="Positie"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De positie tijdens de meting van de gemeten persoon.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The person's position during the measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

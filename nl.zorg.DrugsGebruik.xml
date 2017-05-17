@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.7.4"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.4"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.DrugsGebruik"/>
    <fhir:title value="nl.zorg.DrugsGebruik"/>
    <fhir:status value="draft"/>
-   <fhir:date value="16-7-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Drugs (ook wel: verdovende middelen, stimulerende middelen, bedwelmingsmiddelen, roesmiddelen, geestverruimende middelen, verboden middelen of dope) is een verzamelnaam voor geneesmiddelen en genotsmiddelen die een meer of minder 'drogerende' (verdovende, opwekkende en/of hallucinogene) werking hebben en die tot verslaving kunnen leiden. Drug [Online] Beschikbaar op:  nl.Wikipedia.org/wiki/drug [Geraadpleegd: 11 februari 2015].&#xA;&#xA;Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van drugs.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Drugs (or: narcotics, amphetamines, intoxicants, highs, hallucinogenics, illegal substances or dope) is a collective term for drugs and chemical substances with a more or less ‘drugging' (anesthetic, boosting and/or hallucinogenic) effect and which can lead to addiction. Drug [Online] Available at: nl.Wikipedia.org/wiki/drug [Accessed: 11 February 2015]. &#xA; &#xA;This information model describes the information asked of the patient about their drug use.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Vastleggen en delen van de registratie van het gebruik van drugs, zoals in het concept beschreven.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Documenting and sharing registration of the drug use, as described in the concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.4.1">
          <fhir:path value="DrugsGebruik"/>
-         <fhir:label value="DrugsGebruik"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen DrugsGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen DrugsGebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the DrugUse information model. This concept contains all data elements of the DrugUse information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.4.9">
          <fhir:path value="DrugsGebruik.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Relevante opmerkingen over het gebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Relevant comments on the drug use.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="11336"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.4.5">
          <fhir:path value="DrugsGebruik.WaarnemingGebruik"/>
          <fhir:label value="WaarnemingGebruik"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container voor WaarnemingGebruik. Deze container bevat alle gegevenselementen van de container WaarnemingGebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container for ObservationOfUse. This container contains all data elements of the ObservationOfUse container.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="11336"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.4.2">
          <fhir:path value="DrugsGebruik.DrugsOfGeneesmiddelSoort"/>
          <fhir:label value="DrugsOfGeneesmiddelSoort"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Soort drugs die de patiënt gebruikt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Type of drug used by the patient.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.4.3">
          <fhir:path value="DrugsGebruik.DrugGebruikStatus"/>
          <fhir:label value="DrugGebruikStatus"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indicatie of in het heden of verleden sprake is (geweest) van gebruik van drugs.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Indication stating whether there was any drug use in the past or present.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -59,7 +59,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.4.4">
          <fhir:path value="DrugsGebruik.Toedieningsweg"/>
          <fhir:label value="Toedieningsweg"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De wijze de drugs wordt gebruikt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The way the drugs are used.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

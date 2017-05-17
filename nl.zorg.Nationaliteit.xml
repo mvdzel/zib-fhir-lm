@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.7.6"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.6"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Nationaliteit"/>
    <fhir:title value="nl.zorg.Nationaliteit"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De nationaliteit wordt gebruikt als aanduiding voor het land van staatsburgerschap.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Nationality is used as an indication of the country of citizenship.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Nationaliteit wordt vastgelegd voor administratieve doeleinden. De bouwsteen is dan ook niet bedoeld voor het vastleggen van etniciteiten.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Nationality is recorded for administrative purposes. The information model is not intended for documenting ethnicity.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.6.1">
          <fhir:path value="NationaliteitRC"/>
-         <fhir:label value="NationaliteitRC"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Nationaliteit. Dit concept bevat alle gegevenselementen van de bouwsteen Nationaliteit.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the Nationality information model. This concept contains all data elements of the Nationality information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.6.3">
          <fhir:path value="NationaliteitRC.Nationaliteit"/>
          <fhir:label value="Nationaliteit"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De aanduiding van het land van staatsburgerschap.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Indicates the country of citizenship.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

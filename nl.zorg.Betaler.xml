@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.1.1"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.1.1"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Betaler"/>
    <fhir:title value="nl.zorg.Betaler"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Betalers zijn organisaties of individuen die betalen voor de aan de patiënt geleverde zorg. Deze organisaties of individuen kunnen zijn: instellingen of personen die financieel garant staan of verantwoordelijk zijn voor de patiënt (zoals ouders van minderjarigen), organisaties met directe financiële verantwoordelijkheid, combinaties van deze of de patiënt zelf.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Payers are organizations or individuals that pay for the healthcare supplied to the patient. These organizations or individuals can be: facilities or people who financially guarantee or who are responsible for the patient (such as parents or guardians of minors), organizations with direct financial responsibility, combinations of these or the patient themselves.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen van de gegevens van de betalende instanties en personen dient om betaling van de kosten van de geleverde zorg te vereenvoudigen en op voorhand inzicht te verkrijgen hoe deze kosten betaald gaan worden, zeker waar het gaat om niet verzekerde zorg.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording the information of the paying authorities and people serves to simplify payment of the fees for the supplied care and to provide insight in advance on how these fees are to be paid, especially when it comes to non-insured healthcare.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:1.1.1">
          <fhir:path value="Betaler"/>
-         <fhir:label value="Betaler"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Betaler. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Betaler.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the Payer information model. This root concept contains all data elements of the Payer information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:1.1.12">
          <fhir:path value="Betaler.TelefoonEmail::Contactgegevens"/>
          <fhir:label value="TelefoonEmail::Contactgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Telefoonnummer en/of e-mailadres van betaler.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The payer’s telephone number and/or e-mail address.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="11527"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:1.1.2">
          <fhir:path value="Betaler.BetalerPersoon"/>
          <fhir:label value="BetalerPersoon"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept BetalerPersoon. Deze container bevat alle gegevenselementen van het concept BetalerPersoon.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the PayerPerson concept. This container contains all data elements of the PayerPerson concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -37,7 +37,7 @@
             <fhir:code value="11527"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:1.1.3">
          <fhir:path value="Betaler.Verzekeraar"/>
          <fhir:label value="Verzekeraar"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Verzekeraar. Deze container bevat alle gegevenselementen van het concept Verzekeraar.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the InsuranceCompany concept. This container contains all data elements of the InsuranceCompany concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -45,7 +45,7 @@
             <fhir:code value="11527"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:1.1.17">
          <fhir:path value="Betaler.Adres::Adresgegevens"/>
          <fhir:label value="Adres::Adresgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Adresgegevens van betaler.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The payer’s address information.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.12.4"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.4"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Bloeddruk"/>
    <fhir:title value="nl.zorg.Bloeddruk"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De bloeddruk is een parameter om de toestand van de bloedsomloop vast te leggen en wordt uitgedrukt in de systolische en diastolische druk in mmHg.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The blood pressure is a parameter for determining the condition of the blood circulation and is expressed in systolic and diastolic pressure in mmHg.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De bloeddruk wordt gemeten om een indruk te krijgen van de gezondheidstoestand van het cardiovasculairsysteem van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Blood pressure is measured to gain an indication of the health condition of the patient’s cardiovascular system.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.1">
          <fhir:path value="Bloeddruk"/>
-         <fhir:label value="Bloeddruk"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Bloeddruk. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Bloeddruk.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the BloodPressure information model. This root concept contains all data elements of the BloodPressure information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.7">
          <fhir:path value="Bloeddruk.Meetmethode"/>
          <fhir:label value="Meetmethode"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De soort methode die is toegepast voor het meten van de bloeddruk.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The type of method used to measure blood pressure.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.9">
          <fhir:path value="Bloeddruk.ManchetType"/>
          <fhir:label value="ManchetType"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De grootte van de manchet gebruikt bij de meting.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The size of the cuff used in the measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.10">
          <fhir:path value="Bloeddruk.MeetLocatie"/>
          <fhir:label value="MeetLocatie"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Lichaamslocatie waar de bloeddruk is gemeten.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Anatomical location where the blood pressure was measured.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.8">
          <fhir:path value="Bloeddruk.DiastolischEindpunt"/>
          <fhir:label value="DiastolischEindpunt"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Registratie van de Korotkoff toon die gebruikt is om de diastolische druk te meten met de auscultatieve methode.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Registration of the Korotkoff sound used to measure diastolic pressure with the auscultatory method.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -59,7 +59,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.2">
          <fhir:path value="Bloeddruk.SystolischeBloeddruk"/>
          <fhir:label value="SystolischeBloeddruk"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De hoogste (piek) systemische arteriële bloeddruk - gemeten in de systolische of samentrekkingsfase van de hartslag.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The highest (peak) systematic arterial blood pressure - measured in the contraction stage or systole of the cardiac cycle.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -69,7 +69,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.3">
          <fhir:path value="Bloeddruk.DiastolischeBloeddruk"/>
          <fhir:label value="DiastolischeBloeddruk"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De laagste systemische arteriële bloeddruk - gemeten in de diastolische of ontspanningsfase van de hartslag.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The lowest systematic arterial blood pressure - measured in the relaxation stage or diastole of the cardiac cycle.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -79,7 +79,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.4">
          <fhir:path value="Bloeddruk.GemiddeldeBloeddruk"/>
          <fhir:label value="GemiddeldeBloeddruk"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gemiddelde bloeddruk gedurende één cyclus van samentrekken en ontspannen van het hart.&#xA;Deze wordt geschat op basis van de boven- en onderdruk. Die schatting is onbetrouwbaar bij circulatiestoornissen. Alleen bij een invasief gemeten bloeddruk kan deze waarde betrouwbaar vastgesteld worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Average blood pressure during one cycle of the heart contracting and relaxing. &#xA;Estimated based on systolic and diastolic blood pressure. This estimate is unreliable in cases of circulatory disorders. This value can only be reliably determined when invasive blood pressure is measured.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -89,7 +89,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.5">
          <fhir:path value="Bloeddruk.BloeddrukDatumTijd"/>
          <fhir:label value="BloeddrukDatumTijd"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum en tijd, dat de bloeddrukwaarden werden verkregen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date and time at which these blood pressure values were measured.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -99,7 +99,7 @@
             <fhir:code value="7887"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.6">
          <fhir:path value="Bloeddruk.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerkingen over de gemeten bloeddruk. Hier kan bijvoorbeeld een toelichting worden gegeven op omstandigheden die de meting hebben beïnvloed, zoals pijn, (in)spanning en slaap/waak toestand.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comments on the measured blood pressure. Here, an explanation could be given, for example, of circumstances that may have influenced the patient’s blood pressure, such as pain, stress, exertion and sleep/wake cycles.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -109,7 +109,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.4.11">
          <fhir:path value="Bloeddruk.Houding"/>
          <fhir:label value="Houding"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De houding van de patiënt bij het meten van de bloeddruk.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The position of the patient when the blood pressure was measured.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

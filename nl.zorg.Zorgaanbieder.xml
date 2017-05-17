@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.17.2"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.17.2"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Zorgaanbieder"/>
    <fhir:title value="nl.zorg.Zorgaanbieder"/>
    <fhir:status value="draft"/>
-   <fhir:date value="25-8-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: ziekenhuis, verpleeghuis, huisartsenpraktijk.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A healthcare provider is an organization that offers and provides medical, paramedic and/or nursing care to patients/clients. Examples include: hospitals, nursing homes, doctor’s offices.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording relevant information to identify the organization for administrative purposes.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.1">
          <fhir:path value="Zorgaanbieder"/>
-         <fhir:label value="Zorgaanbieder"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the HealthcareProvider information model. This root concept contains all data elements of the HealthcareProvider information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.7">
          <fhir:path value="Zorgaanbieder.AfdelingSpecialisme"/>
          <fhir:label value="AfdelingSpecialisme"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het specialisme van de betrokken afdeling van de zorgaanbieder. Het afdelingsspecialisme kan gevuld worden indien bij het vermelden van een zorgaanbieder een nadere aanduiding gewenst is. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="10655"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.4">
          <fhir:path value="Zorgaanbieder.OrganisatieType"/>
          <fhir:label value="OrganisatieType"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis. Indien dit veld gevuld is en voor het ZorgaanbiederIdentificatieNummer een AGB code gebruikt wordt dient het type overeen te komen met het type dat impliciet in de AGB code opgenomen is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.2">
          <fhir:path value="Zorgaanbieder.ZorgaanbiederIdentificatieNummer"/>
          <fhir:label value="ZorgaanbiederIdentificatieNummer"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Identificerend nummer van de organisatie. Voor Nederlandse zorgaanbieders wordt hiervoor, indien mogelijk, het URA nummer of het AGB nummer gebruikt. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The organization’s identification number. For Dutch healthcare providers, the URA number or the AGB number is used, if possible. For foreign or non-affiliated healthcare providers, another unique identification number can be used. This must be accompanied by the name and/or code of the issuing organization.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7889"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.3">
          <fhir:path value="Zorgaanbieder.OrganisatieNaam"/>
          <fhir:label value="OrganisatieNaam"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -59,7 +59,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.6">
          <fhir:path value="Zorgaanbieder.TelefoonEmail::Contactgegevens"/>
          <fhir:label value="TelefoonEmail::Contactgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gegevens noodzakelijk om via telefoon en/of e-mail met de zorgaanbiedende organisatie contact op te nemen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The information needed to contact the healthcare organization via telephone and/or e-mail.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -69,7 +69,7 @@
             <fhir:code value="10655"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:17.2.5">
          <fhir:path value="Zorgaanbieder.Adres::Adresgegevens"/>
          <fhir:label value="Adres::Adresgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het fysieke adres van de locatie van de orgaanbieder.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The physical address of the healthcare provider’s location.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

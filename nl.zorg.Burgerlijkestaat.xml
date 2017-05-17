@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.7.9"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.9"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Burgerlijkestaat"/>
    <fhir:title value="nl.zorg.Burgerlijkestaat"/>
    <fhir:status value="draft"/>
-   <fhir:date value="22-5-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Burgerlijke staat is de formele positie van een mens in de zin en betekenis van het burgerlijk wetboek. Te onderscheiden vallen huwelijkse staat en partnerregistratie (geregistreerd partnerschap).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Marital status is a person’s formal position as defined by the Dutch civil code. There is a distinction between marriage and civil union.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De burgerlijke staat wordt vastgelegd voor administratieve doeleinden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The marital status is recorded for administrative purposes.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.9.1">
          <fhir:path value="BurgerlijkeStaatRC"/>
-         <fhir:label value="BurgerlijkeStaatRC"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen BurgerlijkeStaat. Dit concept bevat alle gegevenselementen van de bouwsteen BurgerlijkeStaat.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the MaritalStatus information model. This concept contains all data elements of the MaritalStatus information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.9.2">
          <fhir:path value="BurgerlijkeStaatRC.BurgerlijkeStaat"/>
          <fhir:label value="BurgerlijkeStaat"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De burgerlijke staat van een mens in de zin en betekenis van het burgerlijk wetboek.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;&gt;A person’s marital status according to the terms and definition in the Dutch civil code.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

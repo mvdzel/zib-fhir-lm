@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.12.10"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.10"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.O2Saturatie"/>
    <fhir:title value="nl.zorg.O2Saturatie"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De arteriële zuurstofsaturatie, kortweg saturatie, is een graadmeter voor de hoeveelheid zuurstof die aan het hemoglobine in de rode bloedcellen in de arteriën of slagaders gebonden is. De meting wordt meestal uitgevoerd als een transcutane meting met een saturatiemeter of pulsoximeter. De saturatie wordt uitgedrukt als een percentage en is bij gezonde personen meer dan 95%. &#xA;&#xA;&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Arterial oxygen saturation, also referred to as saturation, is an indicator for the amount of oxygen bound to the hemoglobin in the red blood cells of the arteries. The measurement is usually carried out as a transcutaneous measurement with a blood oxygen monitor or pulse oximeter. The saturation level is expressed as a percentage and should be over 95% in healthy people.  &lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het meten en bewaken van de zuurstofsaturatie vindt plaats om de oxygenatie, ofwel de hoeveelheid gebonden zuurstof in het slagaderlijke bloed, te monitoren.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Measuring and monitoring oxygen saturation is done to monitor the oxygenation, or the amount of bound oxygen in the arterial blood.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.10.1">
          <fhir:path value="O2Saturatie"/>
-         <fhir:label value="O2Saturatie"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen O2Saturatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen O2Saturatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the O2Saturation information model. This root concept contains all data elements of the O2Saturation information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.10.2">
          <fhir:path value="O2Saturatie.SpO2Waarde"/>
          <fhir:label value="SpO2Waarde"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het element bevat de waarde van de indirect, perifeer gemeten O2-saturatie.&#xA;De O2-saturatie geeft in % de mate aan waarin de hemoglobine in het bloed verzadigd is met zuurstof, de ratio van oxy-hemoglobine en hemoglobine.&#xA;De meting wordt uitgevoerd op plaatsen waar de huid voldoende licht doorlaat, zoals een vinger, teen of oorlel.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The element contains the value of the indirect, peripheral measured O2 saturation. &#xA;The O2 saturation gives a percentage expressing the extent to which the blood’s hemoglobin is saturated with oxygen, the ratio of oxygen-saturated hemoglobin to hemoglobin. &#xA;The measurement is done in places where sufficient light can get through the skin, such as a finger, toe or earlobe.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.10.3">
          <fhir:path value="O2Saturatie.O2SaturatieDatumTijd"/>
          <fhir:label value="O2SaturatieDatumTijd"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het moment van waarneming van de SpO2.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The moment (date and time) of the SpO2 measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="7887"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.10.4">
          <fhir:path value="O2Saturatie.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Toelichting op de meting van de saturatie. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Explanation of the saturation measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.10.5">
          <fhir:path value="O2Saturatie.ExtraZuurstofToediening"/>
          <fhir:label value="ExtraZuurstofToediening"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indicatie of de meting gedaan werd in een situatie waar sprake was van extra zuurstof toediening.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Indication stating whether the measurement was done in a situation in which extra oxygen was administered.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

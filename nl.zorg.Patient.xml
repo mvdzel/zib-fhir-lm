@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.0.1"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.0.1"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Patient"/>
    <fhir:title value="nl.zorg.Patient"/>
    <fhir:status value="draft"/>
-   <fhir:date value="22-5-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een persoon die medische zorg ontvangt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A person who receives medical care.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording relevant information to identify the patient for administrative purposes and process support.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.1">
          <fhir:path value="Patient"/>
-         <fhir:label value="Patient"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.6">
          <fhir:path value="Patient.Naamgegevens"/>
          <fhir:label value="Naamgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Naamgegevens. Deze container bevat alle gegevenselementen van het concept Naamgegevens.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the NameInformation concept. This container contains all data elements of the NameInformation concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="10761"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.4">
          <fhir:path value="Patient.Adresgegevens"/>
          <fhir:label value="Adresgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Adresgegevens. Deze container bevat alle gegevenselementen van het concept Adresgegevens.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the AddressInformation concept. This container contains all data elements of the AddressInformation concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="10761"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.5">
          <fhir:path value="Patient.Contactgegevens"/>
          <fhir:label value="Contactgegevens"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Contactgegevens. Deze container bevat alle gegevenselementen van het concept Contactgegevens.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the ContactInformation concept. This container contains all data elements of the ContactInformation concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="10761"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.33">
          <fhir:path value="Patient.DatumOverlijden"/>
          <fhir:label value="DatumOverlijden"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date on which the patient died. A ‘vague’ date, such as only the year, is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -59,7 +59,7 @@
             <fhir:code value="10761"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.7">
          <fhir:path value="Patient.PatientIdentificatienummer"/>
          <fhir:label value="PatientIdentificatienummer"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers for example.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -69,7 +69,7 @@
             <fhir:code value="7889"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.10">
          <fhir:path value="Patient.Geboortedatum"/>
          <fhir:label value="Geboortedatum"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -79,7 +79,7 @@
             <fhir:code value="7887"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.31">
          <fhir:path value="Patient.MeerlingIndicator"/>
          <fhir:label value="MeerlingIndicator"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indicator die aangeeft of de patiënt één van een meerling is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An indication stating whether the patient is of a multiple birth.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -89,7 +89,7 @@
             <fhir:code value="7892"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.9">
          <fhir:path value="Patient.Geslacht"/>
          <fhir:label value="Geslacht"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Administratief geslacht van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s administrative gender.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -99,7 +99,7 @@
             <fhir:code value="10761"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:0.1.32">
          <fhir:path value="Patient.OverlijdensIndicator"/>
          <fhir:label value="OverlijdensIndicator"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indicator die aangeeft of de patiënt overleden is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An indication stating whether the patient has died.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

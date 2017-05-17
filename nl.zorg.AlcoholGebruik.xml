@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.7.3"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.3"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.AlcoholGebruik"/>
    <fhir:title value="nl.zorg.AlcoholGebruik"/>
    <fhir:status value="draft"/>
-   <fhir:date value="22-5-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Alcohol is in de context van deze bouwsteen de verzamelnaam voor alcoholische dranken die als genotsmiddel genuttigd worden. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van alcohol.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;In the context of this information model, alcohol is the collective term for alcoholic beverages consumed as a leisure product. This information model describes the information asked of the patient about their alcohol use.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Tijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van alcohol. Overmatig of excessief (episodisch) alcoholgebruik kan van invloed zijn op de huidige behandeling en diagnostiek. Ook wordt alcoholproblematiek steeds vaker als nevendiagnose gesteld. Bron: Richtlijn - Multidisciplinaire richtlijn Stoornissen in het gebruik van alcohol (CBO, 2009)&#xA;&#xA;&#xA;&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;During the social anamnesis, the patient is frequently asked about their alcohol consumption. Excessive (episodic) alcohol consumption may influence the current treatment and diagnostics. Alcohol-related problems are diagnosed as secondary diagnoses more and more often. Source: Guidelines - Multidisciplinary guidelines for Disorders in alcohol use (CBO, 2009) &#xA; &#xA; &#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.3.1">
          <fhir:path value="AlcoholGebruik"/>
-         <fhir:label value="AlcoholGebruik"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen AlcoholGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen AlcoholGebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the AlcoholUse information model. This concept contains all data elements of the AlcoholUse information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.3.7">
          <fhir:path value="AlcoholGebruik.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Relevante opmerkingen over het gebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Relevant comments on the alcohol consumption.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.3.2">
          <fhir:path value="AlcoholGebruik.AlcoholGebruikStatus"/>
          <fhir:label value="AlcoholGebruikStatus"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De status van het alcoholgebruik van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The status of the patient’s alcohol use.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="11580"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.3.3">
          <fhir:path value="AlcoholGebruik.WaarnemingGebruik"/>
          <fhir:label value="WaarnemingGebruik"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept WaarnemingGebruik. Deze container bevat alle gegevenselementen over de waarneming van het gebruik van alcohol.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the ObservationOfUse concept. This container contains all data elements of the observation of alcohol use.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

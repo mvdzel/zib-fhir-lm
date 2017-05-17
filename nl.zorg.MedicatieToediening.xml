@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.9.3"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.9.3"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.MedicatieToediening"/>
    <fhir:title value="nl.zorg.MedicatieToediening"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een medicatietoediening beschrijft de werkelijke toediening van een medicament. Dit kan gaan om het eenvoudig doorslikken van een tablet, het opbrengen van een zalf of pasta, of een langdurende infusie. &#xA;De toediening kan verwijzen naar een medicatievoorschrift, maar kan ook betrekking hebben op thuismedicatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Administration of medication describes the actual administration of the medication. This can be simply swallowing a tablet, applying ointment or paste, or an infusion that takes a considerable amount of time.  &#xA;The administration can refer to a medication prescription, but can also refer to home medication. &lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Voor de nauwkeurige planning van de toe te dienen medicatie in een keten van samenwerkende zorgprofessionals is het vaak gewenst om te beschikken over gegevens van de meest recente toedieningen van medicamenten, voeding of bloedproducten.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;To precisely plan the medication to be administered in a chain of collaborating healthcare professionals, it is often best to have information on the most recent administrations of medication, food or blood products.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.1">
          <fhir:path value="MedicatieToediening"/>
-         <fhir:label value="MedicatieToediening"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen MedicatieToediening. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieToediening.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the MedicationAdministration information model. This root concept contains all data elements of the MedicationAdministration information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.2">
          <fhir:path value="MedicatieToediening.ToedieningsProduct::Product"/>
          <fhir:label value="ToedieningsProduct::Product"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het ingenomen of toegediende middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden gerapporteerd.  &#xA;&#xA;In principe betreft dit het voorgeschreven product, maar de toediener kan door substitutie het voorgeschreven product vervangen door een equivalent product. Bijv. in plaats van tabletten van 100mg, tabletten van 50mg waarvan er dan twee worden toegediend.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The product taken or administered. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be reported as well.   &#xA; &#xA;In principle, this will be the prescribed product, but the administrator may substitute it by replacing the product with an equivalent product. For example: two 50mg tablets can be administered instead of one 100mg tablet.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="11120"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.4">
          <fhir:path value="MedicatieToediening.MedicatieToedieningStatus"/>
          <fhir:label value="MedicatieToedieningStatus"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De status van de toediening, als beschijving van het stadium van het toedieningsproces. Voor ondeelbare producten (bijv. tabletten, zetpillen) zijn alleen de status codes ‘completed’ (voltooid) en ‘cancelled’ (niet toegediend) van toepassing. Voor deelbare producten (bijv. infusen) geldt dat de toediening ook ‘suspended’ (onderbroken) en ‘aborted’ (afgebroken) kan zijn.&#xA;&#xA;Bij de vastlegging worden de volgende interpretaties gehanteerd:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Actief: Het product wordt toegediend.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Onderbroken: De toediening is (tijdelijk) onderbroken , bv. wegens een bijwerking. Later zal besloten worden tot hervatting of stoppen.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Afgebroken: De toediening is afgebroken.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voltooid: De toediening is helemaal afgerond (volgens plan, voorschrift of afspraak).&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Niet gestart: De toediening van het product is niet gestart.&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The status of the administration, as a description of the stage within the administration process. For indivisible products (such as tablets or suppositories) only the status codes ‘completed’ and ‘cancelled’ apply. For divisible products (such as infusions), administration can also be ‘suspended’ or ‘aborted’. &#xA; &#xA;When documenting this, the following interpretations are used: &#xA;&lt;ul&gt; &#xA; &lt;li&gt;Active: The product is administered.&lt;/li&gt; &#xA; &lt;li&gt;Interrupted: Use has (temporarily) been interrupted, because of a side effect, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&lt;/li&gt; &#xA; &lt;li&gt;Discontinued: Administration has stopped.&lt;/li&gt; &#xA; &lt;li&gt;Completed: The administration has now been completed (according to the plan, prescription or agreement).&lt;/li&gt; &#xA; &lt;li&gt;Not started: The product was never administered.&lt;/li&gt; &#xA;&lt;/ul&gt;&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.7">
          <fhir:path value="MedicatieToediening.ToegediendeHoeveelheid"/>
          <fhir:label value="ToegediendeHoeveelheid"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Hoeveelheid van het product dat werd toegediend.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Amount of the administered product.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.8">
          <fhir:path value="MedicatieToediening.Toedieningsweg"/>
          <fhir:label value="Toedieningsweg"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De route waarlangs de medicatie wordt toegediend (oraal, nasaal, intraveneus,...). &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The route through which the medication is administered (oral, nasal, intravenous,...).&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -59,7 +59,7 @@
             <fhir:code value="11120"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.9">
          <fhir:path value="MedicatieToediening.Toediener"/>
          <fhir:label value="Toediener"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De container van het concept Toediener. Deze container bevat alle gegevenselementen van de concept Toediener. Het concept beschrijft de persoon die de toediening gerealiseerd heeft.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the Administrator concept. This container contains all data elements of the Administrator concept. The concept describes the person who administered the product.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -69,7 +69,7 @@
             <fhir:code value="11120"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.5">
          <fhir:path value="MedicatieToediening.MedicatieToedieningRedenVanNietToedienen"/>
          <fhir:label value="MedicatieToedieningRedenVanNietToedienen"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Reden dat de toediening of inname van een medicament niet is uitgevoerd. Hier kan een tekst of een van de codes gekozen worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reason why the medication was not taken or administered. Here, you can choose to enter text or one of the codes.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -79,7 +79,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.3">
          <fhir:path value="MedicatieToediening.Voorschrift::MedicatieVoorschrift"/>
          <fhir:label value="Voorschrift::MedicatieVoorschrift"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De afspraak of order waar de toediening een uitvoering van is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The agreement or order mandating the administration.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -89,7 +89,7 @@
             <fhir:code value="11120"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.6">
          <fhir:path value="MedicatieToediening.ToedieningsDatumTijd"/>
          <fhir:label value="ToedieningsDatumTijd"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum en tijd waarop de toediening of inname heeft plaatsgevonden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date and time at which the medication was taken or administered.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -99,7 +99,7 @@
             <fhir:code value="7887"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:9.3.13">
          <fhir:path value="MedicatieToediening.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerkingen met betrekking tot de medicatie toediening.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comments on administering the medication.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

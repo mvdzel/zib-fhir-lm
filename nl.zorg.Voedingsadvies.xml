@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.7.11"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.11"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Voedingsadvies"/>
    <fhir:title value="nl.zorg.Voedingsadvies"/>
    <fhir:status value="draft"/>
-   <fhir:date value="8-9-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een voedingsadvies is een beschrijving van voeding voor de patiënt, die aan specifieke eisen moet voldoen in verband met de gezondheidstoestand van de patiënt. Allergieën en overgevoeligheden of kauw- en slikproblemen kunnen aanleiding zijn voor speciale voeding.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Voeg hier de Engelse definitie in&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen en communiceren van het voedingsadvies geeft inzicht in beleid ten aanzien van de voeding. Indien deze informatie niet beschikbaar is, kan dit tot onveilige situaties voor de patiënt leiden. &#xA;Zeker bij overplaatsing is het van belang dat het voedingsadvies meegegeven wordt. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording and communicating dietary recommendations provides insight in policy regarding the patient’s diet. If this information is not available, it can lead to unsafe situations for the patient.  &#xA;Especially in transfer cases, it is important for dietary recommendations to be clearly communicated.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.11.1">
          <fhir:path value="Voedingsadvies"/>
-         <fhir:label value="Voedingsadvies"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Voedingsadvies. Dit concept bevat alle gegevenselementen van de bouwsteen Voedingsadvies.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the DietaryRecommendations information model. This concept contains all data elements of the DietaryRecommendations information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.11.2">
          <fhir:path value="Voedingsadvies.DieetType"/>
          <fhir:label value="DieetType"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De omschrijving van het type dieet.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Description of the type of diet.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.11.5">
          <fhir:path value="Voedingsadvies.VerpleegkundigeActie"/>
          <fhir:label value="VerpleegkundigeActie"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Beschrijving van de verpleegkundige acties ten aanzien van het voedingsadvies.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Description of the required nursing procedures involved in the dietary recommendations.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="8122"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.11.4">
          <fhir:path value="Voedingsadvies.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een toelichting op het voedingsadvies.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An explanation of the dietary recommendations.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:7.11.3">
          <fhir:path value="Voedingsadvies.Consistentie"/>
          <fhir:label value="Consistentie"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De omschrijving van consistentie van de voeding.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A description of the consistency of the food.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:url value="http://zibs.nl/..."/>
-   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.12.3"/>
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.3"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Hartfrequentie"/>
    <fhir:title value="nl.zorg.Hartfrequentie"/>
    <fhir:status value="draft"/>
-   <fhir:date value="1-4-2015"/>
    <fhir:publisher value="PM"/>
    <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De hartfrequentie is het aantal slagen per minuut dat het hart maakt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The heart frequency is the number of heartbeats per minute.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het verkrijgen van informatie over de bloedcirculatie en hartfunctie door middel van het meten van&#xA;de hartslag.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Obtaining information on circulation and heart function by measuring the heartbeat.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
    <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.3.1">
          <fhir:path value="Hartfrequentie"/>
-         <fhir:label value="Hartfrequentie"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Hartfrequentie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Hartfrequentie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the HeartFrequency information model. This root concept contains all data elements of the HeartFrequency information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.3.2">
          <fhir:path value="Hartfrequentie.HartfrequentieWaarde"/>
          <fhir:label value="HartfrequentieWaarde"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De hartfrequentie gemeten als aantal slagen per minuut.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The heart frequency measured as the number of heartbeats per minute.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -29,7 +29,7 @@
             <fhir:code value="7891"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.3.4">
          <fhir:path value="Hartfrequentie.HartfrequentieDatumTijd"/>
          <fhir:label value="HartfrequentieDatumTijd"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en tijd van waarneming van de hartfrequentie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date and time of the heart frequency measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -39,7 +39,7 @@
             <fhir:code value="7887"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.3.6">
          <fhir:path value="Hartfrequentie.HartslagMeetMethode"/>
          <fhir:label value="HartslagMeetMethode"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De wijze waarop de hartslag is geteld en geobserveerd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The method used to count and observe the heartbeat.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -49,7 +49,7 @@
             <fhir:code value="7906"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.3.3">
          <fhir:path value="Hartfrequentie.Toelichting"/>
          <fhir:label value="Toelichting"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Toelichting over eventuele problemen of factoren die van invloed kunnen zijn op de meting. Ook kan hier een nadere beschrijving worden weergegeven.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Explanation of any problems or factors that may influence the measurement. Further explanation can be provided here as well.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
@@ -59,7 +59,7 @@
             <fhir:code value="7895"/>
          </fhir:type>
       </fhir:element>
-      <fhir:element>
+      <fhir:element id="NL-CM:12.3.5">
          <fhir:path value="Hartfrequentie.HartslagRegelmatigheid"/>
          <fhir:label value="HartslagRegelmatigheid"/>
          <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Regelmatigheid van de hartslag.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Regularity of the heartbeat.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
