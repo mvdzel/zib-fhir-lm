@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.9.2"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.MedicatieGebruik"/>
+   <fhir:title value="nl.zorg.MedicatieGebruik"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="22-5-2015"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;MedicatieGebruik beschrijft de inname of toediening van een medicament, veelal in relatie tot een voorschrift, maar ook op eigen initiatief. Het beschrijft het patroon van inname van medicatie, zoals gerapporteerd door de patiënt zelf, een mantelzorger of een zorgverlener. Het vastleggen van medicatie gebruik geeft naast het gebruik van voorgeschreven medicatie ook inzicht in het gebruik van thuismedicatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;MedicationUse describes taking or administering the medication, often in relation to a prescription, but also on the person’s own initiative. This describes the pattern of medication use, as reported by the patient themselves, a caregiver or healthcare provider. Documenting medication use provides insight into the use of prescribed medication as well as the use of medication at home.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik"/>
+         <fhir:label value="MedicatieGebruik"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.GebruiksProduct::Product"/>
+         <fhir:label value="GebruiksProduct::Product"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het gebruikte middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden vastgelegd.&#xA;&#xA;In principe betreft dit het voorgeschreven product, maar het daadwerkelijk gebruikte product kan afwijken van het voorgeschreven product. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The product used. This is usually medication. Food, blood products, aids and bandages do not strictly fall under the category of medication, but can be recorded as well. &#xA; &#xA;In principle, this will be the prescribed product, but the product used may differ from the prescribed product.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11150"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.GebruiksDosering::Dosering"/>
+         <fhir:label value="GebruiksDosering::Dosering"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Bij inventarisatie van medicatiegebruik beschrijft de dosering de hoeveelheid en het gebruikspatroon, gerapporteerd door de patiënt of een zorgverlener.&#xA;&#xA;De gebruiksdosering betreft de gerapporteerde gebruiksdosering. De gebruiksdosering kan qua toedieningsschema van de voorschriftdosering afwijken indien de patiënt bij het gebruik anders besluit en dienovereenkomstig rapporteert.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;When taking stock of medication use, the dosage describes the amount and the pattern of use as reported by the patient or a healthcare provider. &#xA; &#xA;The used dosage is the reported dose used by the patient. The used dosage may differ in terms of the administering schedule of the prescribed dosage in the event that the patient makes different decisions on their use of the product and reports as such.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="11150"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.MedicatieGebruikStatus"/>
+         <fhir:label value="MedicatieGebruikStatus"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De status of statuscode is van belang om de planning van het gebruik aan te geven. &#xA;Met dit attribuut wordt aangegeven of het gebruik actueel is, of tijdelijk onderbroken, of inmiddels gestopt. Het onderbreken van (thuis)gebruik vindt veelvuldig plaats bij opname, voorafgaande aan een ingreep en in reactie op monitoring (spiegelbepaling, effectmeting).&#xA;&#xA;Bij de vastlegging worden de volgende interpretaties gehanteerd:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Actief: Het product wordt gebruikt.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Onderbroken: Het gebruik is (tijdelijk) onderbroken , bv. wegens een operatie. Later zal besloten worden tot hervatting of stoppen.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Afgebroken: Het gebruik is gestopt om een specifieke reden.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voltooid: Het gebruik is inmiddels afgesloten (volgens plan, voorschrift of afspraak).]&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Niet gestart: Het gebruik van het product is niet gestart.&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The status or status code is important in indicating the use schedule.  &#xA;This attribute indicates whether the prescription is actively used, temporarily interrupted, or by now discontinued. Interrupting (home) use often occurs in the event of admittance to a healthcare facility, prior to a procedure and in response to monitoring (mirroring provisions, effect measurements, etc.). &#xA; &#xA;When documenting this, the following interpretations are used: &#xA;&lt;ul&gt; &#xA; &lt;li&gt;Active: The product is used.&lt;/li&gt; &#xA; &lt;li&gt;Interrupted: Use has (temporarily) been interrupted, because of a surgical procedure, for example. Later, the patient and/or doctor can decide whether or not to resume or discontinue use.&lt;/li&gt; &#xA; &lt;li&gt;Discontinued: Use has been stopped for a specific reason.&lt;/li&gt; &#xA; &lt;li&gt;Completed: Use has now been completed (according to the plan, prescription or agreement).]&lt;/li&gt; &#xA; &lt;li&gt;Not started: The product was never used.&lt;/li&gt; &#xA;&lt;/ul&gt;&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.Voorschrift::MedicatieVoorschrift"/>
+         <fhir:label value="Voorschrift::MedicatieVoorschrift"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De afspraak of order voor het gebruik van de medicatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The agreement or order for the use of medication.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="11150"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.MedicatieGebruikRedenVanOnderbreken"/>
+         <fhir:label value="MedicatieGebruikRedenVanOnderbreken"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Reden dat het gebruik van een medicijn onderbroken is. Hier kan een tekst of een van de codes gekozen worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reason why the use of a certain medicine was interrupted. Here, you can choose to enter text or one of the codes.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.MedicatieGebruikRedenVanStoppen"/>
+         <fhir:label value="MedicatieGebruikRedenVanStoppen"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Reden dat het gebruik van een medicijn beëindigd is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reason why the use of a certain medicine was discontinued.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedicatieGebruik.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerkingen met betrekking tot het medicatie gebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comments on the medication use.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7895"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

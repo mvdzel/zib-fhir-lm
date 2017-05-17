@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.11.1"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Vaccinatie"/>
+   <fhir:title value="nl.zorg.Vaccinatie"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="1-4-2015"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Immunisatie kan worden gedefinieerd als “Het opwekken van natuurlijke immuniteit tegen ziekteverwekkers door middel van vaccinatie (actieve immunisatie) of door toediening van immunoglobulinen (passieve immunisatie)”.&#xA;&#xA;In deze bouwsteen worden alleen de vaccinaties opgenomen. De toediening van immunoglobulines maakt deel uit van het medicatieoverzicht. Vaccinaties hebben levenslang relevantie.&#xA;&#xA;De meeste vaccinaties worden in Nederland uitgevoerd in het kader van het Rijksvaccinatieprogramma (RVP). RVP informatie is vooral van belang bij kinderen. &#xA;&#xA;Vaccinaties zijn ook relevant bij volwassen patiënten zoals transplantatiepatiënten, dialysepatiënten en patiënten met een status na miltextirpatie. Daarnaast zijn er specifieke indicaties voor de vaccinatie van risicogroepen, zoals reizigers, professionals die met bloed in aanraking komen of patiënten met verwondingen, een verminderde afweer of verhoogd risico.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”. &#xA; &#xA;Only vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance. &#xA; &#xA;Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program). RVP information is especially important for children.  &#xA; &#xA;Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="Vaccinatie"/>
+         <fhir:label value="Vaccinatie"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Vaccinatie.ProductCode"/>
+         <fhir:label value="ProductCode"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De productcode van het toegediende vaccin.&#xA;&#xA;Er zijn meerdere mogelijke codesystemen om de productcode vast te leggen. Indien de vaccinatiegegevens op basis van een anamnese zijn geregistreerd, dan is codering met de ATC code de voorkeur. In alle gevallen gaat het om die producten, die in de ATC groep J07 vallen (vaccins).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The product code of the vaccine administered. &#xA; &#xA;There are several possible code systems for documenting the product code. If the vaccination data is registered based on an anamnesis, coding with the ATC code is preferred. In all cases it concerns those products that fall under ATC group J07 (vaccines).&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Vaccinatie.Dosis"/>
+         <fhir:label value="Dosis"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De hoeveelheid gegeven product weergegeven in milliliters. In de meeste gevallen wordt het gehele product toegediend, in sommige gevallen wordt een omschreven deel van het product toegediend.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7891"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Vaccinatie.VaccinatieDatum"/>
+         <fhir:label value="VaccinatieDatum"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum (en eventueel tijd) dat het vaccin is toegediend.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date (and if possible time) that the vaccine was administered.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Vaccinatie.GewensteDatumHervaccinatie"/>
+         <fhir:label value="GewensteDatumHervaccinatie"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum waarop deze vaccinatie volgens de gegevens van de auteur herhaald zal moeten worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date on which this vaccination will have to be repeated according to the author’s information.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Vaccinatie.Toediener::Zorgverlener"/>
+         <fhir:label value="Toediener::Zorgverlener"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorgverlener en/of organisatie waar of door wie de immunisatie werd uitgevoerd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare provider and/or organization where or by whom the immunization was done.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="9907"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Vaccinatie.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Vrije tekst als toelichting. &#xA;&#xA;Voorbeelden van veel gebruikte toelichtingen zijn: &#xA;- &#34;Vaccinatie volgens Rijksvaccinatieprogramma&#34;. &#xA;- &#34;Niet volgens Rijksvaccinatieprogramma&#34;, gevolgd door een verdere toelichting.&#xA;- &#34;Onbekend&#34;&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Free text explanation.  &#xA; &#xA;Examples of commonly used explanations are:  &#xA;- &#34;Vaccination according to the National Immunisation Program&#34;.  &#xA;- &#34;Not according to the National Immunisation Program&#34;, followed by further explanation. &#xA;- &#34;Unknown&#34;&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7895"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

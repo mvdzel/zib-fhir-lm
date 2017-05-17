@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.10.1"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.MedischHulpmiddel"/>
+   <fhir:title value="nl.zorg.MedischHulpmiddel"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="1-4-2015"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Medische hulpmiddelen kunnen worden omschreven als de inwendig geïmplanteerde en uitwendige apparatuur en/of hulpmiddelen die de patiënt gebruikt of heeft gebruikt om de gevolgen van functionele beperkingen van orgaansystemen te verminderen of om de behandeling van een ziekte mogelijk te maken.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Medical aids are any internally implanted and external devices and/or aids used by the patient (in the past) to reduce the effects of functional limitations in organ systems or to facilitate the treatment of a disease.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel"/>
+         <fhir:label value="MedischHulpmiddel"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.Product"/>
+         <fhir:label value="Product"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The medical aid used (internally or externally).&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="9803"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.BeginDatum"/>
+         <fhir:label value="BeginDatum"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De startdatum van eerste toepassing of implantatie het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The start date of the first use or implant of the medical aid. A ‘vague’ date, such as only the year, is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.Indicatie::Probleem"/>
+         <fhir:label value="Indicatie::Probleem"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De medische reden voor het gebruik van het medisch hulpmiddel. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The medical reason for use of the medical aid.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="9803"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerking bij de toepassing of informatie over het gebruikte hulpmiddel.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comment about use or information on the medical aid used.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7895"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.HulpmiddelAnatomischeLocatie"/>
+         <fhir:label value="HulpmiddelAnatomischeLocatie"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Anatomische locatie van het gebruikte hulpmiddel bij de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s anatomical location of the medical aid used.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.Locatie::Zorgaanbieder"/>
+         <fhir:label value="Locatie::Zorgaanbieder"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel gïmplanteerd werd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare provider at which use of the medical aid was initiated or where the aid was implanted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="9803"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="MedischHulpmiddel.Zorgverlener"/>
+         <fhir:label value="Zorgverlener"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare provider involved in the indication for use of the medical aid implant.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="9803"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

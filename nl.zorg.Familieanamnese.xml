@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.6.1"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Familieanamnese"/>
+   <fhir:title value="nl.zorg.Familieanamnese"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="1-5-2016"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De familieanamnese beschrijft de gezondheidsproblemen van biologische verwanten die relevant zijn. De familieanamnese bevat informatie over de medische aandoeningen van het familielid en de biologische relatie tussen de patiënt en het beschreven familielid.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The family history describes any health problems of biological relatives that may be relevant. The family history contains information on the medical disorders of the family member and the biological relationship between the patient and the described family member.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="Familieanamnese"/>
+         <fhir:label value="Familieanamnese"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Familieanamnese.Datum"/>
+         <fhir:label value="Datum"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum van afname van de familieanamnese. Een vage datum is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date on which the family history was entered. A ‘vague’ date is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Familieanamnese.Familielid"/>
+         <fhir:label value="Familielid"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept familielid. Deze container bevat alle gegevenselementen van het concept familielid. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the FamilyMember concept. This container contains all data elements of the FamilyMember concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="11307"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

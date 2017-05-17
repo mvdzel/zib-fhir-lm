@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.4.26"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.FunctioneleOfMentaleStatus"/>
+   <fhir:title value="nl.zorg.FunctioneleOfMentaleStatus"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="22-5-2015"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De functionele of mentale status geeft inzicht in de functionele en mentale beperkingen van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The functional or mental status provides insight into the patient’s functional and mental limitations.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="FunctioneleOfMentaleStatus"/>
+         <fhir:label value="FunctioneleOfMentaleStatus"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="FunctioneleOfMentaleStatus.Hulpmiddel::MedischHulpmiddel"/>
+         <fhir:label value="Hulpmiddel::MedischHulpmiddel"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Hulpmiddel dat de patiënt ter beschikking heeft om de impact van de beperking of stoornis te verminderen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Medical aid the patient has to reduce the impact of the disability or disorder.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="11273"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="FunctioneleOfMentaleStatus.StatusDatum"/>
+         <fhir:label value="StatusDatum"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum waarop de status is vastgesteld. Een vage datum, b.v. alleen een jaartal is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date on which the status was determined. A ‘vague’ date, such as only the year, is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11273"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="FunctioneleOfMentaleStatus.StatusWaarde"/>
+         <fhir:label value="StatusWaarde"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De mate waarin de functionele of mentale conditie beperkend is.&#xA;Indien zowel statusnaam als statuswaarde gecodeerd vastgelegd worden, dienen beide waarden uit hetzelfde codesysteem te komen. &#xA;Indien de patiënt een hulpmiddel gebruikt, vindt de beoordeling van de mate van beperking plaats zonder gebruik van dit hulpmiddel.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The extent to which the patient is limited by the functional or mental condition. &#xA;If both the status name and the status value are recorded in code, then both values must come from the same code system.  &#xA;If the patient uses a medical aid, the evaluation of the extent of the limitation will take place without this aid.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11273"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="FunctioneleOfMentaleStatus.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Toelichtende opmerking als omschrijving van de functionele of mentale status.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Explanatory comments as a description of the functional or mental status.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11273"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="FunctioneleOfMentaleStatus.StatusNaam"/>
+         <fhir:label value="StatusNaam"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Gecodeerde omschrijving van de functionele of mentale status of beperking.&#xA;Gebruikte codesystemen zijn:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;SNOMED CT&lt;/li&gt;&#xA;&#x9;&lt;li&gt;ICF (International Classification of Functioning, Disability and Health) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;NOC (Nursing Outcomes Classification)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;OMAHA&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Coded description of the functional or mental status or limitation. &#xA;Code systems used include: &#xA;&lt;ul&gt; &#xA; &lt;li&gt;SNOMED CT&lt;/li&gt; &#xA; &lt;li&gt;ICF (International Classification of Functioning, Disability and Health) &lt;/li&gt; &#xA; &lt;li&gt;NOC (Nursing Outcomes Classification)&lt;/li&gt; &#xA; &lt;li&gt;OMAHA&lt;/li&gt; &#xA;&lt;/ul&gt;&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11273"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

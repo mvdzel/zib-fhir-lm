@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.8.3"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Alert"/>
+   <fhir:title value="nl.zorg.Alert"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="1-4-2015"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een alert beschrijft een klinisch of administratief feit dat onder de aandacht van de gebruikers van de klinische systemen wordt gebracht , om er bij het vormen van diagnostisch en therapeutisch beleid of bij de omgang met de patiënt rekening mee te houden, meestal wegens een veiligheidsrisico. &#xA;Aandoeningen, die de overgevoeligheid van het lichaam voor een stof beschrijven, zich uitend in een specifieke fysiologische reactie na blootstelling, worden allergieën genoemd. Deze worden in een aparte bouwsteen beschreven. &#xA;Waarschuwingen voor niet allergische aandoeningen kunnen betreffen:&#xA;-&#x9;een aandoening (conditie of diagnose die beschouwd kan worden als contra-indicatie voor het gebruik van groepen van geneesmiddelen of het ondergaan van een bepaalde therapie), zoals zwangerschap of een verlengd QT-syndroom&#xA;-&#x9;Verminderde functie van een orgaansysteem (hartfalen, verminder lever- of nierfunctie, verminderde afweer) &#xA;-&#x9;Kans op verspreiding van bepaalde micro-organismen (multiresistente bacterie, tuberkelbacterie, HIV, HBV, Ebola virus)&#xA;-&#x9;Andere risico’s&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An alert describes a clinical or administrative fact brought to the attention of the users of the clinical systems to be taken into account when shaping diagnostic and therapeutic policy or in dealing with the patient, usually because of a safety risk.  &#xA;Disorders that describe the body’s sensitivity to a substance which results in a specific physiological reaction after being exposed to that substance are referred to as allergies. These are described in a separate information model.  &#xA;Warnings for non-allergic disorders can concern: &#xA;- A disorder (condition or diagnosis which can be considered as a contraindication for the use of groups of medication or undergoing a certain type of therapy), such as pregnancy or long QT syndrome &#xA;- Impaired functioning of an organ system (heart failure, impaired liver or kidney function, weakened immune system)  &#xA;- Risk of spreading certain microorganisms (multi-resistant bacteria, tubercle bacilli, HIV, HBV, Ebola virus) &#xA;- Other risks&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="Alert"/>
+         <fhir:label value="Alert"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Alert.AlertNaam"/>
+         <fhir:label value="AlertNaam"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een waarschuwing, anders dan een conditie of probleem. Zo kan bijvoorbeeld als alert 'Agressieve patient' meegegeven worden.&#xA;De waarschuwing kan als een gecodeerd gegeven worden vasrgelegd (voor veelvoorkomende alerts zijn codes voorzien), maar gezien het dynamische karakter van de waarschuwingen cf. Sars en Ebola, zullen deze alerts vaak als vrije tekst doorgegeven worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A warning, other than a condition or problem. For example, a patient can be given an ‘Aggressive patient' alert. &#xA;The warning can be entered in code (there are codes for frequently used alerts), but seeing the dynamic nature of the warnings cf. SARS and Ebola, these alerts will often be entered as free text.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Alert.AlertType"/>
+         <fhir:label value="AlertType"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Geeft het type alert aan, dat wil zeggen een grove indeling van de oorzaak of oorsprong waaruit de waarschuwing voort komt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Indicates the type of alert, meaning a rough description of the cause or origin of the warning.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Alert.BeginDatumTijd"/>
+         <fhir:label value="BeginDatumTijd"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum en tijd waarop de beschreven toestand als waarschuwing is aangemerkt. &#xA;Dit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date and time at which the described condition was entered as a warning.  &#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Alert.Conditie::Concern"/>
+         <fhir:label value="Conditie::Concern"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een gezondheidsprobleem of toestand van de patiënt die de reden is van het alert. Het kan hierbij gaan om een probleem,toestand of diagnose van de patiënt die geldt als contra-indicatie bij het voorschrijven van medicatie of waarmee rekening moet worden gehouden bij het vormen van diagnostisch en therapeutisch beleid. Dit kan zijn in het belang van de patiënt zelf, maar het kan ook gaan om een probleem of aandoening waardoor de patiënt een risico vormt voor zijn omgeving, bijvoorbeeld besmettingsgevaar. Het betreft hier verwijzigingen naar condities die vermeld staan op de probleemlijst van de patiënt.&#xA;&#xA;Indien sprake is van een contra-indicatie, dient het codesystem G-Standaard Contra Indicaties (Tabel 40) uit de ProbleemNaamCodelijst van de bouwsteen OverdrachtConcern gekozen te worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The patient’s health problem or condition that is the subject of the alert. This could involve a patient’s problem, condition or diagnosis that is seen as a contraindication in prescribing medication or which has to be taken into account when shaping diagnostic and therapeutic policy. This can be in the patient’s own interest, or it can involve a problem or disorder that can make the patient a risk to their surroundings, such as an infection hazard. These are references to conditions included on the patient’s problem list. &#xA; &#xA;If there is a contraindication, the code system G-Standard Contraindications (Table 40) from the ProblemNameCodeList of the ConcernTransfer information model should be used.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:type>
+            <fhir:code value="11782"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

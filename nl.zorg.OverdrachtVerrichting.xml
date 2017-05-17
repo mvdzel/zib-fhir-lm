@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.14.1"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.OverdrachtVerrichting"/>
+   <fhir:title value="nl.zorg.OverdrachtVerrichting"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="1-5-2016"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het concept Verrichting vermeldt een therapeutische verrichting, die de patiënt heeft ondergaan. Indien relevant kunnen ook diagnostische verrichtingen vermeld worden. &#xA;Een verrichting kan een simpele bloeddrukmeting zijn maar ook een complexe hartoperatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The concept Procedure indicates a therapeutic procedure undergone by the patient. If relevant, diagnostic procedures can be listed as well.  &#xA;A procedure can be a simple blood pressure measurement, but also a complex heart surgery.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="Verrichting"/>
+         <fhir:label value="Verrichting"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.VerrichtingStartDatum"/>
+         <fhir:label value="VerrichtingStartDatum"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De startdatum (en eventueel starttijd) van de verrichting. Een vage datum, bijv. alleen een jaartal, is toegestaan.&#xA;&#xA;Het element biedt de mogelijkheid om de start van de periode van een reeks bij elkaar behorende verrichtingen aan te geven.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The start date (and if possible start time) of the procedure. A ‘vague’ date, such as only the year, is permitted. &#xA; &#xA;The element offers the option to indicate the start of the period of a series of related procedures.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.VerrichtingEindDatum"/>
+         <fhir:label value="VerrichtingEindDatum"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De einddatum (en eventueel eindtijd) van de verrichting. Een vage datum, bijv. alleen een jaartal, is toegestaan.&#xA;&#xA;Het element biedt de mogelijkheid om het einde van de periode van een reeks bij elkaar behorende verrichtingen aan te geven.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted. &#xA; &#xA;The element offers the option to indicate the end of the period of a series of related procedures.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.VerrichtingAnatomischeLocatie"/>
+         <fhir:label value="VerrichtingAnatomischeLocatie"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Anatomische locatie die de focus is van de verrichting.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Anatomical location which is the focus of the procedure.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.Indicatie::Probleem"/>
+         <fhir:label value="Indicatie::Probleem"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De indicatie is de reden voor het uitvoeren van de verrichting.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The indication is the reason for the procedure.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="9937"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.VerrichtingType"/>
+         <fhir:label value="VerrichtingType"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De naam van de verrichting. &#xA;&#xA;Vanaf 1 januari 2013 moeten alle verrichtingen in het primaire proces worden vastgelegd met CBV codes. Om hieraan te voldoen wordt de verrichtingenthesaurus van DHD (CBV verrichtingenset ) voor het coderen van verrichtingen gebruikt. Mogelijk dat in de toekomst naast de CBV verrichtingenset ook de NIC voor verpleegkundige verrichtingen gehanteerd gaat worden en dat er een “coded valueset” komt voor paramedische verrichtingen. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The name of the procedure.  &#xA; &#xA;As of 1 January 2013, all procedures in the primary process have to be documented with CBV codes. To meet this requirement, the DHD procedure thesaurus (CBV procedures set) is used to code procedures. It is possible that in addition to the CBV procedures set, the NIC will be used for nurse procedures and that a “coded value set” will be introduced for paramedic procedures.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.Product"/>
+         <fhir:label value="Product"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het product waarvan het plaatsen in of aan het lichaam het doel is van de verrichting, bijv. het plaatsen van een implantaat.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The product, the placing of which in or on the body is the purpose of the procedure, for example placing an implant.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="9937"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.Locatie::Zorgaanbieder"/>
+         <fhir:label value="Locatie::Zorgaanbieder"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorginstelling waar de verrichting is of wordt uitgevoerd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare center where the procedure was or is carried out.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="9937"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.UitgevoerdDoor::Zorgverlener"/>
+         <fhir:label value="UitgevoerdDoor::Zorgverlener"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorgverlener die de verrichting heeft uitgevoerd. In de meeste gevallen wordt alleen het specialisme en niet de naam van de zorgverlener doorgegeven. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare provider who carried out the procedure. In most cases, only the medical specialty is entered, and not the name of the healthcare provider.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="9937"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Verrichting.AangevraagdDoor::Zorgverlener"/>
+         <fhir:label value="AangevraagdDoor::Zorgverlener"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorgverlener die de verrichting heeft aangevraagd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare provider who requested the procedure.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="9937"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

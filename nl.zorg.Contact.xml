@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:identifier value="2.16.840.1.113883.2.4.3.11.60.40.3.15.1"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Contact"/>
+   <fhir:title value="nl.zorg.Contact"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="1-4-2015"/>
+   <fhir:publisher value="PM"/>
+   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een contact is een interactie, onafhankelijk van de situatie, tussen een patiënt en een zorgverlener, waarbij de zorgverlener de primaire verantwoordelijkheid heeft de conditie van de patiënt te diagnosticeren, te evalueren, te behandelen en de patiënt te informeren. Dit kunnen bezoeken, afspraken of niet face-to-face interacties zijn.&#xA;&#xA;Contacten kunnen huisarts- of praktijkbezoeken, thuisbezoeken, opnames (in bijvoorbeeld ziekenhuizen, verpleeg/verzorgingstehuizen, psychiatrische inrichtingen of revalidatieklinieken) of andere relevante contacten betreffen. Het betreft alleen &lt;i&gt;historische&lt;/i&gt; contacten. De toekomstige contacten kunnen vastgelegd worden in de bouwsteen GeplandeZorgActiviteit.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A contact is any interaction, regardless of the situation, between a patient and the healthcare provider, in which the healthcare provider has primary responsibility for diagnosing, evaluating and treating the patient’s condition and informing the patient. These can be visits, appointments or non face-to-face interactions. &#xA; &#xA;Contacts can be visits to the general practitioner or other practices, home visits, admissions (in hospitals, nursing homes or care homes, psychiatric institutions or convalescent homes) or other relevant contacts. This only includes &lt;i&gt;past&lt;/i&gt; contacts. Future contacts can be documented in the PlannedCareActivity information model.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:baseDefinition value="http://zibs.nl/..."/>
+   <fhir:snapshot>
+      <fhir:element>
+         <fhir:path value="Contact"/>
+         <fhir:label value="Contact"/>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Contact.ContactMet::Zorgverlener"/>
+         <fhir:label value="ContactMet::Zorgverlener"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De zorgverlener waarmee het contact heeft plaatsgevonden. In de bouwsteen Zorgverlener kan tevens het specialisme en de rol van de zorgverlener vastgelegd worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The healthcare provider with whom the contact took place. The specialty and role of the healthcare provider can be entered in the HealthcareProvider information model as well.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="11411"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Contact.BeginDatumTijd"/>
+         <fhir:label value="BeginDatumTijd"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en tijd waarop het contact heeft plaatsgevonden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date and time at which the contact took place. &lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Contact.RedenContact"/>
+         <fhir:label value="RedenContact"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept RedenContact. Deze container bevat alle gegevenselementen van het concept RedenContact.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the ContactReason concept. This container contains all data elements of the ContactReason concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11411"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Contact.Locatie::Zorgaanbieder"/>
+         <fhir:label value="Locatie::Zorgaanbieder"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De fysieke locatie waar het contact heeft plaatsgevonden. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The physical location at which the contact took place.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="11411"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Contact.ContactType"/>
+         <fhir:label value="ContactType"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het type contact. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The type of contact.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7906"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element>
+         <fhir:path value="Contact.EindDatumTijd"/>
+         <fhir:label value="EindDatumTijd"/>
+         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en tijd waarop het contact is geëindigd. Als het contact een periode betreft wordt hiermee het einde van deze periode aangeduid, bijvoorbeeld bij een opname.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date and time at which the contact ended. If the contact takes place over a period of time, this indicates the end of the period, in the case of an admission, for example.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="7887"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>
