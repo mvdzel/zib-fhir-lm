@@ -1,102 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.Ademhaling"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.5"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Ademhaling"/>
    <fhir:title value="nl.zorg.Ademhaling"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Bij de ademhaling of respiratie stroomt er lucht naar en van de longen, waar de gasuitwisseling plaatsvindt, waarbij zuurstof vanuit de lucht wordt opgenomen in het bloed en koolstofdioxide wordt afgegeven aan de lucht. Observaties van de spontane ademhaling zoals deze meestal geregistreerd worden als onderdeel van de observatie van de vitale functies.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt; During breathing or respiration, air flows to and from the lungs, where gas exchange occurs, absorbing oxygen from the air into the blood and exhaling carbon dioxide into the air. Observations of spontaneous breathing, usually registered as part of the observation of vital functions. &lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het observeren van de spontane ademhaling van een persoon, inclusief het vastleggen van de ademhalingsfrequentie, diepte en het ritme, wordt gedaan om een indruk te krijgen van de gezondheidstoestand van het pulmonaire systeem van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Observing a person’s spontaneous breathing, including recording breathing frequency, depth and rhythm, is done to gain an indication of the health condition of the patient’s pulmonary system.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-07-16"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Bij de ademhaling of respiratie stroomt er lucht naar en van de longen, waar de gasuitwisseling plaatsvindt, waarbij zuurstof vanuit de lucht wordt opgenomen in het bloed en koolstofdioxide wordt afgegeven aan de lucht. Observaties van de spontane ademhaling zoals deze meestal geregistreerd worden als onderdeel van de observatie van de vitale functies."/>
+   <fhir:purpose value="Het observeren van de spontane ademhaling van een persoon, inclusief het vastleggen van de ademhalingsfrequentie, diepte en het ritme, wordt gedaan om een indruk te krijgen van de gezondheidstoestand van het pulmonaire systeem van de patiënt."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Ademhaling"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.5.1">
          <fhir:path value="Ademhaling"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Ademhaling. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Ademhaling.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the Breathing information model. This root concept contains all data elements of the Breathing information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Ademhaling. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Ademhaling."/>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.2">
          <fhir:path value="Ademhaling.Ademfrequentie"/>
          <fhir:label value="Ademfrequentie"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De waarde van de gemeten ademhalingsfrequentie. De ademhalingsfrequentie betreft het aantal ademhalingen per minuut.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The value of the measured breathing frequency. The breathing frequency is the number of breaths per minute.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De waarde van de gemeten ademhalingsfrequentie. De ademhalingsfrequentie betreft het aantal ademhalingen per minuut."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7891"/>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.4">
          <fhir:path value="Ademhaling.AdemhalingDatumTijd"/>
          <fhir:label value="AdemhalingDatumTijd"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en eventueel tijd van de meting.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date and if possible time of measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Datum en eventueel tijd van de meting."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.5">
          <fhir:path value="Ademhaling.Ritme"/>
          <fhir:label value="Ritme"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het ritme of de regelmaat van de ademhaling.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The rhythm or regularity of breathing.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Het ritme of de regelmaat van de ademhaling."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.6">
          <fhir:path value="Ademhaling.Diepte"/>
          <fhir:label value="Diepte"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De diepte van de ademteugen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The depth of the breaths.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De diepte van de ademteugen."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.7">
          <fhir:path value="Ademhaling.AfwijkendAdemhalingspatroon"/>
          <fhir:label value="AfwijkendAdemhalingspatroon"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Specifieke, abnormale ademhalingspatronen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Specific, abnormal breathing patterns.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Specifieke, abnormale ademhalingspatronen."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.12">
          <fhir:path value="Ademhaling.ExtraZuurstofToediening"/>
          <fhir:label value="ExtraZuurstofToediening"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een indicatie die aangeeft of de patiënt extra zuurstof toegediend krijgt. Additionele informatie kan in dat geval worden vastgelegd in de concepten die deel uit  maken van de container ToegediendeZuurstof.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An indication stating whether the patient is given extra oxygen. In that event, additional information can be recorded in the concepts that are part of the AdministeredOxygen container.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Een indicatie die aangeeft of de patiënt extra zuurstof toegediend krijgt. Additionele informatie kan in dat geval worden vastgelegd in de concepten die deel uit  maken van de container ToegediendeZuurstof."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7892"/>
+            <fhir:code value="https://zibs.nl/datatypes/BL"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.8">
          <fhir:path value="Ademhaling.ToegediendeZuurstof"/>
          <fhir:label value="ToegediendeZuurstof"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept ToegediendeZuurstof. Deze container bevat alle gegevenselementen van het concept ToegediendeZuurstof.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the AdministeredOxygen concept. This container contains all data elements of the AdministeredOxygen concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Container van het concept ToegediendeZuurstof. Deze container bevat alle gegevenselementen van het concept ToegediendeZuurstof."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.10">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof.FlowRate"/>
+         <fhir:label value="FlowRate"/>
+         <fhir:definition value="De hoeveelheid toegediende zuurstof. De waarde ligt tussen 0.0 en 50.0 l/min."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="9146"/>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
          </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.9">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof.FiO2"/>
+         <fhir:label value="FiO2"/>
+         <fhir:definition value="De fractionele inspiratoire zuurstof concentratie. Waarde ligt tussen 0.0 en 1.0, met een normale waarde van 0.21 (geen extra zuurstoftoediening)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.13">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof.ToedieningHulpmiddel::MedischHulpmiddel"/>
+         <fhir:label value="ToedieningHulpmiddel::MedischHulpmiddel"/>
+         <fhir:definition value="Hulpmiddel dat gebruikt wordt bij de toediening van extra zuurstof aan de patiënt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
       </fhir:element>
       <fhir:element id="NL-CM:12.5.3">
          <fhir:path value="Ademhaling.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerking over bijkomende factoren die de ademhaling kunnen beïnvloeden. Bijvoorbeeld, het niveau van angst, pijn, voeding bij zuigelingen, tracheostomie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comment on additional factors that can influence breathing such as the extent of fear, pain, nutrition in the case of infants or a tracheostomy.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Opmerking over bijkomende factoren die de ademhaling kunnen beïnvloeden. Bijvoorbeeld, het niveau van angst, pijn, voeding bij zuigelingen, tracheostomie."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

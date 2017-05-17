@@ -1,102 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.AllergieIntolerantie"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.8.2"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.AllergieIntolerantie"/>
    <fhir:title value="nl.zorg.AllergieIntolerantie"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een allergie  of intolerantie beschrijft de geneigdheid tot overgevoeligheid van een patiënt voor een stof,  zodat na blootstelling een ongewenste fysiologische reactie verwacht wordt, terwijl bij de meeste mensen bij die hoeveelheid geen reactie zou optreden. De waargenomen fysiologische veranderingen zijn meestal het resultaat van een immunologische reactie.  &#xA;De stoffen kunnen als volgt worden ingedeeld:&#xA;-&#x9;Geneesmiddel&#xA;-&#x9;Geneesmiddelgroep&#xA;-&#x9;Ingrediënt/toevoeging&#xA;-&#x9;Voeding&#xA;-&#x9;Omgevingsfactor&#xA;-&#x9;Dier&#xA;-&#x9;Planten&#xA;-&#x9;Chemicaliën&#xA;-&#x9;Inhalatieallergenen&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An allergy or intolerance describes a patient’s tendency towards hypersensitivity to a certain substance, so that an unwanted physiological reaction is expected after exposure to the substance, while most people would not exhibit such a reaction to that amount. The observed physiological changes are usually the result of an immunological reaction.   &#xA;The substances can be categorized as follows: &#xA;- Medicine &#xA;- Medicine category &#xA;- Ingredient/addition &#xA;- Nutrition &#xA;- Environmental factor &#xA;- Animal &#xA;- Plants &#xA;- Chemicals &#xA;- Inhaled allergenic&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen en doorgeven van allergieën en intoleranties, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid in het algemeen en medicatieveiligheid in het bijzonder. In de uitvoering van onderzoek, behandeling en verzorging moet veelal continu rekening worden gehouden met deze patiëntkenmerken. &#xA;Allergieën en intoleranties zijn in principe ook aandoeningen en zouden ook als probleem vastegelegd  kunnen worden. Het is niettemin gebruikelijk deze separaat vast te leggen.&#xA;Allergieën/Intoleraties hebben veel gemeen met waarschuwingen (Alert). Belangrijk verschil is dat bij allergieën en intoleranties veel getailleerdere informatie wordt vast gelegd o.a over de reacties op de veroorzakende stof. Daarnaast is niet iedere waarschuwing een probleem of medische conditie. Bij allergie/intolerantie is dit wel het geval, terwijl niet iedere allergie of intolerentie een waarschuwing inhoudt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Documenting and communicating allergies and intolerances is an important part of medical registration. It concerns the core of patient safety in general and medication safety in particular. In the execution of research, treatment and care, these patient characteristics constantly have to be taken into account.  &#xA;In principle, allergies and intolerances are also disorders and also could be entered as a problem. Nevertheless, these are usually entered separately. &#xA;Allergies/Intolerances have a lot in common with warnings (Alert). An important difference is that with allergies and intolerances, a lot of detailed information is recorded on things such as the reactions to the causative substance. Furthermore, not every warning is a problem or medical condition. Every allergy/intolerance is, however, while not every allergy or intolerance implies a warning.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2016-05-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een allergie  of intolerantie beschrijft de geneigdheid tot overgevoeligheid van een patiënt voor een stof,  zodat na blootstelling een ongewenste fysiologische reactie verwacht wordt, terwijl bij de meeste mensen bij die hoeveelheid geen reactie zou optreden. De waargenomen fysiologische veranderingen zijn meestal het resultaat van een immunologische reactie.  &#xA;De stoffen kunnen als volgt worden ingedeeld:&#xA;-&#x9;Geneesmiddel&#xA;-&#x9;Geneesmiddelgroep&#xA;-&#x9;Ingrediënt/toevoeging&#xA;-&#x9;Voeding&#xA;-&#x9;Omgevingsfactor&#xA;-&#x9;Dier&#xA;-&#x9;Planten&#xA;-&#x9;Chemicaliën&#xA;-&#x9;Inhalatieallergenen"/>
+   <fhir:purpose value="Het vastleggen en doorgeven van allergieën en intoleranties, is een belangrijk onderdeel van de medische registratie. Het raakt de kern van patiëntveiligheid in het algemeen en medicatieveiligheid in het bijzonder. In de uitvoering van onderzoek, behandeling en verzorging moet veelal continu rekening worden gehouden met deze patiëntkenmerken. &#xA;Allergieën en intoleranties zijn in principe ook aandoeningen en zouden ook als probleem vastegelegd  kunnen worden. Het is niettemin gebruikelijk deze separaat vast te leggen.&#xA;Allergieën/Intoleraties hebben veel gemeen met waarschuwingen (Alert). Belangrijk verschil is dat bij allergieën en intoleranties veel getailleerdere informatie wordt vast gelegd o.a over de reacties op de veroorzakende stof. Daarnaast is niet iedere waarschuwing een probleem of medische conditie. Bij allergie/intolerantie is dit wel het geval, terwijl niet iedere allergie of intolerentie een waarschuwing inhoudt."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Allergie, Overgevoeligheid"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:8.2.1">
          <fhir:path value="AllergieIntolerantie"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the AllergyIntolerance information model. This root concept contains all data elements of the AllergyIntolerance information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie."/>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.5">
          <fhir:path value="AllergieIntolerantie.AllergieStatus"/>
          <fhir:label value="AllergieStatus"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Bewering over de status van de overgevoeligheid.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Statement on the status of the patient’s hypersensitivity.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Bewering over de status van de overgevoeligheid."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.6">
          <fhir:path value="AllergieIntolerantie.BeginDatumTijd"/>
          <fhir:label value="BeginDatumTijd"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum en tijd dat de allergie of de ongewenste reactie is vastgesteld. &#xA;Dit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date and time at which the allergy or undesired reaction was determined.  &#xA;This can be an exact date and time, or a rough indication of the date (such as only the year, or the month and the year).&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De datum en tijd dat de allergie of de ongewenste reactie is vastgesteld. &#xA;Dit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="11830"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.8">
          <fhir:path value="AllergieIntolerantie.LaatsteReactieDatumTijd"/>
          <fhir:label value="LaatsteReactieDatumTijd"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opgave van de laatste maal dat een reactie in het licht van de overgevoeligheid is opgetreden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Entry of the last time a hypersensitive reaction took place.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Opgave van de laatste maal dat een reactie in het licht van de overgevoeligheid is opgetreden."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="11830"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.4">
          <fhir:path value="AllergieIntolerantie.AllergieCategorie"/>
          <fhir:label value="AllergieCategorie"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Identificeert de categorie van de overgevoeligheid aan zoals medicatie, voedsel of omgeving. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Identifies the allergy category such as medication, food or environment.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Identificeert de categorie van de overgevoeligheid aan zoals medicatie, voedsel of omgeving. "/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="11830"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.9">
          <fhir:path value="AllergieIntolerantie.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Tekstuele toelichting op de overgevoeligheid die niet in één van de andere velden kan worden weergegeven.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Textual explanation of the hypersensitivity which cannot be entered in any of the other fields.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Tekstuele toelichting op de overgevoeligheid die niet in één van de andere velden kan worden weergegeven."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.2">
          <fhir:path value="AllergieIntolerantie.VeroorzakendeStof"/>
          <fhir:label value="VeroorzakendeStof"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Substance, group of substances or environmental factor to which the patient is allergic or hypersensitive.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.10">
          <fhir:path value="AllergieIntolerantie.Reactie"/>
          <fhir:label value="Reactie"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Reactie. Deze container bevat alle gegevenselementen van het concept Reactie.  &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the Reaction concept. This container contains all data elements of the Reaction concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Container van het concept Reactie. Deze container bevat alle gegevenselementen van het concept Reactie.  "/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.14">
+         <fhir:path value="AllergieIntolerantie.Reactie.Ernst"/>
+         <fhir:label value="Ernst"/>
+         <fhir:definition value="De ernst van de reactie ten gevolge van de blootgestelling aan de veroorzakende stof."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="11830"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.12">
+         <fhir:path value="AllergieIntolerantie.Reactie.SpecifiekeStof"/>
+         <fhir:label value="SpecifiekeStof"/>
+         <fhir:definition value="Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.16">
+         <fhir:path value="AllergieIntolerantie.Reactie.ReactieDuur"/>
+         <fhir:label value="ReactieDuur"/>
+         <fhir:definition value="Tijdsduur van de reactie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.13">
+         <fhir:path value="AllergieIntolerantie.Reactie.ReactieBeschrijving"/>
+         <fhir:label value="ReactieBeschrijving"/>
+         <fhir:definition value="Tekstuele beschrijving van de reactie als geheel."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.17">
+         <fhir:path value="AllergieIntolerantie.Reactie.ReactieTijdstip"/>
+         <fhir:label value="ReactieTijdstip"/>
+         <fhir:definition value="Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.11">
+         <fhir:path value="AllergieIntolerantie.Reactie.Symptoom"/>
+         <fhir:label value="Symptoom"/>
+         <fhir:definition value="De inhoudelijke specificatie van de reactie die optreedt indien de patiënt wordt blootgesteld aan de veroorzakende stof."/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.15">
+         <fhir:path value="AllergieIntolerantie.Reactie.WijzeVanBlootstelling"/>
+         <fhir:label value="WijzeVanBlootstelling"/>
+         <fhir:definition value="Wijze waarop de patiënt in aanraking is gekomen met de veroorzakende stof of de wijze waarop  de stof toegediend is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.18">
+         <fhir:path value="AllergieIntolerantie.Reactie.Waarschijnlijkheid"/>
+         <fhir:label value="Waarschijnlijkheid"/>
+         <fhir:definition value="Aanduiding van de waarschijnlijkheid dat de stof die beschreven is in het concept 'SpecifiekeStof' de reactie veroorzaakt heeft."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.2.7">
          <fhir:path value="AllergieIntolerantie.MateVanKritiekZijn"/>
          <fhir:label value="MateVanKritiekZijn"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Mate van kritiek zijn wordt gedefinieerd als &#34;de potentiële ernst van toekomstige reacties.&#34;&#xA;Dit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Critical extent is defined as “the potential severity of future reactions.” &#xA;This represents a clinical evaluation of the worst case scenario for a future reaction. It can be based on the severity of past reactions, the dose and manner of exposure which caused reactions in the past, and the life-threatening potential of the type of reaction. Critical extent is a property of the allergy, and not of the reaction itself.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Mate van kritiek zijn wordt gedefinieerd als &#34;de potentiële ernst van toekomstige reacties.&#34;&#xA;Dit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

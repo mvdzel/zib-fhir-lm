@@ -1,62 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.Lichaamsgewicht"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.1"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Lichaamsgewicht"/>
    <fhir:title value="nl.zorg.Lichaamsgewicht"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Lichaamsgewicht is de gangbare benaming voor de massa van het (menselijk) lichaam.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Body weight is the common name for (human) body mass.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vroegtijdig opsporen van afwijkend lichaamsgewicht is een belangrijke taak van de preventieve gezondheidszorg. Een duidelijk te hoog of te laag lichaamsgewicht kan immers symptoom zijn van een andere onderliggende problematiek. Bij vroege detectie kan er ook vroeger gestart worden met een behandeling. &#xA;&#xA;Deze zorginformatiebouwsteen biedt de mogelijkheid om het lichaamsgewicht (zowel exact als geschat) van een persoon vast te leggen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Early detection of deviating body weight is an important task in preventive healthcare. A patient being clearly overweight or underweight can be a symptom of other, underlying problems. Early detection also means an earlier start to treatment.  &#xA; &#xA;This healthcare information information model offers the option to record a person’s body weight (both exact and estimated).&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Lichaamsgewicht is de gangbare benaming voor de massa van het (menselijk) lichaam."/>
+   <fhir:purpose value="Het vroegtijdig opsporen van afwijkend lichaamsgewicht is een belangrijke taak van de preventieve gezondheidszorg. Een duidelijk te hoog of te laag lichaamsgewicht kan immers symptoom zijn van een andere onderliggende problematiek. Bij vroege detectie kan er ook vroeger gestart worden met een behandeling. &#xA;&#xA;Deze zorginformatiebouwsteen biedt de mogelijkheid om het lichaamsgewicht (zowel exact als geschat) van een persoon vast te leggen."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="gewicht, lichaamsgewicht, vitale parameters"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.1.1">
          <fhir:path value="Lichaamsgewicht"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Lichaamsgewicht. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamsgewicht.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the BodyWeight information model. This root concept contains all data elements of the BodyWeight information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Lichaamsgewicht. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamsgewicht."/>
       </fhir:element>
       <fhir:element id="NL-CM:12.1.2">
          <fhir:path value="Lichaamsgewicht.GewichtWaarde"/>
          <fhir:label value="GewichtWaarde"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het lichaamsgewicht van de patiënt. Het gewicht wordt uitgedrukt in kilogram (kg). Bij pasgeborenen onder 3 kg wordt het gewicht veelal in grammen uitgedrukt.&#xA;&#xA;Dit concept kan ook gebruikt worden om een geschat lichaamsgewicht vast te leggen als het niet mogelijk is om het exacte lichaamsgewicht te meten - bijvoorbeeld, het wegen van een tegenwerkend kind, of een schatting van het gewicht van een ongeboren kind.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The patient’s body weight. Body weight is expressed in kilograms (kg). For infants under 3kg, body weight is often expressed in grams. &#xA; &#xA;This concept can also be used to determine an estimated body weight in the event that measuring the exact body weight is not possible - such as for example weighing a resistant child, or in the case of having to estimate the weight of an unborn child.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Het lichaamsgewicht van de patiënt. Het gewicht wordt uitgedrukt in kilogram (kg). Bij pasgeborenen onder 3 kg wordt het gewicht veelal in grammen uitgedrukt.&#xA;&#xA;Dit concept kan ook gebruikt worden om een geschat lichaamsgewicht vast te leggen als het niet mogelijk is om het exacte lichaamsgewicht te meten - bijvoorbeeld, het wegen van een tegenwerkend kind, of een schatting van het gewicht van een ongeboren kind."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7891"/>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.1.3">
          <fhir:path value="Lichaamsgewicht.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerking over de gewichtsmeting, zoals eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht; bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comment on the weight measurement, such as any problems or factors that may influence body weight at that time, such as timing within the menstrual cycle, timing of recent bowel movement or a note on any amputations.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Opmerking over de gewichtsmeting, zoals eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht; bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie. "/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.1.4">
          <fhir:path value="Lichaamsgewicht.GewichtDatumTijd"/>
          <fhir:label value="GewichtDatumTijd"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en (eventueel) tijd dat het gewicht gemeten of geschat werd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date and (if possible) time that the weight was measured or estimated.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Datum en (eventueel) tijd dat het gewicht gemeten of geschat werd."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.1.5">
          <fhir:path value="Lichaamsgewicht.Kleding"/>
          <fhir:label value="Kleding"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De kleding die de patiënt aan had tijdens de meting.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The clothes the patient was wearing at the time of the measurement.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De kleding die de patiënt aan had tijdens de meting."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

@@ -1,73 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.OverdrachtTekstUitslag"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.13.2"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.OverdrachtTekstUitslag"/>
    <fhir:title value="nl.zorg.OverdrachtTekstUitslag"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een tekstuitslag beschrijft de bevindingen en interpretatie van diagnostische of therapeutische verrichtingen, uitgevoerd op patiènten of monsters afkomstig van de patiënt. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Textual results describe the findings and interpretation of diagnostic or therapeutic procedures carried out on patients or on specimens from the patient.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen van de resultaten van diagnostische verrichtingen ten behoeve van communicatie hiervan met de aanvrager van de verrichting en het documenteren van de bevindingen naar aanleiding van therapeutische verrichtingen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording the results of diagnostic procedures for the purpose of communicating these with the person requesting the procedure and documenting the findings resulting from therapeutic procedures.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-08-25"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een tekstuitslag beschrijft de bevindingen en interpretatie van diagnostische of therapeutische verrichtingen, uitgevoerd op patiènten of monsters afkomstig van de patiënt. "/>
+   <fhir:purpose value="Het vastleggen van de resultaten van diagnostische verrichtingen ten behoeve van communicatie hiervan met de aanvrager van de verrichting en het documenteren van de bevindingen naar aanleiding van therapeutische verrichtingen."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="laboratorium uitslagen, verslagen"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:13.2.1">
          <fhir:path value="TekstUitslag"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen OverdrachtTekstUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtTekstUitslag.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the TextResultTransfer information model. This root concept contains all data elements of the TextResultTransfer information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen OverdrachtTekstUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtTekstUitslag."/>
       </fhir:element>
       <fhir:element id="NL-CM:13.2.6">
          <fhir:path value="TekstUitslag.TekstUitslagStatus"/>
          <fhir:label value="TekstUitslagStatus"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De status van de uitslag.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The status of the result.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De status van de uitslag."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:13.2.3">
          <fhir:path value="TekstUitslag.TekstUitslagDatumTijd"/>
          <fhir:label value="TekstUitslagDatumTijd"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Datum en eventueel tijdstip van de uitslag. &#xA;Datum waarop de verrichting wordt vermeld in de bouwsteen OverdrachtVerrichting. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Date and if possible time of the result.  &#xA;Date on which the procedure took place as recorded in the ProcedureTransfer information model.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Datum en eventueel tijdstip van de uitslag. &#xA;Datum waarop de verrichting wordt vermeld in de bouwsteen OverdrachtVerrichting. "/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:13.2.2">
          <fhir:path value="TekstUitslag.TekstResultaat"/>
          <fhir:label value="TekstResultaat"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het tekstverslag waarin de feitelijke resultaat van de test of de verrichting staat.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The text report detailing the actual results of the test or procedure.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Het tekstverslag waarin de feitelijke resultaat van de test of de verrichting staat."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:13.2.4">
          <fhir:path value="TekstUitslag.TekstUitslagType"/>
          <fhir:label value="TekstUitslagType"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het soort resultaat.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The type of result.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Het soort resultaat."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:13.2.5">
          <fhir:path value="TekstUitslag.Verrichting"/>
          <fhir:label value="Verrichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Verwijzing naar de bouwsteen OverdrachtVerrichting en daarin ook de verrichtingsdatum, aanvragend en uitvoerend specialisme.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reference to the ProcedureTransfer information model including the date of the procedure, requesting and executive specialty.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Verwijzing naar de bouwsteen OverdrachtVerrichting en daarin ook de verrichtingsdatum, aanvragend en uitvoerend specialisme."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
-         <fhir:type>
-            <fhir:code value="10843"/>
-         </fhir:type>
       </fhir:element>
    </fhir:snapshot>
 </fhir:StructureDefinition>

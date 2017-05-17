@@ -1,112 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.GlasgowComaScale"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.8"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.GlasgowComaScale"/>
    <fhir:title value="nl.zorg.GlasgowComaScale"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Vijftienpuntschaal waarmee het bewustzijnsniveau van een persoon, van volkomen helder tot diep bewusteloos, kan worden weergegeven in een cijfer, de zogenaamde EMV-score.&#xA;De Glasgow comascore ofwel EMV (Eye-Motor-Verbal) score is een maat voor de mate van het bewustzijn, gebaseerd op oog-, verbale en bewegingsreacties op specifieke voorgeschreven hoorbare en voelbare prikkels.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Fifteen-point scale for expressing a person’s level of consciousness, from fully awake to deep unconsciousness, in a number: the so-called EMV score. &#xA;The Glasgow Coma Scale score or EMV (Eye-Motor-Verbal) score is a scale to measure the extent of consciousness, based on eye, verbal and motor responses to specific prescribed sound and pain stimuli.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De Glasgow comascore biedt de mogelijkheid om een klinische observatie betreffende de bewustzijnstoestand van een patiënt vast te leggen met een gevalideerd instrument dat gebruikt maakt van de reacties van een patiënt op stimuli.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The GCS score provides the opportunity to document a clinical observation of a patient’s conscious state with a validated instrument which makes use of a patient’s responses to stimuli.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-07-16"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Vijftienpuntschaal waarmee het bewustzijnsniveau van een persoon, van volkomen helder tot diep bewusteloos, kan worden weergegeven in een cijfer, de zogenaamde EMV-score.&#xA;De Glasgow comascore ofwel EMV (Eye-Motor-Verbal) score is een maat voor de mate van het bewustzijn, gebaseerd op oog-, verbale en bewegingsreacties op specifieke voorgeschreven hoorbare en voelbare prikkels."/>
+   <fhir:purpose value="De Glasgow comascore biedt de mogelijkheid om een klinische observatie betreffende de bewustzijnstoestand van een patiënt vast te leggen met een gevalideerd instrument dat gebruikt maakt van de reacties van een patiënt op stimuli."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Glascow coma schaal"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.8.1">
          <fhir:path value="GlasgowComaScale"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen GlasgowComaScale. Dit rootconcept bevat alle gegevenselementen van de bouwsteen GlasgowComaScale.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the GlasgowComaScale information model. This root concept contains all data elements of the GlasgowComaScale information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen GlasgowComaScale. Dit rootconcept bevat alle gegevenselementen van de bouwsteen GlasgowComaScale."/>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.8">
          <fhir:path value="GlasgowComaScale.GlasgowComaScaleDatumTijd"/>
          <fhir:label value="GlasgowComaScaleDatumTijd"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Tijdstip waarop de EMV score werd bepaald.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Time at which the EMV score was determined.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Tijdstip waarop de EMV score werd bepaald."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.9">
          <fhir:path value="GlasgowComaScale.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Opmerking over de (context van de) meting van de EMV score, zoals eventuele problemen of factoren die van invloed kunnen zijn op de interpretatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Comment on (the context of) the EMV score measurement, such as any problems or factors that may influence interpretation.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Opmerking over de (context van de) meting van de EMV score, zoals eventuele problemen of factoren die van invloed kunnen zijn op de interpretatie."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.10">
          <fhir:path value="GlasgowComaScale.TotaalScore"/>
          <fhir:label value="TotaalScore"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De som van de EMV scores, uitgedrukt als getal in het bereik 3-15. De waarde hoeft niet te worden vastgelegd, omdat deze altijd op grond van de deelscores berekend kan worden, en omdat het vastleggen van het totaal bij een niet goed te bepalen deelscore niet gebruikelijk is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The sum of the EMV scores, expressed as a number on a scale from 3-15. The value does not have to be recorded, as it can always be calculated based on the individual scores, and as recording the total is not common for a difficult to determine individual score.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De som van de EMV scores, uitgedrukt als getal in het bereik 3-15. De waarde hoeft niet te worden vastgelegd, omdat deze altijd op grond van de deelscores berekend kan worden, en omdat het vastleggen van het totaal bij een niet goed te bepalen deelscore niet gebruikelijk is."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7888"/>
+            <fhir:code value="https://zibs.nl/datatypes/INT"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.2">
          <fhir:path value="GlasgowComaScale.GCS_Eyes"/>
          <fhir:label value="GCS_Eyes"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Beste response van de ogen op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingEscore.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Best eye response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ExplanationEScore concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Beste response van de ogen op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingEscore."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7886"/>
+            <fhir:code value="https://zibs.nl/datatypes/CO"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.3">
          <fhir:path value="GlasgowComaScale.ToelichtingEscore"/>
          <fhir:label value="ToelichtingEscore"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Reden, dat geen oog response getest kon worden. Dit wordt als vrije tekst doorgegeven. Een veel gebruikte notatie is de afkorting: c (voor closed) indien de ogen gesloten zijn.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reason why no eye response test could be done. This is to be entered as free text. An often-used notation is the abbreviation c (closed), in the event that the eyes are closed.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Reden, dat geen oog response getest kon worden. Dit wordt als vrije tekst doorgegeven. Een veel gebruikte notatie is de afkorting: c (voor closed) indien de ogen gesloten zijn."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.4">
          <fhir:path value="GlasgowComaScale.GCS_Motor"/>
          <fhir:label value="GCS_Motor"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Beste motorische response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingMscore.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Best motor response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ExplanationMScore concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Beste motorische response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingMscore."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7886"/>
+            <fhir:code value="https://zibs.nl/datatypes/CO"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.5">
          <fhir:path value="GlasgowComaScale.ToelichtingMscore"/>
          <fhir:label value="ToelichtingMscore"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Reden, dat geen motorische response getest kon worden. Dit wordt als vrije tekst doorgegeven.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reason why no motor response test could be done. This is to be entered as free text.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Reden, dat geen motorische response getest kon worden. Dit wordt als vrije tekst doorgegeven."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.6">
          <fhir:path value="GlasgowComaScale.GCS_Verbal"/>
          <fhir:label value="GCS_Verbal"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Beste verbale response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingVscore.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Best verbal response to a stimulus. The element is mandatory, but does not require a numerical value. If no value is given, the reason for this is to be provided in the ExplanationVScore concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Beste verbale response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingVscore."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7886"/>
+            <fhir:code value="https://zibs.nl/datatypes/CO"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.7">
          <fhir:path value="GlasgowComaScale.ToelichtingVscore"/>
          <fhir:label value="ToelichtingVscore"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Reden, dat geen verbale response getest kon worden. Dit wordt als vrije tekst doorgegeven.&#xA;Een veel gebruikte notatie is de toevoeging 'Tube' bij een geïntubeerde patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Reason why no verbal response test could be done. This is to be entered as free text. &#xA;An often-used notation is the addition 'Tube' for an intubated patient.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Reden, dat geen verbale response getest kon worden. Dit wordt als vrije tekst doorgegeven.&#xA;Een veel gebruikte notatie is de toevoeging 'Tube' bij een geïntubeerde patiënt."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

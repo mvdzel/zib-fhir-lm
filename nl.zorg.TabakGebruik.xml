@@ -1,62 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.TabakGebruik"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.2"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.TabakGebruik"/>
    <fhir:title value="nl.zorg.TabakGebruik"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Tabak is een product afkomstig van de bladeren van de tabaksplant dat als genotmiddel wordt gerookt. Rookbare vormen van tabak zijn shag, sigaretten, sigaren en pijptabak. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van tabak. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Tobacco is a product that comes from the leaves of the tobacco plant, which is smoked as a drug. Smokable forms of tobacco include rolling tobacco, cigarettes, cigars and pipe tobacco. This information model describes the information asked of the patient about their use of tobacco.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Tijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van tabak of blootstellingen aan tabaksrook thuis of elders. Informatie over tabakgebruik kan van belang zijn i.v.m. behandeling en diagnostiek. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;During the social anamnesis, the patient is frequently asked about their use of tobacco or exposure to tobacco smoke at home or elsewhere. Information on tobacco use can be important for treatment and diagnostics.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Tabak is een product afkomstig van de bladeren van de tabaksplant dat als genotmiddel wordt gerookt. Rookbare vormen van tabak zijn shag, sigaretten, sigaren en pijptabak. Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van tabak. "/>
+   <fhir:purpose value="Tijdens de sociale anamnese wordt frequent gevraagd naar het gebruik van tabak of blootstellingen aan tabaksrook thuis of elders. Informatie over tabakgebruik kan van belang zijn i.v.m. behandeling en diagnostiek. "/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="social history, sociale anamnese, roken, tabak"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.2.1">
          <fhir:path value="TabakGebruik"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen TabakGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen TabakGebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the TobaccoUse information model. This concept contains all data elements of the TobaccoUse information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen TabakGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen TabakGebruik."/>
       </fhir:element>
       <fhir:element id="NL-CM:7.2.3">
          <fhir:path value="TabakGebruik.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Relevante opmerkingen over het gebruik.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Relevant comments on the patient’s use of tobacco.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Relevante opmerkingen over het gebruik."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.2.2">
          <fhir:path value="TabakGebruik.WaarnemingGebruik"/>
          <fhir:label value="WaarnemingGebruik"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Deze container bevat alle gegevens over de mate waarin de patiënt aan tabak is blootgesteld geweest of wordt blootgesteld.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;This container contains all information on the extent to which the patient is or was exposed to tobacco.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Deze container bevat alle gegevens over de mate waarin de patiënt aan tabak is blootgesteld geweest of wordt blootgesteld."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.5">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.StopDatum"/>
+         <fhir:label value="StopDatum"/>
+         <fhir:definition value="De datum waarop is gestopt met roken"/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10733"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.6">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.Hoeveelheid"/>
+         <fhir:label value="Hoeveelheid"/>
+         <fhir:definition value="Het aantal sigaretten, sigaren of gram shag per dag, week, maand of jaar."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.4">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.StartDatum"/>
+         <fhir:label value="StartDatum"/>
+         <fhir:definition value="De datum waarop is gestart met roken. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.7">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.PackYears"/>
+         <fhir:label value="PackYears"/>
+         <fhir:definition value="De eenheid waarin de totale blootstelling aan tabaksrook bij rokers beschreven wordt.  Bij sigaretten wordt dit berekend aan de hand van het aantal gerookte pakjes sigaretten per dag (inhoud pakje is 20 stuks) en het aantal jaren dat werd gerookt. Bij andere rookwaren wordt vaak een omrekening naar equivalente sigarettenconsumptie gehanteerd. Vaak wordt ook alleen het aantal packyears geschat."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/INT"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.2.9">
          <fhir:path value="TabakGebruik.SoortTabakGebruik"/>
          <fhir:label value="SoortTabakGebruik"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Soort tabak die de patiënt gebruikt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Type of tobacco the patient uses.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Soort tabak die de patiënt gebruikt."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.2.10">
          <fhir:path value="TabakGebruik.TabakGebruikStatus"/>
          <fhir:label value="TabakGebruikStatus"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De status van het tabaksgebruik van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The status of the patient’s tobacco use.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De status van het tabaksgebruik van de patiënt."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10733"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

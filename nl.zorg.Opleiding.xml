@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.Opleiding"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.10"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Opleiding"/>
    <fhir:title value="nl.zorg.Opleiding"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De opleiding beschrijft de hoogst genoten opleiding.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Education indicates the highest level of education achieved.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gevolgde opleiding kan een indicatie geven over de mate waarin de patiënt in staat is om te begrijpen wat de arts uitlegt over ziekte, symptomen, behandeling en vooruitzichten als ook de mate waarin de patiënt inzicht heeft in het gebruik van de gezondheidszorg en de kans op ziektes.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The obtained degree can offer an indication of the extent to which the patient is capable of understanding the doctor’s explanations about diseases, symptoms, treatment and prospects as well as the patient’s insight into the use of healthcare and the chances of contracting certain diseases.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De opleiding beschrijft de hoogst genoten opleiding."/>
+   <fhir:purpose value="De gevolgde opleiding kan een indicatie geven over de mate waarin de patiënt in staat is om te begrijpen wat de arts uitlegt over ziekte, symptomen, behandeling en vooruitzichten als ook de mate waarin de patiënt inzicht heeft in het gebruik van de gezondheidszorg en de kans op ziektes."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="social history, sociale anamnese, opleiding, education, school"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.10.1">
          <fhir:path value="Opleiding"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Dit is het rootconcept van de bouwsteen Opleiding. Het concept bevat alle gegevenselementen van de bouwsteen Opleiding.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the Education information model. This concept contains all data elements of the Education information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Dit is het rootconcept van de bouwsteen Opleiding. Het concept bevat alle gegevenselementen van de bouwsteen Opleiding."/>
       </fhir:element>
       <fhir:element id="NL-CM:7.10.2">
          <fhir:path value="Opleiding.Schooltype"/>
          <fhir:label value="Schooltype"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Typering van de hoogst genoten opleiding.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Indication of the highest level of education achieved.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Typering van de hoogst genoten opleiding."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.10.3">
          <fhir:path value="Opleiding.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indien relevant geacht kan middels de toelichting een specificatie van de opleiding (bijv. patient studeert Geneeskunde) worden toegevoegd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;If deemed relevant, a specification of the degree program can be provided by means of an explanation (e.g.: patient is in medical school).&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Indien relevant geacht kan middels de toelichting een specificatie van de opleiding (bijv. patient studeert Geneeskunde) worden toegevoegd."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.Wilsverklaring"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.15"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Wilsverklaring"/>
    <fhir:title value="nl.zorg.Wilsverklaring"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een wilsverklaring is een mondelinge of schriftelijke omschrijving van de wens van de patiënt ten aanzien van toekomstig medisch handelen of het levenseinde. Een wilsverklaring is vooral voor situaties waarin de patiënt niet meer over deze beslissingen kan praten met de zorgverlener.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A living will is a verbal or written description of the patient’s wishes with regard to future medical action or end of their life. A living will is mainly used for situations in which the patient is no longer able to speak about these decisions with their healthcare provider.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een goed overzicht van wensen van de patiënt  is belangrijk. Een zorgverlener kan de wilsverklaring gebruiken om de bestaande wensen met de betrokkenen te bespreken  en om deze wensen in het eigen beleid op te nemen.  Vooral in de acute situatie is een beknopte en overzichtelijke lijst van belang. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A good overview of the patient’s wishes is important. A healthcare provider can use the living will to discuss the existing wishes with the persons involved and to incorporate these wishes in their own policy.  A concise, orderly list is of particular importance in acute care situations.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een wilsverklaring is een mondelinge of schriftelijke omschrijving van de wens van de patiënt ten aanzien van toekomstig medisch handelen of het levenseinde. Een wilsverklaring is vooral voor situaties waarin de patiënt niet meer over deze beslissingen kan praten met de zorgverlener."/>
+   <fhir:purpose value="Een goed overzicht van wensen van de patiënt  is belangrijk. Een zorgverlener kan de wilsverklaring gebruiken om de bestaande wensen met de betrokkenen te bespreken  en om deze wensen in het eigen beleid op te nemen.  Vooral in de acute situatie is een beknopte en overzichtelijke lijst van belang. "/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="wilsverklaring"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.15.1">
          <fhir:path value="Wilsverklaring"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Wilsverklaring. Dit concept bevat alle gegevenselementen van de bouwsteen Wilsverklaring.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the LivingWill information model. This concept contains all data elements of the LivingWill information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Wilsverklaring. Dit concept bevat alle gegevenselementen van de bouwsteen Wilsverklaring."/>
       </fhir:element>
       <fhir:element id="NL-CM:7.15.2">
          <fhir:path value="Wilsverklaring.WilsverklaringType"/>
          <fhir:label value="WilsverklaringType"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Aanduiding van de verschillende soorten wilsverklaringen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;List of the different types of living wills.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Aanduiding van de verschillende soorten wilsverklaringen."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.15.4">
          <fhir:path value="Wilsverklaring.Aandoening::Probleem"/>
          <fhir:label value="Aandoening::Probleem"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het probleem of aandoening waar de wilsverklaring betrekking op heeft.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The problem or disorder to which the living will applies.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Het probleem of aandoening waar de wilsverklaring betrekking op heeft."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
-         <fhir:type>
-            <fhir:code value="9571"/>
-         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.15.3">
          <fhir:path value="Wilsverklaring.Vertegenwoordiger::Contactpersoon"/>
          <fhir:label value="Vertegenwoordiger::Contactpersoon"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De persoon die wettelijke vertegerwoordiger is of in de ondertekende volmacht als gevolmachtigde wordt benoemd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The person who is the legal representative or is appointed as the authorized representative in the signed authorization.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De persoon die wettelijke vertegerwoordiger is of in de ondertekende volmacht als gevolmachtigde wordt benoemd."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
-         <fhir:type>
-            <fhir:code value="9571"/>
-         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.15.5">
          <fhir:path value="Wilsverklaring.WilsverklaringDocument"/>
          <fhir:label value="WilsverklaringDocument"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Ingescand brondocument met de wilsverklaring en handtekening van de patiënt, bijv. een PDF.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Scanned source document with the living will and the patient's signature, such as a PDF.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Ingescand brondocument met de wilsverklaring en handtekening van de patiënt, bijv. een PDF."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7885"/>
+            <fhir:code value="https://zibs.nl/datatypes/ED"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.15.6">
          <fhir:path value="Wilsverklaring.Toelichting"/>
          <fhir:label value="Toelichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Toelichting bij de wilsverklaring, bijvoorbeeld de vorm, zoals een penning, een tattoo etc. of waar de wilsverklaring te vinden is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Explanation of the living will: the form, such as a medallion, tattoo, etc., or where the living will can be found.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Toelichting bij de wilsverklaring, bijvoorbeeld de vorm, zoals een penning, een tattoo etc. of waar de wilsverklaring te vinden is."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.15.7">
          <fhir:path value="Wilsverklaring.WilsverklaringDatum"/>
          <fhir:label value="WilsverklaringDatum"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum waarop de wilsverklaring is vastgelegd.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date on which the living will was recorded.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De datum waarop de wilsverklaring is vastgelegd."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

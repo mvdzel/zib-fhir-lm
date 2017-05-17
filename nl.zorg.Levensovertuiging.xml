@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.Levensovertuiging"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.5"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Levensovertuiging"/>
    <fhir:title value="nl.zorg.Levensovertuiging"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De levens- en/of geloofsovertuiging van de patiënt.  &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s life stance and/or religion.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Levensovertuiging kan implicaties hebben rondom de behandeling en verzorging, zoals bij behandelaanwijzingen, dieet, geestelijke verzorging.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Life stance may have implications for treatment and care, such as in instructions for treatment, diet, or mental care.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De levens- en/of geloofsovertuiging van de patiënt.  "/>
+   <fhir:purpose value="Levensovertuiging kan implicaties hebben rondom de behandeling en verzorging, zoals bij behandelaanwijzingen, dieet, geestelijke verzorging."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="social history, sociale anamnese, levensovertuiging, geloof "/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.5.1">
          <fhir:path value="LevensovertuigingRC"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Levensovertuiging. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Levensovertuiging.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the LifeStance information model. This root concept contains all data elements of the LifeStance information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Levensovertuiging. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Levensovertuiging."/>
       </fhir:element>
       <fhir:element id="NL-CM:7.5.2">
          <fhir:path value="LevensovertuigingRC.Levensovertuiging"/>
          <fhir:label value="Levensovertuiging"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De levens- en/of geloofsovertuiging van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s life stance and/or religion.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De levens- en/of geloofsovertuiging van de patiënt."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

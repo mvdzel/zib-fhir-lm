@@ -1,112 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.Patient"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.0.1"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.Patient"/>
    <fhir:title value="nl.zorg.Patient"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een persoon die medische zorg ontvangt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A person who receives medical care.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording relevant information to identify the patient for administrative purposes and process support.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een persoon die medische zorg ontvangt."/>
+   <fhir:purpose value="Het vastleggen van de relevante gegevens ten behoeve van identificatie van de patiënt, voor administratieve doeleinden en procesondersteuning."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Patient, zorgverlener, contact"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:0.1.1">
          <fhir:path value="Patient"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the Patient information model. This root concept contains all data elements of the Patient information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Patiënt. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Patiënt. "/>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.6">
          <fhir:path value="Patient.Naamgegevens"/>
          <fhir:label value="Naamgegevens"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Naamgegevens. Deze container bevat alle gegevenselementen van het concept Naamgegevens.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the NameInformation concept. This container contains all data elements of the NameInformation concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Container van het concept Naamgegevens. Deze container bevat alle gegevenselementen van het concept Naamgegevens."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.34">
+         <fhir:path value="Patient.Naamgegevens.Naamgebruik"/>
+         <fhir:label value="Naamgebruik"/>
+         <fhir:definition value="Dit concept  geeft de achternaam of volgorde van achternamen aan waarmee de persoon aangesproken of aangeschreven wil worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10761"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.27">
+         <fhir:path value="Patient.Naamgegevens.Roepnaam"/>
+         <fhir:label value="Roepnaam"/>
+         <fhir:definition value="De naam waarmee de persoon gebruikelijk aangesproken wordt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.26">
+         <fhir:path value="Patient.Naamgegevens.Voornamen"/>
+         <fhir:label value="Voornamen"/>
+         <fhir:definition value="Officiële voornamen van de persoon."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.35">
+         <fhir:path value="Patient.Naamgegevens.Initialen"/>
+         <fhir:label value="Initialen"/>
+         <fhir:definition value="Initialen van de persoon."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.37">
+         <fhir:path value="Patient.Naamgegevens.GeslachtsnaamPartner"/>
+         <fhir:label value="GeslachtsnaamPartner"/>
+         <fhir:definition value="Container van het concept GeslachtsnaamPartner. Deze container bevat alle gegevenselementen van het concept GeslachtsnaamPartner."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.36">
+         <fhir:path value="Patient.Naamgegevens.Geslachtsnaam"/>
+         <fhir:label value="Geslachtsnaam"/>
+         <fhir:definition value="Container van het concept Geslachtsnaam. Deze container bevat alle gegevenselementen van het concept Geslachtsnaam"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.4">
          <fhir:path value="Patient.Adresgegevens"/>
          <fhir:label value="Adresgegevens"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Adresgegevens. Deze container bevat alle gegevenselementen van het concept Adresgegevens.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the AddressInformation concept. This container contains all data elements of the AddressInformation concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Container van het concept Adresgegevens. Deze container bevat alle gegevenselementen van het concept Adresgegevens."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.15">
+         <fhir:path value="Patient.Adresgegevens.Postcode"/>
+         <fhir:label value="Postcode"/>
+         <fhir:definition value="Postcode van het adres.&#xA;Bij Nederlandse adressen bij voorkeur de postcode uit de Postcodetabel (OID: 2.16.840.1.113883.2.4.4.15) gebruiken."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10761"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.11">
+         <fhir:path value="Patient.Adresgegevens.AdresSoort"/>
+         <fhir:label value="AdresSoort"/>
+         <fhir:definition value="Het soort adres waarvan sprake is, bijv. woonadres, postadres."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.28">
+         <fhir:path value="Patient.Adresgegevens.AdditioneleInformatie"/>
+         <fhir:label value="AdditioneleInformatie"/>
+         <fhir:definition value="Extra informatie zoals naam van het gebouw, gebouwnummer, ingang, routenummer. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.42">
+         <fhir:path value="Patient.Adresgegevens.AanduidingBijNummer"/>
+         <fhir:label value="AanduidingBijNummer"/>
+         <fhir:definition value="De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.13">
+         <fhir:path value="Patient.Adresgegevens.Huisnummer"/>
+         <fhir:label value="Huisnummer"/>
+         <fhir:definition value="Huisnummer van het adres."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.17">
+         <fhir:path value="Patient.Adresgegevens.Land"/>
+         <fhir:label value="Land"/>
+         <fhir:definition value="Land waar het adres zich bevindt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.40">
+         <fhir:path value="Patient.Adresgegevens.Huisnummerletter"/>
+         <fhir:label value="Huisnummerletter"/>
+         <fhir:definition value="Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.41">
+         <fhir:path value="Patient.Adresgegevens.Huisnummertoevoeging"/>
+         <fhir:label value="Huisnummertoevoeging"/>
+         <fhir:definition value="Die letters of tekens die noodzakelijk zijn om, naast het huisnummer en de letter, de brievenbus te vinden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.12">
+         <fhir:path value="Patient.Adresgegevens.Straat"/>
+         <fhir:label value="Straat"/>
+         <fhir:definition value="Straatnaam van het adres."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.16">
+         <fhir:path value="Patient.Adresgegevens.Gemeente"/>
+         <fhir:label value="Gemeente"/>
+         <fhir:definition value="Gemeente van inschrijving. &#xA;Bij Nederlandse gemeenten bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.14">
+         <fhir:path value="Patient.Adresgegevens.Woonplaats"/>
+         <fhir:label value="Woonplaats"/>
+         <fhir:definition value="Een geografisch bepaald gebied dat een deel is van het gemeentelijke grondgebied.&#xA;Bij Nederlandse woonplaatsen bij voorkeur de naam uit de GBA tabel 33 (OID: 2.16.840.1.113883.2.4.6.14) gebruiken."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.5">
          <fhir:path value="Patient.Contactgegevens"/>
          <fhir:label value="Contactgegevens"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Contactgegevens. Deze container bevat alle gegevenselementen van het concept Contactgegevens.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the ContactInformation concept. This container contains all data elements of the ContactInformation concept.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Container van het concept Contactgegevens. Deze container bevat alle gegevenselementen van het concept Contactgegevens."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
-         <fhir:type>
-            <fhir:code value="10761"/>
-         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.18">
+         <fhir:path value="Patient.Contactgegevens.EmailAdressen"/>
+         <fhir:label value="EmailAdressen"/>
+         <fhir:definition value="Container van het concept EmailAdressen. Deze container bevat alle gegevenselementen van het concept Emailadressen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:0.1.21">
+         <fhir:path value="Patient.Contactgegevens.Telefoonnummers"/>
+         <fhir:label value="Telefoonnummers"/>
+         <fhir:definition value="Container van het concept Telefoonnummers. Deze container bevat alle gegevenselementen van het concept Telefoonnummers."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.33">
          <fhir:path value="Patient.DatumOverlijden"/>
          <fhir:label value="DatumOverlijden"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The date on which the patient died. A ‘vague’ date, such as only the year, is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="De datum waarop de patiënt overleden is. Een vage datum, b.v. alleen jaartal is toegestaan."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10761"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.7">
          <fhir:path value="Patient.PatientIdentificatienummer"/>
          <fhir:label value="PatientIdentificatienummer"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The patient’s identification number. In transfer situations, use of the social security number (BSN) must comply with the Use of Social Security Numbers in Healthcare Act (Wbsn-z). In other situations, other number systems can be used, such as internal hospital patient numbers for example.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Identificatienummer van de patiënt. Bij overdrachtsituaties dient het gebruik van het burgerservicenummer (BSN) in overeenstemming te zijn met de 'Wet gebruik burgerservicenummer in de zorg (Wbsn-z)'. In andere situaties kunnen andere nummersystemen gebruikt worden, zoals bijv. interne ziekenhuis patiëntnummers."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
          <fhir:type>
-            <fhir:code value="7889"/>
+            <fhir:code value="https://zibs.nl/datatypes/"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.10">
          <fhir:path value="Patient.Geboortedatum"/>
          <fhir:label value="Geboortedatum"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s date of birth. The date of birth is mandatory for a patient. A vague date (such as only the year) is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.31">
          <fhir:path value="Patient.MeerlingIndicator"/>
          <fhir:label value="MeerlingIndicator"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indicator die aangeeft of de patiënt één van een meerling is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An indication stating whether the patient is of a multiple birth.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Indicator die aangeeft of de patiënt één van een meerling is."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7892"/>
+            <fhir:code value="https://zibs.nl/datatypes/BL"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.9">
          <fhir:path value="Patient.Geslacht"/>
          <fhir:label value="Geslacht"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Administratief geslacht van de patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Patient’s administrative gender.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Administratief geslacht van de patiënt."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10761"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:0.1.32">
          <fhir:path value="Patient.OverlijdensIndicator"/>
          <fhir:label value="OverlijdensIndicator"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Indicator die aangeeft of de patiënt overleden is.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An indication stating whether the patient has died.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Indicator die aangeeft of de patiënt overleden is."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="10761"/>
+            <fhir:code value="https://zibs.nl/datatypes/BL"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

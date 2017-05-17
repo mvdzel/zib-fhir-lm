@@ -1,42 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.OverdrachtConcern"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.5.1"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.OverdrachtConcern"/>
    <fhir:title value="nl.zorg.OverdrachtConcern"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Bij het vastleggen van relevante gezondheidsproblemen van de patiënt zijn twee aspecten van belang: enerzijds de waarneming van het probleem (de klacht, het symptoom, de diagnose enz.) zelf en anderzijds de beoordeling of het actief beleid vergt. Deze beoordeling door de zorgverlener ligt vast in het ‘Concern’, het punt van aandacht. Het is mogelijk om Problemen, die onderling samenhangen, onder te brengen onder één Concern.&#xA;Het onderscheid tussen vastgestelde problemen en de aandacht die deze vergen, maakt het mogelijk aan te geven waarop medisch of verpleegkundig beleid van toepassing dan wel noodzakelijk is. Als voorbeeld kan een goed ingestelde diabetes worden genoemd; deze vereist geen actief beleid van de zorgverlener.&#xA;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). De toestand kan aanleiding zijn voor diagnostisch of therapeutisch beleid.&#xA;Een probleem omvat allerlei soorten medische of verpleegkundige gegevens, die een gezondheidsprobleem representeren. Een probleem kan verschillende typen gezondheidsproblemen representeren:&#xA;&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;klacht&lt;/i&gt; (Complaint, finding by patient): een subjectieve, als negatief ervaren waarneming van de gezondheid. Voorbeelden: buikpijn, geheugenverlies &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;symptoom&lt;/i&gt; (Symptom): een waarneming door of over de patiënt die de betrekking zou kunnen hebben op een bepaalde ziekte. Voorbeelden : koorts, bloed bij de ontlasting, witte vlekken op het gehemelte;  &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een&lt;i&gt; bevinding&lt;/i&gt; (Finding): een waarneming van de zorgverlener m.b.t. de gezondheid van de patiënt. Voorbeelden: vergrote lever, pathologische voetzoolreflex, afwijkende Minimal Mental State, afwezig gebitselement. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;conditie&lt;/i&gt; (Condition): een beschrijving van een (afwijkende) toestand van het lichaam, die niet noodzakelijkerwijs als ziekte wordt gezien. Voorbeelden: zwangerschap, circulatiestoornis, vergiftiging. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;diagnose&lt;/i&gt; (Diagnosis): medische interpretatie van klachten en bevindingen. Voorbeelden: Diabetes Mellitus type II, pneumonie, Hemolytisch Uremisch Syndroom. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een functionele beperking (Functional Limitation): een vermindering van functionele mogelijkheden. Voorbeelden: verminderde mobiliteit, hulp nodig bij aankleden. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;complicatie&lt;/i&gt; (Complication): Iedere diagnose die door de zorgverlener gezien wordt als een onvoorzien en ongewenst gevolg van medisch handelen. Voorbeelden: wondinfectie na chirurgie, gehoorverlies door antibioticagebruik.  &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;aandachtspunt&lt;/i&gt; (Problem): iedere omstandigheid die relevant is bij de medische behandeling, maar niet in één van de genoemde categorieën past. Voorbeelden: Patiënt verblijft in Nederland zonder rechtmatige status en is niet verzekerd, patiënt kan geen glucosecontrole uitvoeren.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;In de eerste lijn vervult het concept Episode de rol van Concern. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Determining relevant health issues of the patient involves two important aspects: observing the problem itself on the one hand (complaints, symptoms, diagnosis, etc.) and evaluation of whether or not an active policy is required on the other. This evaluation by the healthcare provider is documented in the ‘Concern’, the point of attention. Multiple, linked Problems can be subsumed under a single Concern. &#xA;The difference between recorded problems and the attention they require enables an indication of which issues medical or nursing policy applies to, or in which issues policy is necessary. An example is well-managed diabetes; this requires no active policy of the healthcare provider. &#xA; &#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint), or by their healthcare provider (in the form of a diagnosis, for example). The situation can form cause for diagnostic or therapeutic policy. &#xA;A problem includes all kinds of medical or nursing information that represents a health problem. A problem can represent various types of health problems: &#xA; &#xA;&lt;ul&gt; &#xA; &lt;li&gt;A &lt;i&gt;complaint, finding by patient&lt;/i&gt;: a subjective, negatively experienced observation of the patient’s health. Examples: stomach ache, amnesia &lt;/li&gt; &#xA; &lt;li&gt;A &lt;i&gt;symptom&lt;/i&gt;: an observation by or about the patient which may indicate a certain disease. Examples: fever, blood in stool, white spots on the roof of the mouth; &lt;/li&gt; &#xA; &lt;li&gt;A&lt;i&gt; finding&lt;/i&gt;: a healthcare provider’s observation of a patient’s health. Examples: enlarged liver, pathological plantar reflex, deviating Minimal Mental State, missing teeth. &lt;/li&gt; &#xA; &lt;li&gt;A &lt;i&gt;condition&lt;/i&gt;: a description of a (deviating) bodily state, which may or may not be seen as a disease. Examples: pregnancy, circulatory disorder, poisoning. &lt;/li&gt; &#xA; &lt;li&gt;A &lt;i&gt;diagnosis&lt;/i&gt;: medical interpretation of complaints and findings. Examples: Diabetes Mellitus type II, pneumonia, hemolytic-uremic syndrome. &lt;/li&gt; &#xA; &lt;li&gt;A &lt;i&gt;functional limitation&lt;/i&gt;: a reduction of functional options. Examples: reduced mobility, help required for dressing. &lt;/li&gt; &#xA; &lt;li&gt;A &lt;i&gt;complication&lt;/i&gt;: Every diagnosis seen by the healthcare provider as an unforeseen and undesired result of medical action. Examples: post-operative wound infections, loss of hearing through the use of antibiotics.  &lt;/li&gt; &#xA; &lt;li&gt;A &lt;i&gt;problem&lt;/i&gt;: any circumstance that is relevant to the medical treatment, but does not fit into one of the categories listed. Examples: Patient resides in the Netherlands without a legal status and is not insured; patient is not able to check their own blood sugar levels.&lt;/li&gt; &#xA;&lt;/ul&gt; &#xA;&#xA;In first-line care the Episode concept fills the role of Concern.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een overzicht van de problemen met betrekking tot de gezondheid van een patiënt heeft tot doel om alle bij de patiënt betrokken zorgverleners te informeren over de gezondheidstoestand van de patiënt in het heden en het verleden. Het geeft inzicht in welke problemen medisch handelen verlangen, welke onder controle zijn en welke niet meer actueel zijn. Het probleemoverzicht geeft ook direct de medische context weer voor toegediende medicatie en uitgevoerde procedures.&#xA;Het overzicht bevordert een gerichte en efficiënte voortzetting van de zorg voor de patiënt.&#xA;Een volledige probleemlijst is van belang ten behoeve van geautomatiseerde beslissingsondersteuning en het bepalen van contra-indicaties.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An overview of a patient’s health problems has the purpose of informing all healthcare providers involved in the patient’s care on the patient’s current and past health condition. It provides insight into which problems require medical action, which are under control and which are no longer current. The problem overview also directly provides medical context for medication administered and procedures carried out. &#xA;The overview promotes an efficient, targeted continuation of the patient’s care. &#xA;A complete list of problems is of importance for automated decision support and determining contraindications.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-08-25"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Bij het vastleggen van relevante gezondheidsproblemen van de patiënt zijn twee aspecten van belang: enerzijds de waarneming van het probleem (de klacht, het symptoom, de diagnose enz.) zelf en anderzijds de beoordeling of het actief beleid vergt. Deze beoordeling door de zorgverlener ligt vast in het ‘Concern’, het punt van aandacht. Het is mogelijk om Problemen, die onderling samenhangen, onder te brengen onder één Concern.&#xA;Het onderscheid tussen vastgestelde problemen en de aandacht die deze vergen, maakt het mogelijk aan te geven waarop medisch of verpleegkundig beleid van toepassing dan wel noodzakelijk is. Als voorbeeld kan een goed ingestelde diabetes worden genoemd; deze vereist geen actief beleid van de zorgverlener.&#xA;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose). De toestand kan aanleiding zijn voor diagnostisch of therapeutisch beleid.&#xA;Een probleem omvat allerlei soorten medische of verpleegkundige gegevens, die een gezondheidsprobleem representeren. Een probleem kan verschillende typen gezondheidsproblemen representeren:&#xA;&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;klacht&lt;/i&gt; (Complaint, finding by patient): een subjectieve, als negatief ervaren waarneming van de gezondheid. Voorbeelden: buikpijn, geheugenverlies &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;symptoom&lt;/i&gt; (Symptom): een waarneming door of over de patiënt die de betrekking zou kunnen hebben op een bepaalde ziekte. Voorbeelden : koorts, bloed bij de ontlasting, witte vlekken op het gehemelte;  &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een&lt;i&gt; bevinding&lt;/i&gt; (Finding): een waarneming van de zorgverlener m.b.t. de gezondheid van de patiënt. Voorbeelden: vergrote lever, pathologische voetzoolreflex, afwijkende Minimal Mental State, afwezig gebitselement. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;conditie&lt;/i&gt; (Condition): een beschrijving van een (afwijkende) toestand van het lichaam, die niet noodzakelijkerwijs als ziekte wordt gezien. Voorbeelden: zwangerschap, circulatiestoornis, vergiftiging. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;diagnose&lt;/i&gt; (Diagnosis): medische interpretatie van klachten en bevindingen. Voorbeelden: Diabetes Mellitus type II, pneumonie, Hemolytisch Uremisch Syndroom. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een functionele beperking (Functional Limitation): een vermindering van functionele mogelijkheden. Voorbeelden: verminderde mobiliteit, hulp nodig bij aankleden. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;complicatie&lt;/i&gt; (Complication): Iedere diagnose die door de zorgverlener gezien wordt als een onvoorzien en ongewenst gevolg van medisch handelen. Voorbeelden: wondinfectie na chirurgie, gehoorverlies door antibioticagebruik.  &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een &lt;i&gt;aandachtspunt&lt;/i&gt; (Problem): iedere omstandigheid die relevant is bij de medische behandeling, maar niet in één van de genoemde categorieën past. Voorbeelden: Patiënt verblijft in Nederland zonder rechtmatige status en is niet verzekerd, patiënt kan geen glucosecontrole uitvoeren.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;In de eerste lijn vervult het concept Episode de rol van Concern. "/>
+   <fhir:purpose value="Een overzicht van de problemen met betrekking tot de gezondheid van een patiënt heeft tot doel om alle bij de patiënt betrokken zorgverleners te informeren over de gezondheidstoestand van de patiënt in het heden en het verleden. Het geeft inzicht in welke problemen medisch handelen verlangen, welke onder controle zijn en welke niet meer actueel zijn. Het probleemoverzicht geeft ook direct de medische context weer voor toegediende medicatie en uitgevoerde procedures.&#xA;Het overzicht bevordert een gerichte en efficiënte voortzetting van de zorg voor de patiënt.&#xA;Een volledige probleemlijst is van belang ten behoeve van geautomatiseerde beslissingsondersteuning en het bepalen van contra-indicaties."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="problemen, klachten, diagnosen, episode"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:5.1.1">
          <fhir:path value="Concern"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen OverdrachtConcern. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtConcern. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the ConcernTransfer information model. This root concept contains all data elements of the ConcernTransfer information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen OverdrachtConcern. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtConcern. "/>
       </fhir:element>
       <fhir:element id="NL-CM:5.1.9">
          <fhir:path value="Concern.ConcernLabel"/>
          <fhir:label value="ConcernLabel"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Eventuele korte tekstuele omschrijving van het concern. Met name in de eerste lijn zal dit gebruikt worden voor de episodenaam.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;If needed, a short, written description of the concern. Mainly in first-line care this will be used for the episode name.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Eventuele korte tekstuele omschrijving van het concern. Met name in de eerste lijn zal dit gebruikt worden voor de episodenaam."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7895"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:5.1.2">
          <fhir:path value="Concern.Probleem"/>
          <fhir:label value="Probleem"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Container van het concept Probleem. Deze container bevat alle gegevenselementen van het concept Probleem.&#xA;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose).  &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Container of the Problem concept. This container contains all data elements of the Problem concept. &#xA; &#xA;A problem describes a situation with regard to an individual’s health and/or welfare. This situation can be described by the person involved (the patient) themselves (in the form of a complaint) or by their healthcare provider (in the form of a diagnosis, for example).  &#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Container van het concept Probleem. Deze container bevat alle gegevenselementen van het concept Probleem.&#xA;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose).  "/>
          <fhir:min value="1"/>
          <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.8">
+         <fhir:path value="Concern.Probleem.ProbleemType"/>
+         <fhir:label value="ProbleemType"/>
+         <fhir:definition value="Het type probleem, zie de conceptbeschrijving."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="9857"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.3">
+         <fhir:path value="Concern.Probleem.ProbleemNaam"/>
+         <fhir:label value="ProbleemNaam"/>
+         <fhir:definition value="De probleemnaam definieert het probleem.  &#xA;&#xA;Afhankelijk van de setting kan één of meer van de onderstaande codestelsels worden gebruikt:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Gestructureerde begrippen: SNOMED CT&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Medische diagnoses: landelijke DHD lijst&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Verpleegkundige diagnoses: NANDA&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Paramedische diagnoses: DHD en NANDA (bieden hier deels oplossing voor)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voor functionele beperkingen: ICF&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voor eerste lijnszorg: ICPC-1 NL&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.6">
+         <fhir:path value="Concern.Probleem.ProbleemBeginDatum"/>
+         <fhir:label value="ProbleemBeginDatum"/>
+         <fhir:definition value="Begin van de aandoening, waarop het probleem betrekking heeft. Vooral bij klachten waarbij het langer duurt voordat de uiteindelijke diagnose gesteld wordt is het belangrijk niet alleen de diagnosedatum te weten, maar ook sinds wanneer de aandoening al bestaat. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.4">
+         <fhir:path value="Concern.Probleem.ProbleemStatus"/>
+         <fhir:label value="ProbleemStatus"/>
+         <fhir:definition value="De probleemstatus beschrijft de toestand van het probleem:&#xA;&lt;ol&gt;&#xA;&#x9;&lt;li&gt;Actuele problemen vormen de focus van het actuele medisch beleid.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Niet-actuele (Historische) problemen vormen een onderdeel van de voorgeschiedenis. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Problemen met status 'Onder controle' verwijzen naar problemen die weliswaar nog steeds bestaan, maar die op dit moment geen specifiek medisch beleid behoeven (bv. een goed ingestelde diabetes). &lt;/li&gt;&#xA;&lt;/ol&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.7">
+         <fhir:path value="Concern.Probleem.ProbleemStatusDatum"/>
+         <fhir:label value="ProbleemStatusDatum"/>
+         <fhir:definition value="Datum vanaf wanneer de huidige waarde van de ProbleemStatus van toepassing is: sinds wanneer actueel, onder controle of niet actueel."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.5">
+         <fhir:path value="Concern.Probleem.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

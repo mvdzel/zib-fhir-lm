@@ -1,118 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
-   <fhir:url value="http://zibs.nl/..."/>
+   <fhir:url value="https://zibs.nl/zibs/nl.zorg.OverdrachtGeplandeZorgActiviteit"/>
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.16.1"/>
+   <fhir:language value="nl"/>
    <fhir:version value="3.0"/>
    <fhir:name value="nl.zorg.OverdrachtGeplandeZorgActiviteit"/>
    <fhir:title value="nl.zorg.OverdrachtGeplandeZorgActiviteit"/>
    <fhir:status value="draft"/>
-   <fhir:publisher value="PM"/>
-   <fhir:description value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Alle geplande afspraken, verwijzingen, behandelingen en diagnostische procedures, uitstaande orders en orders waarvan de uitslag nog niet bekend is, relevant voor de zorg van de patiënt, kunnen worden vermeld. Ook kunnen hier &lt;i&gt;Clinical reminders &lt;/i&gt;worden geplaatst. Dit zijn uitgestelde orders, die nog niet actief zijn. (Bijvoorbeeld: let op! patiënt moet nog een booster vaccinatie hebben over x weken; let op! controleer de volgende keer de wangslijmvliezen). Het concept GeplandeZorgActiviteit is een regel uit het behandelplan. &#xA;Hiermee kan elke ontvanger, raadpleger of zorginstelling inzicht krijgen in de geplande zorg voor deze patiënt.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;All planned appointments, referrals, treatments and diagnostic procedures, open orders and orders of which the results are not yet known that are relevant to the patient’s care may be included. &lt;i&gt;Clinical reminders &lt;/i&gt;can also be included here. These are postponed orders that are not yet active. (For example: please note! patient still needs a booster vaccination in x weeks; or please note! check the oral mucosa next time). The PlannedCareActivity concept is a line from the treatment plan.  &#xA;This gives every recipient, user or healthcare facility insight into the planned care for this patient.&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:purpose value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Het vastleggen van de geplande afspraken, verwijzingen, behandelingen, diagnostische procedures, uitstaande orders en orders waarvan de uitslag nog niet bekend is, geeft elke ontvanger, raadpleger of zorginstelling inzicht in de geplande zorg voor deze patiënt. Hiermee kunnen situaties voorkomen worden waarin diagnostiek en behandeling met elkaar in conflict kunnen komen.&#xA;De ontvanger heeft hiermee de mogelijkheid om een order alsnog te plaatsen, in te trekken of anderszins te handelen en ze zo in te passen in het eigen beleid.&#xA;Voor orders, waarvan de uitslag nog niet bekend is, attendeert het de ontvanger erop dat er nog mogelijk relevante uitslagen beschikbaar komen die opgevraagd moeten worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Recording planned appointments, referrals, treatments, diagnostic procedures, open orders and orders of which the results are not yet known gives every recipient, user or healthcare facility insight in the planned healthcare for this patient. This can prevent situations in which diagnostics and treatment can conflict with each other. &#xA;This will give the recipient the option to place an order, cancel the order or act in any other way in accordance with their own policy. &#xA;For orders that do not yet have results, the recipient is informed of the fact that potentially relevant results will be made available (which have to be requested).&#xA;&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-   <fhir:copyright value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Alle geplande afspraken, verwijzingen, behandelingen en diagnostische procedures, uitstaande orders en orders waarvan de uitslag nog niet bekend is, relevant voor de zorg van de patiënt, kunnen worden vermeld. Ook kunnen hier &lt;i&gt;Clinical reminders &lt;/i&gt;worden geplaatst. Dit zijn uitgestelde orders, die nog niet actief zijn. (Bijvoorbeeld: let op! patiënt moet nog een booster vaccinatie hebben over x weken; let op! controleer de volgende keer de wangslijmvliezen). Het concept GeplandeZorgActiviteit is een regel uit het behandelplan. &#xA;Hiermee kan elke ontvanger, raadpleger of zorginstelling inzicht krijgen in de geplande zorg voor deze patiënt."/>
+   <fhir:purpose value="Het vastleggen van de geplande afspraken, verwijzingen, behandelingen, diagnostische procedures, uitstaande orders en orders waarvan de uitslag nog niet bekend is, geeft elke ontvanger, raadpleger of zorginstelling inzicht in de geplande zorg voor deze patiënt. Hiermee kunnen situaties voorkomen worden waarin diagnostiek en behandeling met elkaar in conflict kunnen komen.&#xA;De ontvanger heeft hiermee de mogelijkheid om een order alsnog te plaatsen, in te trekken of anderszins te handelen en ze zo in te passen in het eigen beleid.&#xA;Voor orders, waarvan de uitslag nog niet bekend is, attendeert het de ontvanger erop dat er nog mogelijk relevante uitslagen beschikbaar komen die opgevraagd moeten worden."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Geplande afspraken, orders, clinical reminders"/>
+   </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:type value="ZIB"/>
-   <fhir:baseDefinition value="http://zibs.nl/..."/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:16.1.1">
          <fhir:path value="GeplandeZorgActiviteit"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Rootconcept van de bouwsteen OverdrachtGeplandeZorgActiviteit. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtGeplandeZorgActiviteit.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Root concept of the PlannedCareActivityTransfer information model. This root concept contains all data elements of the PlannedCareActivity information model.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Rootconcept van de bouwsteen OverdrachtGeplandeZorgActiviteit. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtGeplandeZorgActiviteit."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.5">
          <fhir:path value="GeplandeZorgActiviteit.Vaccinatie"/>
          <fhir:label value="Vaccinatie"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een voorgenomen vaccinatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A planned vaccination.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-         <fhir:type>
-            <fhir:code value="11243"/>
-         </fhir:type>
+         <fhir:definition value="Een voorgenomen vaccinatie."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.3">
          <fhir:path value="GeplandeZorgActiviteit.MedicatieToediening"/>
          <fhir:label value="MedicatieToediening"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;De medicatie waarvan het toediening in de toekomst nog moet worden afgesproken. Doorgaans zullen deze gegevens in de sectie Medicatie zijn opgenomen.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The medication for which future administration still has to be agreed on. This information is usually included in the Medication section.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-         <fhir:type>
-            <fhir:code value="11243"/>
-         </fhir:type>
+         <fhir:definition value="De medicatie waarvan het toediening in de toekomst nog moet worden afgesproken. Doorgaans zullen deze gegevens in de sectie Medicatie zijn opgenomen."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.4">
          <fhir:path value="GeplandeZorgActiviteit.Verrichting"/>
          <fhir:label value="Verrichting"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een voorgenomen verrichting inclusief o.a. indicatie en locatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A planned procedure including things like the indication and location.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-         <fhir:type>
-            <fhir:code value="11243"/>
-         </fhir:type>
+         <fhir:definition value="Een voorgenomen verrichting inclusief o.a. indicatie en locatie."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.2">
          <fhir:path value="GeplandeZorgActiviteit.OrderOverige"/>
          <fhir:label value="OrderOverige"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Orders die niet passen binnen één van de andere concepten, kunnen in vrije tekst beschreven worden.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Orders that do not fit in any of the other concepts can be described in free text.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Orders die niet passen binnen één van de andere concepten, kunnen in vrije tekst beschreven worden."/>
          <fhir:type>
-            <fhir:code value="11243"/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.6">
          <fhir:path value="GeplandeZorgActiviteit.Afspraak::Contact"/>
          <fhir:label value="Afspraak::Contact"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een afspraak inclusief o.a. reden van contact en locatie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;An appointment including the location and reason for contact.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-         <fhir:type>
-            <fhir:code value="11243"/>
-         </fhir:type>
+         <fhir:definition value="Een afspraak inclusief o.a. reden van contact en locatie."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.7">
          <fhir:path value="GeplandeZorgActiviteit.MedischHulpmiddel"/>
          <fhir:label value="MedischHulpmiddel"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een gewenst medisch hulpmiddel.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A requested medical aid.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-         <fhir:type>
-            <fhir:code value="11243"/>
-         </fhir:type>
+         <fhir:definition value="Een gewenst medisch hulpmiddel."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.12">
          <fhir:path value="GeplandeZorgActiviteit.VerpleegkundigeActie"/>
          <fhir:label value="VerpleegkundigeActie"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Een voorgenomen verpleegkundige actie.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;A planned nursing procedure.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
-         <fhir:type>
-            <fhir:code value="11243"/>
-         </fhir:type>
+         <fhir:definition value="Een voorgenomen verpleegkundige actie."/>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.8">
          <fhir:path value="GeplandeZorgActiviteit.OrderType"/>
          <fhir:label value="OrderType"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Type order, verzoek of reminder.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Type of order, request or reminder.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Type order, verzoek of reminder."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.10">
          <fhir:path value="GeplandeZorgActiviteit.BeginDatum"/>
          <fhir:label value="BeginDatum"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Geplande of gewenste datum van uitvoering. Bij Clinical reminders kan hiermee aangegeven worden vanaf wanneer de handeling uitgevoerd mag worden. Een vage datum (bv. alleen maand en jaar is toegestaan).&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;Planned or requested date. Clinical reminders can be used to indicate from when the procedure can take place. A vague date (such as only the month and year) is permitted.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Geplande of gewenste datum van uitvoering. Bij Clinical reminders kan hiermee aangegeven worden vanaf wanneer de handeling uitgevoerd mag worden. Een vage datum (bv. alleen maand en jaar is toegestaan)."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7887"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.9">
          <fhir:path value="GeplandeZorgActiviteit.OrderStatus"/>
          <fhir:label value="OrderStatus"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Status van de order.&lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The status of the order.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Status van de order."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="7906"/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.11">
          <fhir:path value="GeplandeZorgActiviteit.EindDatum"/>
          <fhir:label value="EindDatum"/>
-         <fhir:definition value="&lt;languages xml:space=&#34;preserve&#34;&gt;&#xA;&lt;nl-NL&gt;Eventueel kan de geplande einddatum van de handeling vastgelegd worden. Tevens kan afhankelijk van het type handeling hiermee aangegeven worden voor wanneer deze uitgevoerd moet worden. &lt;/nl-NL&gt;&#xA;&lt;en-US&gt;The planned end date of the procedure can be included as well if needed. Depending on the type of procedure, this can also be used to indicate before which time it has to have been completed.&lt;/en-US&gt;&#xA;&lt;/languages&gt;"/>
+         <fhir:definition value="Eventueel kan de geplande einddatum van de handeling vastgelegd worden. Tevens kan afhankelijk van het type handeling hiermee aangegeven worden voor wanneer deze uitgevoerd moet worden. "/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="11235"/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>
