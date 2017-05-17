@@ -31,6 +31,10 @@
          <fhir:definition value="Hulpmiddel dat de patiënt ter beschikking heeft om de impact van de beperking of stoornis te verminderen."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:10.1.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:4.26.6">
          <fhir:path value="FunctioneleOfMentaleStatus.StatusDatum"/>
@@ -39,7 +43,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:4.26.3">
@@ -49,7 +53,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CO"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:4.26.4">
@@ -59,7 +63,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:4.26.2">
@@ -69,7 +73,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

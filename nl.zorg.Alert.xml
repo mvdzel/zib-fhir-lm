@@ -30,7 +30,7 @@
          <fhir:label value="AlertNaam"/>
          <fhir:definition value="Een waarschuwing, anders dan een conditie of probleem. Zo kan bijvoorbeeld als alert 'Agressieve patient' meegegeven worden.&#xA;De waarschuwing kan als een gecodeerd gegeven worden vasrgelegd (voor veelvoorkomende alerts zijn codes voorzien), maar gezien het dynamische karakter van de waarschuwingen cf. Sars en Ebola, zullen deze alerts vaak als vrije tekst doorgegeven worden."/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.3.6">
@@ -40,7 +40,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.3.5">
@@ -50,13 +50,17 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:8.3.3">
          <fhir:path value="Alert.Conditie::Concern"/>
          <fhir:label value="Conditie::Concern"/>
          <fhir:definition value="Een gezondheidsprobleem of toestand van de patiënt die de reden is van het alert. Het kan hierbij gaan om een probleem,toestand of diagnose van de patiënt die geldt als contra-indicatie bij het voorschrijven van medicatie of waarmee rekening moet worden gehouden bij het vormen van diagnostisch en therapeutisch beleid. Dit kan zijn in het belang van de patiënt zelf, maar het kan ook gaan om een probleem of aandoening waardoor de patiënt een risico vormt voor zijn omgeving, bijvoorbeeld besmettingsgevaar. Het betreft hier verwijzigingen naar condities die vermeld staan op de probleemlijst van de patiënt.&#xA;&#xA;Indien sprake is van een contra-indicatie, dient het codesystem G-Standaard Contra Indicaties (Tabel 40) uit de ProbleemNaamCodelijst van de bouwsteen OverdrachtConcern gekozen te worden."/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:5.1.1 "/>
+         </fhir:type>
       </fhir:element>
    </fhir:snapshot>
 </fhir:StructureDefinition>

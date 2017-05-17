@@ -31,6 +31,10 @@
          <fhir:definition value="Telefoonnummer en/of e-mailadres van betaler."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:0.1.5"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:1.1.2">
          <fhir:path value="Betaler.BetalerPersoon"/>
@@ -102,6 +106,10 @@
          <fhir:definition value="Adresgegevens van betaler."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:0.1.4"/>
+         </fhir:type>
       </fhir:element>
    </fhir:snapshot>
 </fhir:StructureDefinition>

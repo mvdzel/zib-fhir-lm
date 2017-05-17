@@ -31,6 +31,10 @@
          <fhir:definition value="Het ingenomen of toegediende middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden gerapporteerd.  &#xA;&#xA;In principe betreft dit het voorgeschreven product, maar de toediener kan door substitutie het voorgeschreven product vervangen door een equivalent product. Bijv. in plaats van tabletten van 100mg, tabletten van 50mg waarvan er dan twee worden toegediend."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:9.5.6"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.4">
          <fhir:path value="MedicatieToediening.MedicatieToedieningStatus"/>
@@ -39,7 +43,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.7">
@@ -49,7 +53,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.8">
@@ -59,7 +63,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.9">
@@ -73,16 +77,28 @@
          <fhir:path value="MedicatieToediening.Toediener.Patiënt"/>
          <fhir:label value="Patiënt"/>
          <fhir:definition value="De patiënt die de toediening gerealiseerd heeft."/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:0.1.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.12">
          <fhir:path value="MedicatieToediening.Toediener.Mantelzorger::Contactpersoon"/>
          <fhir:label value="Mantelzorger::Contactpersoon"/>
          <fhir:definition value="De mantelzorger die de toediening gerealiseerd heeft."/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:3.1.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.10">
          <fhir:path value="MedicatieToediening.Toediener.Zorgverlener"/>
          <fhir:label value="Zorgverlener"/>
          <fhir:definition value="De zorgverlener die de toediening gerealiseerd heeft."/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:17.1.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.5">
          <fhir:path value="MedicatieToediening.MedicatieToedieningRedenVanNietToedienen"/>
@@ -91,7 +107,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.3">
@@ -100,6 +116,10 @@
          <fhir:definition value="De afspraak of order waar de toediening een uitvoering van is."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:9.5.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.6">
          <fhir:path value="MedicatieToediening.ToedieningsDatumTijd"/>
@@ -108,7 +128,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.3.13">
@@ -118,7 +138,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

@@ -59,7 +59,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:10.1.7">
@@ -68,6 +68,10 @@
          <fhir:definition value="De medische reden voor het gebruik van het medisch hulpmiddel. "/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:5.1.2"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:10.1.10">
          <fhir:path value="MedischHulpmiddel.Toelichting"/>
@@ -76,7 +80,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:10.1.6">
@@ -86,7 +90,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:10.1.8">
@@ -95,6 +99,10 @@
          <fhir:definition value="De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel gïmplanteerd werd."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:17.2.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:10.1.9">
          <fhir:path value="MedischHulpmiddel.Zorgverlener"/>
@@ -102,6 +110,10 @@
          <fhir:definition value="De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel. "/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:17.1.1"/>
+         </fhir:type>
       </fhir:element>
    </fhir:snapshot>
 </fhir:StructureDefinition>

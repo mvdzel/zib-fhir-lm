@@ -32,7 +32,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.4.5">
@@ -79,7 +79,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.4.3">
@@ -89,7 +89,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.4.4">
@@ -99,7 +99,7 @@
          <fhir:min value="0"/>
          <fhir:max value="*"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

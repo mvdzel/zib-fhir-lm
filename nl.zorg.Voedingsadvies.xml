@@ -32,7 +32,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.11.5">
@@ -41,6 +41,10 @@
          <fhir:definition value="Beschrijving van de verpleegkundige acties ten aanzien van het voedingsadvies."/>
          <fhir:min value="0"/>
          <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:14.2.9"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.11.4">
          <fhir:path value="Voedingsadvies.Toelichting"/>
@@ -49,7 +53,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:7.11.3">
@@ -59,7 +63,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

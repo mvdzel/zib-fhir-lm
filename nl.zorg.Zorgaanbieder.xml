@@ -32,7 +32,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.2.4">
@@ -42,7 +42,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.2.2">
@@ -52,7 +52,7 @@
          <fhir:min value="0"/>
          <fhir:max value="*"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.2.3">
@@ -62,7 +62,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.2.6">
@@ -71,6 +71,10 @@
          <fhir:definition value="De gegevens noodzakelijk om via telefoon en/of e-mail met de zorgaanbiedende organisatie contact op te nemen."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:0.1.5"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.2.5">
          <fhir:path value="Zorgaanbieder.Adres::Adresgegevens"/>
@@ -78,6 +82,10 @@
          <fhir:definition value="Het fysieke adres van de locatie van de orgaanbieder."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:0.1.4"/>
+         </fhir:type>
       </fhir:element>
    </fhir:snapshot>
 </fhir:StructureDefinition>

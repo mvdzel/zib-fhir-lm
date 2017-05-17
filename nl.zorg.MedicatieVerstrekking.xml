@@ -32,7 +32,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.6">
@@ -42,7 +42,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.7">
@@ -52,7 +52,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/TS"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.5">
@@ -61,6 +61,10 @@
          <fhir:definition value="Instructies voor toediening van de medicatie aan de toediener (de patiënt zelf, een verpleegkundige of andere hulpverlener).&#xA;&#xA;De verstrekkingsdosering zal, zeker wat betreft het toedieningsschema, een meer gespecificeerde uitwerking zijn van het toedieningsschema uit het voorschrift. Zo kan het voorschrift bijvoorbeeld 4xd1 vermelden, wat door de verstrekker vertaald wordt naar een etikettekst als '4 maal daags 1 tijdens de maaltijd'. Ook bij Baxter verstrekkingen vindt dit soort vertalingen plaats van 4xd1 naar specifieke tijdstippen, bijv. 09.00 uur, 12.00 uur, etc."/>
          <fhir:min value="1"/>
          <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:9.5.4"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.2">
          <fhir:path value="MedicatieVerstrekking.Verstrekker::Zorgverlener"/>
@@ -68,6 +72,10 @@
          <fhir:definition value="De verstrekker is in de vrijwel alle gevallen een geregistreerde apotheker. In principe zou het ook kunnen gaan om een webwinkel (online bestelling), een drogisterij of een buitenlandse apotheek. "/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:17.1.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.4">
          <fhir:path value="MedicatieVerstrekking.Voorschrift::MedicatieVoorschrift"/>
@@ -75,6 +83,10 @@
          <fhir:definition value="Een afspraak of order voor het gebruik van medicatie."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:9.5.1"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.3">
          <fhir:path value="MedicatieVerstrekking.VerstrekkingsProduct::Product"/>
@@ -82,6 +94,10 @@
          <fhir:definition value="Het verstrekte product is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar de verstrekking hiervan kan op dezelfde wijze worden gerapporteerd.&#xA;In de meeste gevallen zal het verstrekte product gelijk zijn aan het product dat is voorgeschreven in het medicatievoorschrift. &#xA;&#xA;In principe betreft dit het voorgeschreven product, maar de verstrekker kan door substitutie het voorgeschreven product vervangen door een equivalent product. Bovendien kan de verstrekker een generiek geformuleerd voorgeschreven product vervangen door een handelsproduct, daarnaast kan hij ook het voorgeschreven handelsproduct vervangen door een ander handelsproduct."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code>Reference</fhir:code>
+            <fhir:targetProfile value="NL-CM:9.5.6"/>
+         </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.9">
          <fhir:path value="MedicatieVerstrekking.Toelichting"/>
@@ -90,7 +106,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/ST"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>
