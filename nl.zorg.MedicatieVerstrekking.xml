@@ -32,7 +32,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.6">
@@ -42,7 +42,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/PQ"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.7">
@@ -52,7 +52,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.4.5">
@@ -62,7 +62,7 @@
          <fhir:min value="1"/>
          <fhir:max value="*"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:9.5.4"/>
          </fhir:type>
       </fhir:element>
@@ -73,7 +73,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:17.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -84,7 +84,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:9.5.1"/>
          </fhir:type>
       </fhir:element>
@@ -95,7 +95,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:9.5.6"/>
          </fhir:type>
       </fhir:element>
@@ -106,7 +106,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

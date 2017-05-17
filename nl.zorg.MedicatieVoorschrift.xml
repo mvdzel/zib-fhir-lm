@@ -207,7 +207,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:17.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -228,7 +228,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.5.8">
@@ -238,7 +238,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.5.2">
@@ -248,7 +248,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:5.1.2"/>
          </fhir:type>
       </fhir:element>
@@ -264,7 +264,7 @@
          <fhir:label value="Mantelzorger::Contactpersoon"/>
          <fhir:definition value="De mantelzorger die het middel heeft voorgeschreven."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:3.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -273,7 +273,7 @@
          <fhir:label value="Patiënt"/>
          <fhir:definition value="De patiënt die zichzelf een middel heeft voorgeschreven."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:0.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -282,7 +282,7 @@
          <fhir:label value="Zorgverlener"/>
          <fhir:definition value="De zorgverlener die voor het voorschrift verantwoordelijk is."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:17.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -293,7 +293,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.5.9">
@@ -303,7 +303,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.5.44">
@@ -313,7 +313,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

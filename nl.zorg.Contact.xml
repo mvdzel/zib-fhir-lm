@@ -32,7 +32,7 @@
          <fhir:min value="0"/>
          <fhir:max value="*"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:17.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -43,7 +43,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:15.1.13">
@@ -66,7 +66,7 @@
          <fhir:label value="Verrichting"/>
          <fhir:definition value="De verrichting die tijdens het contact is uitgevoerd."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:14.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -75,7 +75,7 @@
          <fhir:label value="Probleem::ProbleemNaam"/>
          <fhir:definition value="Het probleem dat aanleiding is geweest voor het contact."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:5.1.2"/>
          </fhir:type>
       </fhir:element>
@@ -86,7 +86,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:17.2.1"/>
          </fhir:type>
       </fhir:element>
@@ -97,7 +97,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:15.1.4">
@@ -107,7 +107,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

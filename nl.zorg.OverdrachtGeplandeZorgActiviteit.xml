@@ -30,7 +30,7 @@
          <fhir:label value="Vaccinatie"/>
          <fhir:definition value="Een voorgenomen vaccinatie."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:11.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -39,7 +39,7 @@
          <fhir:label value="MedicatieToediening"/>
          <fhir:definition value="De medicatie waarvan het toediening in de toekomst nog moet worden afgesproken. Doorgaans zullen deze gegevens in de sectie Medicatie zijn opgenomen."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:9.3.1"/>
          </fhir:type>
       </fhir:element>
@@ -48,7 +48,7 @@
          <fhir:label value="Verrichting"/>
          <fhir:definition value="Een voorgenomen verrichting inclusief o.a. indicatie en locatie."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:14.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -57,7 +57,7 @@
          <fhir:label value="OrderOverige"/>
          <fhir:definition value="Orders die niet passen binnen één van de andere concepten, kunnen in vrije tekst beschreven worden."/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/ST"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.6">
@@ -65,7 +65,7 @@
          <fhir:label value="Afspraak::Contact"/>
          <fhir:definition value="Een afspraak inclusief o.a. reden van contact en locatie."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:15.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -74,7 +74,7 @@
          <fhir:label value="MedischHulpmiddel"/>
          <fhir:definition value="Een gewenst medisch hulpmiddel."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:10.1.1"/>
          </fhir:type>
       </fhir:element>
@@ -83,7 +83,7 @@
          <fhir:label value="VerpleegkundigeActie"/>
          <fhir:definition value="Een voorgenomen verpleegkundige actie."/>
          <fhir:type>
-            <fhir:code>Reference</fhir:code>
+            <fhir:code value="Reference"/>
             <fhir:targetProfile value="NL-CM:14.2.9"/>
          </fhir:type>
       </fhir:element>
@@ -94,7 +94,7 @@
          <fhir:min value="1"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.10">
@@ -104,7 +104,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.9">
@@ -114,7 +114,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/CD"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:16.1.11">
@@ -124,7 +124,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value=""/>
+            <fhir:code value="https://zibs.nl/datatypes/TS"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

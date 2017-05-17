@@ -89,12 +89,12 @@
 					      <xsl:if test="exists(/max:model/relationships/relationship[sourceId=$cid and type='Generalization'])">
 						      <fhir:type>
 						      	<xsl:variable name="datatypeid" select="/max:model/relationships/relationship[sourceId=$cid and type='Generalization']/destId"/>
-						      	<fhir:code><xsl:attribute name="value"><xsl:value-of select="$zib_datatypes/datatype[@id=$datatypeid]"/></xsl:attribute></fhir:code>
+						      	<fhir:code><xsl:attribute name="value"><xsl:value-of select="concat('https://zibs.nl/datatypes/',$zib_datatypes/datatype[@id=$datatypeid]/@name)"/></xsl:attribute></fhir:code>
 						      </fhir:type>
 					      </xsl:if>
 					      <xsl:if test="exists($concept/tag[@name='DCM::ReferencedDefinitionCode'])">
 					      	  <fhir:type>
-						      	<fhir:code>Reference</fhir:code>
+						      	<fhir:code value="Reference"/>
 						      	<fhir:targetProfile><xsl:attribute name="value"><xsl:value-of select="$concept/tag[@name='DCM::ReferencedDefinitionCode']/@value"/></xsl:attribute></fhir:targetProfile>
 					      	  </fhir:type>
 					      </xsl:if>
@@ -130,7 +130,7 @@
 							      </xsl:if>
 							      <xsl:if test="exists($concept2/tag[@name='DCM::ReferencedDefinitionCode'])">
 							      	  <fhir:type>
-								      	<fhir:code>Reference</fhir:code>
+								      	<fhir:code value="Reference"/>
 								      	<fhir:targetProfile><xsl:attribute name="value"><xsl:value-of select="$concept2/tag[@name='DCM::ReferencedDefinitionCode']/@value"/></xsl:attribute></fhir:targetProfile>
 							      	  </fhir:type>
 							      </xsl:if>
