@@ -33,7 +33,7 @@
          <fhir:max value="1"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:targetProfile value="NL-CM:0.1.4"/>
+            <fhir:profile value="NL-CM:0.1.4"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.1.8">
@@ -44,7 +44,7 @@
          <fhir:max value="*"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:targetProfile value="NL-CM:0.1.5"/>
+            <fhir:profile value="NL-CM:0.1.5"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.1.3">
@@ -55,7 +55,7 @@
          <fhir:max value="1"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:targetProfile value="NL-CM:0.1.6"/>
+            <fhir:profile value="NL-CM:0.1.6"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.1.2">
@@ -65,7 +65,7 @@
          <fhir:min value="0"/>
          <fhir:max value="*"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/"/>
+            <fhir:code value=""/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.1.4">
@@ -75,7 +75,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value="Coding"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.1.6">
@@ -86,7 +86,7 @@
          <fhir:max value="1"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:targetProfile value="NL-CM:17.2.1"/>
+            <fhir:profile value="NL-CM:17.2.1"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:17.1.5">
@@ -96,7 +96,7 @@
          <fhir:min value="0"/>
          <fhir:max value="1"/>
          <fhir:type>
-            <fhir:code value="https://zibs.nl/datatypes/CD"/>
+            <fhir:code value="Coding"/>
          </fhir:type>
       </fhir:element>
    </fhir:snapshot>

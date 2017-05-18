@@ -9,15 +9,35 @@
 	<xsl:output method="text"/>
 	<xsl:output encoding="utf-8" indent="yes" method="xml" name="xml"/>
 	
-	<xsl:variable name="zib_datatypes">
-		<datatype id="7887" name="TS"/>
-		<datatype id="7906" name="CD"/>
-		<datatype id="7895" name="ST"/>
-		<datatype id="7891" name="PQ"/>
-		<datatype id="7892" name="BL"/>
-		<datatype id="7888" name="INT"/>
-		<datatype id="7886" name="CO"/>
-		<datatype id="7885" name="ED"/>
+	<!--
+		This now generated STU3 Structure Definitions for ZIB's.
+		For this to work on DSTU2 servers remove:
+		- <title>
+		- <purpose>
+		- <keywords>
+		- <type>
+		
+		Somehow we need to use the FHIR datatypes to make all the tooling work.
+		For ClinFHIR to work we also need:
+			<extension url="http:www.clinfhir.com/StructureDefinition/userEmail">
+	   			<valueString value="david.hay25@gmail.com" />
+			</extension>
+	   		<url value="..."/>
+			<identifier>
+	   			<system value="http://clinfhir.com" />
+	   			<value value="author" />
+			</identifier>
+	 -->
+	
+	<xsl:variable name="datatypes">
+		<datatype id="7887" dcm="TS" fhir="dateTime"/>
+		<datatype id="7906" dcm="CD" fhir="Coding"/>
+		<datatype id="7895" dcm="ST" fhir="string"/>
+		<datatype id="7891" dcm="PQ" fhir="Quantity"/>
+		<datatype id="7892" dcm="BL" fhir="boolean"/>
+		<datatype id="7888" dcm="INT" fhir="integer"/>
+		<datatype id="7886" dcm="CO" fhir="Coding"/>
+		<datatype id="7885" dcm="ED" fhir="base64Binary"/>
 	</xsl:variable>
 
 	<xsl:template match="/">
@@ -89,13 +109,14 @@
 					      <xsl:if test="exists(/max:model/relationships/relationship[sourceId=$cid and type='Generalization'])">
 						      <fhir:type>
 						      	<xsl:variable name="datatypeid" select="/max:model/relationships/relationship[sourceId=$cid and type='Generalization']/destId"/>
-						      	<fhir:code><xsl:attribute name="value"><xsl:value-of select="concat('https://zibs.nl/datatypes/',$zib_datatypes/datatype[@id=$datatypeid]/@name)"/></xsl:attribute></fhir:code>
+						      	<!-- <fhir:code><xsl:attribute name="value"><xsl:value-of select="concat('https://zibs.nl/datatypes/',$datatypes/datatype[@id=$datatypeid]/@dcm)"/></xsl:attribute></fhir:code> -->
+					      		<fhir:code><xsl:attribute name="value"><xsl:value-of select="$datatypes/datatype[@id=$datatypeid]/@fhir"/></xsl:attribute></fhir:code>
 						      </fhir:type>
 					      </xsl:if>
 					      <xsl:if test="exists($concept/tag[@name='DCM::ReferencedDefinitionCode'])">
 					      	  <fhir:type>
 						      	<fhir:code value="Reference"/>
-						      	<fhir:targetProfile><xsl:attribute name="value"><xsl:value-of select="$concept/tag[@name='DCM::ReferencedDefinitionCode']/@value"/></xsl:attribute></fhir:targetProfile>
+						      	<fhir:profile><xsl:attribute name="value"><xsl:value-of select="$concept/tag[@name='DCM::ReferencedDefinitionCode']/@value"/></xsl:attribute></fhir:profile>
 					      	  </fhir:type>
 					      </xsl:if>
 					    </fhir:element>
@@ -125,7 +146,8 @@
 					      		  <xsl:if test="exists(/max:model/relationships/relationship[sourceId=$cid2 and type='Generalization'])">
 							      	<fhir:type>
 							      		<xsl:variable name="datatypeid2" select="/max:model/relationships/relationship[sourceId=$cid2 and type='Generalization']/destId"/>
-							      		<fhir:code><xsl:attribute name="value"><xsl:value-of select="concat('https://zibs.nl/datatypes/',$zib_datatypes/datatype[@id=$datatypeid2]/@name)"/></xsl:attribute></fhir:code>
+							      		<!-- <fhir:code><xsl:attribute name="value"><xsl:value-of select="concat('https://zibs.nl/datatypes/',$datatypes/datatype[@id=$datatypeid2]/@zib)"/></xsl:attribute></fhir:code> -->
+							      		<fhir:code><xsl:attribute name="value"><xsl:value-of select="$datatypes/datatype[@id=$datatypeid2]/@fhir"/></xsl:attribute></fhir:code>
 							      	</fhir:type>
 							      </xsl:if>
 							      <xsl:if test="exists($concept2/tag[@name='DCM::ReferencedDefinitionCode'])">
