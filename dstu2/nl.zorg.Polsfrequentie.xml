@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.7"/>
-   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.12.7"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.12.7"/>
    <fhir:identifier>
       <fhir:system value="http://clinfhir.com"/>
       <fhir:value value="author"/>

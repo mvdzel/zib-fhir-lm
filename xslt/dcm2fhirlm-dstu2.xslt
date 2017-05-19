@@ -21,7 +21,7 @@
 	 -->
 	
 	<xsl:variable name="NL-CM">2.16.840.1.113883.2.4.3.11.60.40.3.</xsl:variable>
-	<xsl:variable name="url-prefix">https://zibs.nl/fhir/StructureDefinition/</xsl:variable>
+	<xsl:variable name="url-prefix">https://zibs.nl/fhir/logical/</xsl:variable>
 	<xsl:variable name="datatypes">
 		<datatype id="7887" dcm="TS" fhir="dateTime"/>
 		<datatype id="7906" dcm="CD" fhir="Coding"/>

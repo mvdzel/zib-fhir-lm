@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
    <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.9.2"/>
-   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.2"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.2"/>
    <fhir:identifier>
       <fhir:system value="http://clinfhir.com"/>
       <fhir:value value="author"/>
@@ -31,7 +31,7 @@
          <fhir:max value="1"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.6"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.6"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.2.4">
@@ -42,7 +42,7 @@
          <fhir:max value="*"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.4"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.4"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.2.5">
@@ -63,7 +63,7 @@
          <fhir:max value="*"/>
          <fhir:type>
             <fhir:code value="Reference"/>
-            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.1"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.1"/>
          </fhir:type>
       </fhir:element>
       <fhir:element id="NL-CM:9.2.7">
