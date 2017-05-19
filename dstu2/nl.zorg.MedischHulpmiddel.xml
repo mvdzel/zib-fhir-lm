@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.10.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.10.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.MedischHulpmiddel"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:10.1.1">
+         <fhir:path value="MedischHulpmiddel"/>
+         <fhir:definition value="Rootconcept van de bouwsteen MedischHulpmiddel. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedischHulpmiddel."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.2">
+         <fhir:path value="MedischHulpmiddel.Product"/>
+         <fhir:label value="Product"/>
+         <fhir:definition value="Het medische hulpmiddel dat wordt gebruikt (inwendig of uitwendig)."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.4">
+         <fhir:path value="MedischHulpmiddel.Product.ProductID"/>
+         <fhir:label value="ProductID"/>
+         <fhir:definition value="Unieke identificatie van het product, bijvoorbeeld het serienummer.&#xA;&#xA;Indien de wet verplicht stelt dat deze geregistreerd wordt op basis van een UDI (Unique Device Identifier), dient de unieke identificatie opgebouwd te zijn uit een UDI-DI (Device Identifier) en een UDI-PI (Production Identifier(s)). Voor meer informatie, zie: http://www.gs1.org/healthcare/udi .&#xA;&#xA;De UDI-DI dient m.b.t. GS1 GTIN (01) coderingen worden vastgelegd, waarmee o.a. een firma aan het producttype wordt gekoppeld. De UDI-PI dient te bestaan uit de volgende application identifier (AI); vervaldatum (17) en serienummer (21) en/of batch- of lotnummer (10)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.3">
+         <fhir:path value="MedischHulpmiddel.Product.ProductType"/>
+         <fhir:label value="ProductType"/>
+         <fhir:definition value="De code van het type product. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.11">
+         <fhir:path value="MedischHulpmiddel.BeginDatum"/>
+         <fhir:label value="BeginDatum"/>
+         <fhir:definition value="De startdatum van eerste toepassing of implantatie het medische hulpmiddel. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.7">
+         <fhir:path value="MedischHulpmiddel.Indicatie::Probleem"/>
+         <fhir:label value="Indicatie::Probleem"/>
+         <fhir:definition value="De medische reden voor het gebruik van het medisch hulpmiddel. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.10">
+         <fhir:path value="MedischHulpmiddel.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerking bij de toepassing of informatie over het gebruikte hulpmiddel."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.6">
+         <fhir:path value="MedischHulpmiddel.HulpmiddelAnatomischeLocatie"/>
+         <fhir:label value="HulpmiddelAnatomischeLocatie"/>
+         <fhir:definition value="Anatomische locatie van het gebruikte hulpmiddel bij de patiënt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.8">
+         <fhir:path value="MedischHulpmiddel.Locatie::Zorgaanbieder"/>
+         <fhir:label value="Locatie::Zorgaanbieder"/>
+         <fhir:definition value="De zorgaanbieder waar het gebruik van het hulpmiddel geïnitieerd werd of waar het hulpmiddel gïmplanteerd werd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.2.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:10.1.9">
+         <fhir:path value="MedischHulpmiddel.Zorgverlener"/>
+         <fhir:label value="Zorgverlener"/>
+         <fhir:definition value="De zorgverlener betrokken bij de indicatiestelling voor het gebruik of de implantatie van het hulpmiddel. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

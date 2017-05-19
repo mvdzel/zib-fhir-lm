@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.8.3"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.8.3"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Alert"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:8.3.1">
+         <fhir:path value="Alert"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Alert. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Alert."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.3.4">
+         <fhir:path value="Alert.AlertNaam"/>
+         <fhir:label value="AlertNaam"/>
+         <fhir:definition value="Een waarschuwing, anders dan een conditie of probleem. Zo kan bijvoorbeeld als alert 'Agressieve patient' meegegeven worden.&#xA;De waarschuwing kan als een gecodeerd gegeven worden vasrgelegd (voor veelvoorkomende alerts zijn codes voorzien), maar gezien het dynamische karakter van de waarschuwingen cf. Sars en Ebola, zullen deze alerts vaak als vrije tekst doorgegeven worden."/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.3.6">
+         <fhir:path value="Alert.AlertType"/>
+         <fhir:label value="AlertType"/>
+         <fhir:definition value="Geeft het type alert aan, dat wil zeggen een grove indeling van de oorzaak of oorsprong waaruit de waarschuwing voort komt."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.3.5">
+         <fhir:path value="Alert.BeginDatumTijd"/>
+         <fhir:label value="BeginDatumTijd"/>
+         <fhir:definition value="De datum en tijd waarop de beschreven toestand als waarschuwing is aangemerkt. &#xA;Dit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.3.3">
+         <fhir:path value="Alert.Conditie::Concern"/>
+         <fhir:label value="Conditie::Concern"/>
+         <fhir:definition value="Een gezondheidsprobleem of toestand van de patiënt die de reden is van het alert. Het kan hierbij gaan om een probleem,toestand of diagnose van de patiënt die geldt als contra-indicatie bij het voorschrijven van medicatie of waarmee rekening moet worden gehouden bij het vormen van diagnostisch en therapeutisch beleid. Dit kan zijn in het belang van de patiënt zelf, maar het kan ook gaan om een probleem of aandoening waardoor de patiënt een risico vormt voor zijn omgeving, bijvoorbeeld besmettingsgevaar. Het betreft hier verwijzigingen naar condities die vermeld staan op de probleemlijst van de patiënt.&#xA;&#xA;Indien sprake is van een contra-indicatie, dient het codesystem G-Standaard Contra Indicaties (Tabel 40) uit de ProbleemNaamCodelijst van de bouwsteen OverdrachtConcern gekozen te worden."/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.1 "/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

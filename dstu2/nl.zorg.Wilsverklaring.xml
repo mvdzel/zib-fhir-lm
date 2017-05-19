@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.15"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.7.15"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Wilsverklaring"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:7.15.1">
+         <fhir:path value="Wilsverklaring"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Wilsverklaring. Dit concept bevat alle gegevenselementen van de bouwsteen Wilsverklaring."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.2">
+         <fhir:path value="Wilsverklaring.WilsverklaringType"/>
+         <fhir:label value="WilsverklaringType"/>
+         <fhir:definition value="Aanduiding van de verschillende soorten wilsverklaringen."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.4">
+         <fhir:path value="Wilsverklaring.Aandoening::Probleem"/>
+         <fhir:label value="Aandoening::Probleem"/>
+         <fhir:definition value="Het probleem of aandoening waar de wilsverklaring betrekking op heeft."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.3">
+         <fhir:path value="Wilsverklaring.Vertegenwoordiger::Contactpersoon"/>
+         <fhir:label value="Vertegenwoordiger::Contactpersoon"/>
+         <fhir:definition value="De persoon die wettelijke vertegerwoordiger is of in de ondertekende volmacht als gevolmachtigde wordt benoemd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.3.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.5">
+         <fhir:path value="Wilsverklaring.WilsverklaringDocument"/>
+         <fhir:label value="WilsverklaringDocument"/>
+         <fhir:definition value="Ingescand brondocument met de wilsverklaring en handtekening van de patiënt, bijv. een PDF."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="base64Binary"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.6">
+         <fhir:path value="Wilsverklaring.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting bij de wilsverklaring, bijvoorbeeld de vorm, zoals een penning, een tattoo etc. of waar de wilsverklaring te vinden is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.7">
+         <fhir:path value="Wilsverklaring.WilsverklaringDatum"/>
+         <fhir:label value="WilsverklaringDatum"/>
+         <fhir:definition value="De datum waarop de wilsverklaring is vastgelegd."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

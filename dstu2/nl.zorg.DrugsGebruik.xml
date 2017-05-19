@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.4"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.7.4"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.DrugsGebruik"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-07-16"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:7.4.1">
+         <fhir:path value="DrugsGebruik"/>
+         <fhir:definition value="Rootconcept van de bouwsteen DrugsGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen DrugsGebruik."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.9">
+         <fhir:path value="DrugsGebruik.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Relevante opmerkingen over het gebruik."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.5">
+         <fhir:path value="DrugsGebruik.WaarnemingGebruik"/>
+         <fhir:label value="WaarnemingGebruik"/>
+         <fhir:definition value="Container voor WaarnemingGebruik. Deze container bevat alle gegevenselementen van de container WaarnemingGebruik."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.7">
+         <fhir:path value="DrugsGebruik.WaarnemingGebruik.StopDatum"/>
+         <fhir:label value="StopDatum"/>
+         <fhir:definition value="De datum waarop is gestopt met het gebruik"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.6">
+         <fhir:path value="DrugsGebruik.WaarnemingGebruik.StartDatum"/>
+         <fhir:label value="StartDatum"/>
+         <fhir:definition value="De datum waarop is gestart met het gebruik. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.8">
+         <fhir:path value="DrugsGebruik.WaarnemingGebruik.Hoeveelheid"/>
+         <fhir:label value="Hoeveelheid"/>
+         <fhir:definition value="Het aantal eenheden (pillen, joints, shots etc.) per dag, week, maand of jaar of de freqentie van gebruik."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.2">
+         <fhir:path value="DrugsGebruik.DrugsOfGeneesmiddelSoort"/>
+         <fhir:label value="DrugsOfGeneesmiddelSoort"/>
+         <fhir:definition value="Soort drugs die de patiënt gebruikt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.3">
+         <fhir:path value="DrugsGebruik.DrugGebruikStatus"/>
+         <fhir:label value="DrugGebruikStatus"/>
+         <fhir:definition value="Indicatie of in het heden of verleden sprake is (geweest) van gebruik van drugs."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.4.4">
+         <fhir:path value="DrugsGebruik.Toedieningsweg"/>
+         <fhir:label value="Toedieningsweg"/>
+         <fhir:definition value="De wijze de drugs wordt gebruikt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

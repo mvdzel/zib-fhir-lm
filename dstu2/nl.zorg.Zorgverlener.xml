@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.17.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Zorgverlener"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-08-12"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:17.1.1">
+         <fhir:path value="Zorgverlener"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Zorgverlener. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgverlener. "/>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.7">
+         <fhir:path value="Zorgverlener.Adres::Adresgegevens"/>
+         <fhir:label value="Adres::Adresgegevens"/>
+         <fhir:definition value="Adresgegevens van de zorgverlener. Verwijst naar het model voor adresgegevens in de bouwsteen Patient."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.4"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.8">
+         <fhir:path value="Zorgverlener.TelefoonEmail::Contactgegevens"/>
+         <fhir:label value="TelefoonEmail::Contactgegevens"/>
+         <fhir:definition value="Telefoonnummer(s) of e-mailadres(sen) van de zorgverlener."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.5"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.3">
+         <fhir:path value="Zorgverlener.ZorgverlenerNaam::Naamgegevens"/>
+         <fhir:label value="ZorgverlenerNaam::Naamgegevens"/>
+         <fhir:definition value="De naamgegevens van de zorgverlener. Indien een zorgverleneridentificatienummer wordt opgegeven, is dit de naam zoals vermeld in UZI, AGB of in de instelling."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.6"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.2">
+         <fhir:path value="Zorgverlener.ZorgverlenerIdentificatieNummer"/>
+         <fhir:label value="ZorgverlenerIdentificatieNummer"/>
+         <fhir:definition value="Het zorgverleneridentificatienummer is een nummer dat de zorgverlener uniek identificeert. &#xA;&#xA;In de Nederlandse situatie worden de volgende nummers gebruikt: &#xA;1. Zorgverlener UZI. Identificatie van zorgverleners (natuurlijke personen) in de Nederlandse zorgsector.&#xA;2. VEKTIS AGB-Z. Dient ter identificatie van zorgverleners en zorgverlenende organisaties&#xA;3. BIG-ID. Het ID van de in het BIG Register opgenomen zorgverlener. &#xA;&#xA;Voor buitenlandse zorgverleners zijn deze gegevens niet voorhanden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Identifier"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.4">
+         <fhir:path value="Zorgverlener.Specialisme"/>
+         <fhir:label value="Specialisme"/>
+         <fhir:definition value="Medisch specialisme van de zorgverlener. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.6">
+         <fhir:path value="Zorgverlener.Zorgaanbieder"/>
+         <fhir:label value="Zorgaanbieder"/>
+         <fhir:definition value="De organisatie waarbij de zorgverlener werkzaam is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.2.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.1.5">
+         <fhir:path value="Zorgverlener.ZorgverlenerRol"/>
+         <fhir:label value="ZorgverlenerRol"/>
+         <fhir:definition value="De rol die de zorgverlener in het zorgproces vervult. Voor zorgverleners kan dit bijvoorbeeld hoofdbehandelaar, verwijzer of huisarts zijn."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

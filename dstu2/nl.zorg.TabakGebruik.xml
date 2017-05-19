@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.2"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.7.2"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.TabakGebruik"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:7.2.1">
+         <fhir:path value="TabakGebruik"/>
+         <fhir:definition value="Rootconcept van de bouwsteen TabakGebruik. Dit concept bevat alle gegevenselementen van de bouwsteen TabakGebruik."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.3">
+         <fhir:path value="TabakGebruik.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Relevante opmerkingen over het gebruik."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.2">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik"/>
+         <fhir:label value="WaarnemingGebruik"/>
+         <fhir:definition value="Deze container bevat alle gegevens over de mate waarin de patiënt aan tabak is blootgesteld geweest of wordt blootgesteld."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.5">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.StopDatum"/>
+         <fhir:label value="StopDatum"/>
+         <fhir:definition value="De datum waarop is gestopt met roken"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.6">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.Hoeveelheid"/>
+         <fhir:label value="Hoeveelheid"/>
+         <fhir:definition value="Het aantal sigaretten, sigaren of gram shag per dag, week, maand of jaar."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.4">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.StartDatum"/>
+         <fhir:label value="StartDatum"/>
+         <fhir:definition value="De datum waarop is gestart met roken. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.7">
+         <fhir:path value="TabakGebruik.WaarnemingGebruik.PackYears"/>
+         <fhir:label value="PackYears"/>
+         <fhir:definition value="De eenheid waarin de totale blootstelling aan tabaksrook bij rokers beschreven wordt.  Bij sigaretten wordt dit berekend aan de hand van het aantal gerookte pakjes sigaretten per dag (inhoud pakje is 20 stuks) en het aantal jaren dat werd gerookt. Bij andere rookwaren wordt vaak een omrekening naar equivalente sigarettenconsumptie gehanteerd. Vaak wordt ook alleen het aantal packyears geschat."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="integer"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.9">
+         <fhir:path value="TabakGebruik.SoortTabakGebruik"/>
+         <fhir:label value="SoortTabakGebruik"/>
+         <fhir:definition value="Soort tabak die de patiënt gebruikt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.2.10">
+         <fhir:path value="TabakGebruik.TabakGebruikStatus"/>
+         <fhir:label value="TabakGebruikStatus"/>
+         <fhir:definition value="De status van het tabaksgebruik van de patiënt."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

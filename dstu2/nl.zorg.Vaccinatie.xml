@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.11.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.11.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Vaccinatie"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:11.1.1">
+         <fhir:path value="Vaccinatie"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Vaccinatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Vaccinatie."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:11.1.2">
+         <fhir:path value="Vaccinatie.ProductCode"/>
+         <fhir:label value="ProductCode"/>
+         <fhir:definition value="De productcode van het toegediende vaccin.&#xA;&#xA;Er zijn meerdere mogelijke codesystemen om de productcode vast te leggen. Indien de vaccinatiegegevens op basis van een anamnese zijn geregistreerd, dan is codering met de ATC code de voorkeur. In alle gevallen gaat het om die producten, die in de ATC groep J07 vallen (vaccins)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:11.1.4">
+         <fhir:path value="Vaccinatie.Dosis"/>
+         <fhir:label value="Dosis"/>
+         <fhir:definition value="De hoeveelheid gegeven product weergegeven in milliliters. In de meeste gevallen wordt het gehele product toegediend, in sommige gevallen wordt een omschreven deel van het product toegediend."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:11.1.3">
+         <fhir:path value="Vaccinatie.VaccinatieDatum"/>
+         <fhir:label value="VaccinatieDatum"/>
+         <fhir:definition value="Datum (en eventueel tijd) dat het vaccin is toegediend."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:11.1.5">
+         <fhir:path value="Vaccinatie.GewensteDatumHervaccinatie"/>
+         <fhir:label value="GewensteDatumHervaccinatie"/>
+         <fhir:definition value="Datum waarop deze vaccinatie volgens de gegevens van de auteur herhaald zal moeten worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:11.1.6">
+         <fhir:path value="Vaccinatie.Toediener::Zorgverlener"/>
+         <fhir:label value="Toediener::Zorgverlener"/>
+         <fhir:definition value="De zorgverlener en/of organisatie waar of door wie de immunisatie werd uitgevoerd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:11.1.7">
+         <fhir:path value="Vaccinatie.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Vrije tekst als toelichting. &#xA;&#xA;Voorbeelden van veel gebruikte toelichtingen zijn: &#xA;- &#34;Vaccinatie volgens Rijksvaccinatieprogramma&#34;. &#xA;- &#34;Niet volgens Rijksvaccinatieprogramma&#34;, gevolgd door een verdere toelichting.&#xA;- &#34;Onbekend&#34;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

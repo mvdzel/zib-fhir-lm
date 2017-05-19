@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.10"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.12.10"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.O2Saturatie"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.10.1">
+         <fhir:path value="O2Saturatie"/>
+         <fhir:definition value="Rootconcept van de bouwsteen O2Saturatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen O2Saturatie."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.2">
+         <fhir:path value="O2Saturatie.SpO2Waarde"/>
+         <fhir:label value="SpO2Waarde"/>
+         <fhir:definition value="Het element bevat de waarde van de indirect, perifeer gemeten O2-saturatie.&#xA;De O2-saturatie geeft in % de mate aan waarin de hemoglobine in het bloed verzadigd is met zuurstof, de ratio van oxy-hemoglobine en hemoglobine.&#xA;De meting wordt uitgevoerd op plaatsen waar de huid voldoende licht doorlaat, zoals een vinger, teen of oorlel."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.3">
+         <fhir:path value="O2Saturatie.O2SaturatieDatumTijd"/>
+         <fhir:label value="O2SaturatieDatumTijd"/>
+         <fhir:definition value="Het moment van waarneming van de SpO2."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.4">
+         <fhir:path value="O2Saturatie.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting op de meting van de saturatie. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.5">
+         <fhir:path value="O2Saturatie.ExtraZuurstofToediening"/>
+         <fhir:label value="ExtraZuurstofToediening"/>
+         <fhir:definition value="Indicatie of de meting gedaan werd in een situatie waar sprake was van extra zuurstof toediening."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="boolean"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

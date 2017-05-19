@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.5"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.12.5"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Ademhaling"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-07-16"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.5.1">
+         <fhir:path value="Ademhaling"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Ademhaling. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Ademhaling."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.2">
+         <fhir:path value="Ademhaling.Ademfrequentie"/>
+         <fhir:label value="Ademfrequentie"/>
+         <fhir:definition value="De waarde van de gemeten ademhalingsfrequentie. De ademhalingsfrequentie betreft het aantal ademhalingen per minuut."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.4">
+         <fhir:path value="Ademhaling.AdemhalingDatumTijd"/>
+         <fhir:label value="AdemhalingDatumTijd"/>
+         <fhir:definition value="Datum en eventueel tijd van de meting."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.5">
+         <fhir:path value="Ademhaling.Ritme"/>
+         <fhir:label value="Ritme"/>
+         <fhir:definition value="Het ritme of de regelmaat van de ademhaling."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.6">
+         <fhir:path value="Ademhaling.Diepte"/>
+         <fhir:label value="Diepte"/>
+         <fhir:definition value="De diepte van de ademteugen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.7">
+         <fhir:path value="Ademhaling.AfwijkendAdemhalingspatroon"/>
+         <fhir:label value="AfwijkendAdemhalingspatroon"/>
+         <fhir:definition value="Specifieke, abnormale ademhalingspatronen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.12">
+         <fhir:path value="Ademhaling.ExtraZuurstofToediening"/>
+         <fhir:label value="ExtraZuurstofToediening"/>
+         <fhir:definition value="Een indicatie die aangeeft of de patiënt extra zuurstof toegediend krijgt. Additionele informatie kan in dat geval worden vastgelegd in de concepten die deel uit  maken van de container ToegediendeZuurstof."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="boolean"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.8">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof"/>
+         <fhir:label value="ToegediendeZuurstof"/>
+         <fhir:definition value="Container van het concept ToegediendeZuurstof. Deze container bevat alle gegevenselementen van het concept ToegediendeZuurstof."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.10">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof.FlowRate"/>
+         <fhir:label value="FlowRate"/>
+         <fhir:definition value="De hoeveelheid toegediende zuurstof. De waarde ligt tussen 0.0 en 50.0 l/min."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.9">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof.FiO2"/>
+         <fhir:label value="FiO2"/>
+         <fhir:definition value="De fractionele inspiratoire zuurstof concentratie. Waarde ligt tussen 0.0 en 1.0, met een normale waarde van 0.21 (geen extra zuurstoftoediening)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.13">
+         <fhir:path value="Ademhaling.ToegediendeZuurstof.ToedieningHulpmiddel::MedischHulpmiddel"/>
+         <fhir:label value="ToedieningHulpmiddel::MedischHulpmiddel"/>
+         <fhir:definition value="Hulpmiddel dat gebruikt wordt bij de toediening van extra zuurstof aan de patiënt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.10.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.5.3">
+         <fhir:path value="Ademhaling.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerking over bijkomende factoren die de ademhaling kunnen beïnvloeden. Bijvoorbeeld, het niveau van angst, pijn, voeding bij zuigelingen, tracheostomie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

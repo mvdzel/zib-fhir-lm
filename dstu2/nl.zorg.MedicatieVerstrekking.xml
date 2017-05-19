@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.9.4"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.4"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.MedicatieVerstrekking"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:9.4.1">
+         <fhir:path value="MedicatieVerstrekking"/>
+         <fhir:definition value="Rootconcept van de bouwsteen MedicatieVerstrekking. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieVerstrekking."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.8">
+         <fhir:path value="MedicatieVerstrekking.VerstrekteHoeveelheid"/>
+         <fhir:label value="VerstrekteHoeveelheid"/>
+         <fhir:definition value="Aantal eenheden van het product (gemeten op basis van de relevante productcode) die is afgeleverd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.6">
+         <fhir:path value="MedicatieVerstrekking.VerbruiksDuur"/>
+         <fhir:label value="VerbruiksDuur"/>
+         <fhir:definition value="De verwachte periode, dat het medicament gebruikt zal worden. De waarde hangt samen met de dosering en de verstrekte hoeveelheid."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.7">
+         <fhir:path value="MedicatieVerstrekking.DatumMedicatieVerstrekking"/>
+         <fhir:label value="DatumMedicatieVerstrekking"/>
+         <fhir:definition value="Datum en tijd dat de verstrekking heeft plaatsgevonden."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.5">
+         <fhir:path value="MedicatieVerstrekking.VerstrekkingsDosering::Dosering"/>
+         <fhir:label value="VerstrekkingsDosering::Dosering"/>
+         <fhir:definition value="Instructies voor toediening van de medicatie aan de toediener (de patiënt zelf, een verpleegkundige of andere hulpverlener).&#xA;&#xA;De verstrekkingsdosering zal, zeker wat betreft het toedieningsschema, een meer gespecificeerde uitwerking zijn van het toedieningsschema uit het voorschrift. Zo kan het voorschrift bijvoorbeeld 4xd1 vermelden, wat door de verstrekker vertaald wordt naar een etikettekst als '4 maal daags 1 tijdens de maaltijd'. Ook bij Baxter verstrekkingen vindt dit soort vertalingen plaats van 4xd1 naar specifieke tijdstippen, bijv. 09.00 uur, 12.00 uur, etc."/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.4"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.2">
+         <fhir:path value="MedicatieVerstrekking.Verstrekker::Zorgverlener"/>
+         <fhir:label value="Verstrekker::Zorgverlener"/>
+         <fhir:definition value="De verstrekker is in de vrijwel alle gevallen een geregistreerde apotheker. In principe zou het ook kunnen gaan om een webwinkel (online bestelling), een drogisterij of een buitenlandse apotheek. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.4">
+         <fhir:path value="MedicatieVerstrekking.Voorschrift::MedicatieVoorschrift"/>
+         <fhir:label value="Voorschrift::MedicatieVoorschrift"/>
+         <fhir:definition value="Een afspraak of order voor het gebruik van medicatie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.3">
+         <fhir:path value="MedicatieVerstrekking.VerstrekkingsProduct::Product"/>
+         <fhir:label value="VerstrekkingsProduct::Product"/>
+         <fhir:definition value="Het verstrekte product is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar de verstrekking hiervan kan op dezelfde wijze worden gerapporteerd.&#xA;In de meeste gevallen zal het verstrekte product gelijk zijn aan het product dat is voorgeschreven in het medicatievoorschrift. &#xA;&#xA;In principe betreft dit het voorgeschreven product, maar de verstrekker kan door substitutie het voorgeschreven product vervangen door een equivalent product. Bovendien kan de verstrekker een generiek geformuleerd voorgeschreven product vervangen door een handelsproduct, daarnaast kan hij ook het voorgeschreven handelsproduct vervangen door een ander handelsproduct."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.6"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.4.9">
+         <fhir:path value="MedicatieVerstrekking.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerkingen met betrekking tot de medicatie verstrekking."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

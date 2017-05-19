@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.10"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.7.10"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Opleiding"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:7.10.1">
+         <fhir:path value="Opleiding"/>
+         <fhir:definition value="Dit is het rootconcept van de bouwsteen Opleiding. Het concept bevat alle gegevenselementen van de bouwsteen Opleiding."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.10.2">
+         <fhir:path value="Opleiding.Schooltype"/>
+         <fhir:label value="Schooltype"/>
+         <fhir:definition value="Typering van de hoogst genoten opleiding."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.10.3">
+         <fhir:path value="Opleiding.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Indien relevant geacht kan middels de toelichting een specificatie van de opleiding (bijv. patient studeert Geneeskunde) worden toegevoegd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

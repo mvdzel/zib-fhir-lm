@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.8.2"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.8.2"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.AllergieIntolerantie"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2016-05-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:8.2.1">
+         <fhir:path value="AllergieIntolerantie"/>
+         <fhir:definition value="Rootconcept van de bouwsteen AllergieIntolerantie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen AllergieIntolerantie."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.5">
+         <fhir:path value="AllergieIntolerantie.AllergieStatus"/>
+         <fhir:label value="AllergieStatus"/>
+         <fhir:definition value="Bewering over de status van de overgevoeligheid."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.6">
+         <fhir:path value="AllergieIntolerantie.BeginDatumTijd"/>
+         <fhir:label value="BeginDatumTijd"/>
+         <fhir:definition value="De datum en tijd dat de allergie of de ongewenste reactie is vastgesteld. &#xA;Dit kan een exacte datum en tijd zijn maar ook een globale aanduiding van de datum (bijvoorbeeld alleen jaar of jaar en maand)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.8">
+         <fhir:path value="AllergieIntolerantie.LaatsteReactieDatumTijd"/>
+         <fhir:label value="LaatsteReactieDatumTijd"/>
+         <fhir:definition value="Opgave van de laatste maal dat een reactie in het licht van de overgevoeligheid is opgetreden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.4">
+         <fhir:path value="AllergieIntolerantie.AllergieCategorie"/>
+         <fhir:label value="AllergieCategorie"/>
+         <fhir:definition value="Identificeert de categorie van de overgevoeligheid aan zoals medicatie, voedsel of omgeving. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.9">
+         <fhir:path value="AllergieIntolerantie.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Tekstuele toelichting op de overgevoeligheid die niet in één van de andere velden kan worden weergegeven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.2">
+         <fhir:path value="AllergieIntolerantie.VeroorzakendeStof"/>
+         <fhir:label value="VeroorzakendeStof"/>
+         <fhir:definition value="Stof, groep stoffen of omgevingsfactor waar de patiënt allergisch of overgevoelig voor is."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.10">
+         <fhir:path value="AllergieIntolerantie.Reactie"/>
+         <fhir:label value="Reactie"/>
+         <fhir:definition value="Container van het concept Reactie. Deze container bevat alle gegevenselementen van het concept Reactie.  "/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.14">
+         <fhir:path value="AllergieIntolerantie.Reactie.Ernst"/>
+         <fhir:label value="Ernst"/>
+         <fhir:definition value="De ernst van de reactie ten gevolge van de blootgestelling aan de veroorzakende stof."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.12">
+         <fhir:path value="AllergieIntolerantie.Reactie.SpecifiekeStof"/>
+         <fhir:label value="SpecifiekeStof"/>
+         <fhir:definition value="Meer specifieke aanduiding van de stof die de reactie opriep. Dit kan een specifieke stof uit een groep stoffen zijn waarvoor de patiënt allergisch of overgevoelig is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.16">
+         <fhir:path value="AllergieIntolerantie.Reactie.ReactieDuur"/>
+         <fhir:label value="ReactieDuur"/>
+         <fhir:definition value="Tijdsduur van de reactie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.13">
+         <fhir:path value="AllergieIntolerantie.Reactie.ReactieBeschrijving"/>
+         <fhir:label value="ReactieBeschrijving"/>
+         <fhir:definition value="Tekstuele beschrijving van de reactie als geheel."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.17">
+         <fhir:path value="AllergieIntolerantie.Reactie.ReactieTijdstip"/>
+         <fhir:label value="ReactieTijdstip"/>
+         <fhir:definition value="Datum en tijd waarop de reactie plaats gevonden heeft. Dit mag ook alleen een datum of een gedeeltelijke datum zijn, indien dit niet nauwkeuriger bekend is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.11">
+         <fhir:path value="AllergieIntolerantie.Reactie.Symptoom"/>
+         <fhir:label value="Symptoom"/>
+         <fhir:definition value="De inhoudelijke specificatie van de reactie die optreedt indien de patiënt wordt blootgesteld aan de veroorzakende stof."/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.15">
+         <fhir:path value="AllergieIntolerantie.Reactie.WijzeVanBlootstelling"/>
+         <fhir:label value="WijzeVanBlootstelling"/>
+         <fhir:definition value="Wijze waarop de patiënt in aanraking is gekomen met de veroorzakende stof of de wijze waarop  de stof toegediend is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.18">
+         <fhir:path value="AllergieIntolerantie.Reactie.Waarschijnlijkheid"/>
+         <fhir:label value="Waarschijnlijkheid"/>
+         <fhir:definition value="Aanduiding van de waarschijnlijkheid dat de stof die beschreven is in het concept 'SpecifiekeStof' de reactie veroorzaakt heeft."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:8.2.7">
+         <fhir:path value="AllergieIntolerantie.MateVanKritiekZijn"/>
+         <fhir:label value="MateVanKritiekZijn"/>
+         <fhir:definition value="Mate van kritiek zijn wordt gedefinieerd als &#34;de potentiële ernst van toekomstige reacties.&#34;&#xA;Dit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

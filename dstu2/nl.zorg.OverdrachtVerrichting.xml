@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.14.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.14.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.OverdrachtVerrichting"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2016-05-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:14.1.1">
+         <fhir:path value="Verrichting"/>
+         <fhir:definition value="Rootconcept van de bouwsteen OverdrachtVerrichting. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtVerrichting."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.2">
+         <fhir:path value="Verrichting.VerrichtingStartDatum"/>
+         <fhir:label value="VerrichtingStartDatum"/>
+         <fhir:definition value="De startdatum (en eventueel starttijd) van de verrichting. Een vage datum, bijv. alleen een jaartal, is toegestaan.&#xA;&#xA;Het element biedt de mogelijkheid om de start van de periode van een reeks bij elkaar behorende verrichtingen aan te geven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.3">
+         <fhir:path value="Verrichting.VerrichtingEindDatum"/>
+         <fhir:label value="VerrichtingEindDatum"/>
+         <fhir:definition value="De einddatum (en eventueel eindtijd) van de verrichting. Een vage datum, bijv. alleen een jaartal, is toegestaan.&#xA;&#xA;Het element biedt de mogelijkheid om het einde van de periode van een reeks bij elkaar behorende verrichtingen aan te geven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.8">
+         <fhir:path value="Verrichting.VerrichtingAnatomischeLocatie"/>
+         <fhir:label value="VerrichtingAnatomischeLocatie"/>
+         <fhir:definition value="Anatomische locatie die de focus is van de verrichting."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.9">
+         <fhir:path value="Verrichting.Indicatie::Probleem"/>
+         <fhir:label value="Indicatie::Probleem"/>
+         <fhir:definition value="De indicatie is de reden voor het uitvoeren van de verrichting."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.4">
+         <fhir:path value="Verrichting.VerrichtingType"/>
+         <fhir:label value="VerrichtingType"/>
+         <fhir:definition value="De naam van de verrichting. &#xA;&#xA;Vanaf 1 januari 2013 moeten alle verrichtingen in het primaire proces worden vastgelegd met CBV codes. Om hieraan te voldoen wordt de verrichtingenthesaurus van DHD (CBV verrichtingenset ) voor het coderen van verrichtingen gebruikt. Mogelijk dat in de toekomst naast de CBV verrichtingenset ook de NIC voor verpleegkundige verrichtingen gehanteerd gaat worden en dat er een “coded valueset” komt voor paramedische verrichtingen. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.7">
+         <fhir:path value="Verrichting.Product"/>
+         <fhir:label value="Product"/>
+         <fhir:definition value="Het product waarvan het plaatsen in of aan het lichaam het doel is van de verrichting, bijv. het plaatsen van een implantaat."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.10.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.5">
+         <fhir:path value="Verrichting.Locatie::Zorgaanbieder"/>
+         <fhir:label value="Locatie::Zorgaanbieder"/>
+         <fhir:definition value="De zorginstelling waar de verrichting is of wordt uitgevoerd."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.2.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.6">
+         <fhir:path value="Verrichting.UitgevoerdDoor::Zorgverlener"/>
+         <fhir:label value="UitgevoerdDoor::Zorgverlener"/>
+         <fhir:definition value="De zorgverlener die de verrichting heeft uitgevoerd. In de meeste gevallen wordt alleen het specialisme en niet de naam van de zorgverlener doorgegeven. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:14.1.10">
+         <fhir:path value="Verrichting.AangevraagdDoor::Zorgverlener"/>
+         <fhir:label value="AangevraagdDoor::Zorgverlener"/>
+         <fhir:definition value="De zorgverlener die de verrichting heeft aangevraagd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.7"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.12.7"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Polsfrequentie"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.7.1">
+         <fhir:path value="Polsfrequentie"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Polsfrequentie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Polsfrequentie."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.7.2">
+         <fhir:path value="Polsfrequentie.PolsfrequentieWaarde"/>
+         <fhir:label value="PolsfrequentieWaarde"/>
+         <fhir:definition value="Het element bevat de waarde van de gemeten polsfrequentie. De polsfrequentie wordt uitgedrukt in het aantal voelbare pulsaties van een slagader per minuut, meestal de a. radialis, a. carotis of a. femoralis."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.7.3">
+         <fhir:path value="Polsfrequentie.PolsfrequentieDatumTijd"/>
+         <fhir:label value="PolsfrequentieDatumTijd"/>
+         <fhir:definition value="Datum en tijd van de waarneming van de polsfrequentie of polsregelmatigheid."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.7.4">
+         <fhir:path value="Polsfrequentie.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting over eventuele problemen of factoren die van invloed kunnen zijn op de meting. Ook kan hier een nadere beschrijving van de polskwaliteiten worden weergegeven: aequaal/inaequaal, pulsus alternans, pulsus paradoxus, pols volume, enz."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.7.5">
+         <fhir:path value="Polsfrequentie.PolsRegelmatigheid"/>
+         <fhir:label value="PolsRegelmatigheid"/>
+         <fhir:definition value="Regulair (regelmatig) of irregulair (onregelmatig) ritme."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

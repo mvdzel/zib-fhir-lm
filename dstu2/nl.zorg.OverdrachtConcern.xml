@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.5.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.5.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.OverdrachtConcern"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-08-25"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:5.1.1">
+         <fhir:path value="Concern"/>
+         <fhir:definition value="Rootconcept van de bouwsteen OverdrachtConcern. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtConcern. "/>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.9">
+         <fhir:path value="Concern.ConcernLabel"/>
+         <fhir:label value="ConcernLabel"/>
+         <fhir:definition value="Eventuele korte tekstuele omschrijving van het concern. Met name in de eerste lijn zal dit gebruikt worden voor de episodenaam."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.2">
+         <fhir:path value="Concern.Probleem"/>
+         <fhir:label value="Probleem"/>
+         <fhir:definition value="Container van het concept Probleem. Deze container bevat alle gegevenselementen van het concept Probleem.&#xA;&#xA;Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de betroffene (de patiënt) zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose).  "/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.8">
+         <fhir:path value="Concern.Probleem.ProbleemType"/>
+         <fhir:label value="ProbleemType"/>
+         <fhir:definition value="Het type probleem, zie de conceptbeschrijving."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.3">
+         <fhir:path value="Concern.Probleem.ProbleemNaam"/>
+         <fhir:label value="ProbleemNaam"/>
+         <fhir:definition value="De probleemnaam definieert het probleem.  &#xA;&#xA;Afhankelijk van de setting kan één of meer van de onderstaande codestelsels worden gebruikt:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Gestructureerde begrippen: SNOMED CT&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Medische diagnoses: landelijke DHD lijst&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Verpleegkundige diagnoses: NANDA&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Paramedische diagnoses: DHD en NANDA (bieden hier deels oplossing voor)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voor functionele beperkingen: ICF&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voor eerste lijnszorg: ICPC-1 NL&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.6">
+         <fhir:path value="Concern.Probleem.ProbleemBeginDatum"/>
+         <fhir:label value="ProbleemBeginDatum"/>
+         <fhir:definition value="Begin van de aandoening, waarop het probleem betrekking heeft. Vooral bij klachten waarbij het langer duurt voordat de uiteindelijke diagnose gesteld wordt is het belangrijk niet alleen de diagnosedatum te weten, maar ook sinds wanneer de aandoening al bestaat. Een vage datum, bijv. alleen een jaartal of een maand en een jaartal, is toegestaan."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.4">
+         <fhir:path value="Concern.Probleem.ProbleemStatus"/>
+         <fhir:label value="ProbleemStatus"/>
+         <fhir:definition value="De probleemstatus beschrijft de toestand van het probleem:&#xA;&lt;ol&gt;&#xA;&#x9;&lt;li&gt;Actuele problemen vormen de focus van het actuele medisch beleid.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Niet-actuele (Historische) problemen vormen een onderdeel van de voorgeschiedenis. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Problemen met status 'Onder controle' verwijzen naar problemen die weliswaar nog steeds bestaan, maar die op dit moment geen specifiek medisch beleid behoeven (bv. een goed ingestelde diabetes). &lt;/li&gt;&#xA;&lt;/ol&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.7">
+         <fhir:path value="Concern.Probleem.ProbleemStatusDatum"/>
+         <fhir:label value="ProbleemStatusDatum"/>
+         <fhir:definition value="Datum vanaf wanneer de huidige waarde van de ProbleemStatus van toepassing is: sinds wanneer actueel, onder controle of niet actueel."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:5.1.5">
+         <fhir:path value="Concern.Probleem.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

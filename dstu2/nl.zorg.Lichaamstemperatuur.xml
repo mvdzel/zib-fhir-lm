@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.6"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.12.6"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Lichaamstemperatuur"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-07-16"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.6.1">
+         <fhir:path value="Lichaamstemperatuur"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Lichaamstemperatuur. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamstemperatuur."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.6.2">
+         <fhir:path value="Lichaamstemperatuur.TemperatuurWaarde"/>
+         <fhir:label value="TemperatuurWaarde"/>
+         <fhir:definition value="De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Quantity"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.6.4">
+         <fhir:path value="Lichaamstemperatuur.TemperatuurDatumTijd"/>
+         <fhir:label value="TemperatuurDatumTijd"/>
+         <fhir:definition value="Datum en tijd van de meting."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.6.3">
+         <fhir:path value="Lichaamstemperatuur.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerkingen of bijzonderheden, die van belang zijn om de meetwaarde te interpreteren."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.6.5">
+         <fhir:path value="Lichaamstemperatuur.TemperatuurType"/>
+         <fhir:label value="TemperatuurType"/>
+         <fhir:definition value="De anatomische plaats waar de lichaamstemperatuur is gemeten."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

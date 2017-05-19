@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.15.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.15.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Contact"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:15.1.1">
+         <fhir:path value="Contact"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Contact. Dit concept bevat alle gegevenselementen van de bouwsteen Contact."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.7">
+         <fhir:path value="Contact.ContactMet::Zorgverlener"/>
+         <fhir:label value="ContactMet::Zorgverlener"/>
+         <fhir:definition value="De zorgverlener waarmee het contact heeft plaatsgevonden. In de bouwsteen Zorgverlener kan tevens het specialisme en de rol van de zorgverlener vastgelegd worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.3">
+         <fhir:path value="Contact.BeginDatumTijd"/>
+         <fhir:label value="BeginDatumTijd"/>
+         <fhir:definition value="Datum en tijd waarop het contact heeft plaatsgevonden."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.13">
+         <fhir:path value="Contact.RedenContact"/>
+         <fhir:label value="RedenContact"/>
+         <fhir:definition value="Container van het concept RedenContact. Deze container bevat alle gegevenselementen van het concept RedenContact."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.12">
+         <fhir:path value="Contact.RedenContact.AfwijkendeUitslag"/>
+         <fhir:label value="AfwijkendeUitslag"/>
+         <fhir:definition value="Een afwijkende uitslag die als reden voor het contact geldt."/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.11">
+         <fhir:path value="Contact.RedenContact.Verrichting"/>
+         <fhir:label value="Verrichting"/>
+         <fhir:definition value="De verrichting die tijdens het contact is uitgevoerd."/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.14.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.6">
+         <fhir:path value="Contact.RedenContact.Probleem::ProbleemNaam"/>
+         <fhir:label value="Probleem::ProbleemNaam"/>
+         <fhir:definition value="Het probleem dat aanleiding is geweest voor het contact."/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.8">
+         <fhir:path value="Contact.Locatie::Zorgaanbieder"/>
+         <fhir:label value="Locatie::Zorgaanbieder"/>
+         <fhir:definition value="De fysieke locatie waar het contact heeft plaatsgevonden. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.17.2.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.2">
+         <fhir:path value="Contact.ContactType"/>
+         <fhir:label value="ContactType"/>
+         <fhir:definition value="Het type contact. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:15.1.4">
+         <fhir:path value="Contact.EindDatumTijd"/>
+         <fhir:label value="EindDatumTijd"/>
+         <fhir:definition value="Datum en tijd waarop het contact is geëindigd. Als het contact een periode betreft wordt hiermee het einde van deze periode aangeduid, bijvoorbeeld bij een opname."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.13.1"/>
+   <fhir:url value="https://zibs.nl/fhir/StructureDefinition/2.16.840.1.113883.2.4.3.11.60.40.3.13.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.OverdrachtLaboratoriumUitslag"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-08-25"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value=""/>
+   <fhir:copyright value=""/>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:13.1.1">
+         <fhir:path value="LaboratoriumUitslag"/>
+         <fhir:definition value="Rootconcept van de bouwsteen OverdrachtLaboratoriumUitslag. Dit rootconcept bevat alle gegevenselementen van de bouwsteen OverdrachtLaboratoriumUitslag."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.2">
+         <fhir:path value="LaboratoriumUitslag.Monster"/>
+         <fhir:label value="Monster"/>
+         <fhir:definition value="Container van het concept Monster. Deze container bevat alle gegevenselementen van het concept Monster."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.19">
+         <fhir:path value="LaboratoriumUitslag.Monster.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerking over de afname, bijv. afname na (glucose)stimulus of medicijn inname."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.17">
+         <fhir:path value="LaboratoriumUitslag.Monster.AfnameDatumTijd"/>
+         <fhir:label value="AfnameDatumTijd"/>
+         <fhir:definition value="Tijdstip van afname van het materiaal. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.18">
+         <fhir:path value="LaboratoriumUitslag.Monster.Afnameprocedure"/>
+         <fhir:label value="Afnameprocedure"/>
+         <fhir:definition value="Indien relevant voor de uitslag kan de wijze van verkrijgen van het monster opgegeven worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.16">
+         <fhir:path value="LaboratoriumUitslag.Monster.Monstermateriaal"/>
+         <fhir:label value="Monstermateriaal"/>
+         <fhir:definition value="Monstermateriaal beschrijft het afgenomen materiaal. Indien de LOINC testcode impliciet ook een materiaal beschrijft, mag dit element daar niet mee in strijd zijn. Indien gewenst kan dit gegeven wel een meer gedetailleerde beschrijving van het materiaal geven: LOINC codes bevatten de materialen alleen op hoofdniveau.&#xA;Dit is in lijn met de afspraken die gemaakt zijn in het IHE/Nictiz programma e-Lab.&#xA;&#xA;Indien de test uitgevoerd is op een afgeleid materiaal (bijv. plasma) bevat dit element toch het afgenomen materiaal (in dit geval bloed). De LOINC code zal in het algemeen in dit geval wel naar plasma wijzen. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.15">
+         <fhir:path value="LaboratoriumUitslag.Monster.Monsternummer"/>
+         <fhir:label value="Monsternummer"/>
+         <fhir:definition value="Identificerend nummer van het afgenomen materiaal, ter referentie voor navraag bij bronorganisatie. In de transmurale setting bestaat dit nummer uit een monsternummer inclusief de identificatie van de uitgevende organisatie, om uniek te zijn buiten de grenzen van een organisatie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Identifier"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.3">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest"/>
+         <fhir:label value="LaboratoriumTest"/>
+         <fhir:definition value="Container van het concept LaboratoriumTest. Deze container bevat alle gegevenselementen van het concept LaboratoriumTest."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.9">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.Testmethode"/>
+         <fhir:label value="Testmethode"/>
+         <fhir:definition value="De gebruikte testmethode voor het verkrijgen van de uitslag. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.8">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.TestNaam"/>
+         <fhir:label value="TestNaam"/>
+         <fhir:definition value="De TestNaam is de naam van de uitgevoerde test."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.12">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.ReferentieOndergrens"/>
+         <fhir:label value="ReferentieOndergrens"/>
+         <fhir:definition value="De voor de patiënt geldende referentie onderwaarde van de met de test gemeten waarde."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Element"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.10">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.Uitslag"/>
+         <fhir:label value="Uitslag"/>
+         <fhir:definition value="De uitslag van de test. Afhankelijk van de soort test bestaat de uitslag uit een waarde met eenheid of uit een gecodeerde waarde (ordinaal of nominaal)."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Element"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.14">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.ResultaatVlaggen"/>
+         <fhir:label value="ResultaatVlaggen"/>
+         <fhir:definition value="Attentie codes die aangeven of de uitslag boven of onder bepaalde referentiewaarden ligt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.11">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.ReferentieBovengrens"/>
+         <fhir:label value="ReferentieBovengrens"/>
+         <fhir:definition value="De voor de patiënt geldende referentie bovenwaarde van de met de test gemeten waarde."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Element"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.13">
+         <fhir:path value="LaboratoriumUitslag.LaboratoriumTest.TestDatumTijd"/>
+         <fhir:label value="TestDatumTijd"/>
+         <fhir:definition value="De datum en eventueel tijdstip waarop de test uitgevoerd is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="dateTime"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.7">
+         <fhir:path value="LaboratoriumUitslag.ResultaatType"/>
+         <fhir:label value="ResultaatType"/>
+         <fhir:definition value="Het resultaattype definieert de laboratoriumspecialiteit waaronder de bepaling valt."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.6">
+         <fhir:path value="LaboratoriumUitslag.ResultaatStatus"/>
+         <fhir:label value="ResultaatStatus"/>
+         <fhir:definition value="De status van de laboratoriumuitslag."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.4">
+         <fhir:path value="LaboratoriumUitslag.Onderzoek"/>
+         <fhir:label value="Onderzoek"/>
+         <fhir:definition value="Bij een laboratoriumbepaling die uit meerdere subbepalingen bestaat en vaak als één geheel wordt aangevraagd bevat dit concept  de naam van de samengestelde aanvraag (vaak aangeduid als panel, battery of cluster). Voorbeelden zijn: bloedgassen en EBV serologie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Coding"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:13.1.5">
+         <fhir:path value="LaboratoriumUitslag.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerkingen, zoals bv. tekstuele interpretatie of advies bij de uitslag."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="string"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>
