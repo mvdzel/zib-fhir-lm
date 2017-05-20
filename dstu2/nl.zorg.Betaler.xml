@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="Betalers zijn organisaties of individuen die betalen voor de aan de patiënt geleverde zorg. Deze organisaties of individuen kunnen zijn: instellingen of personen die financieel garant staan of verantwoordelijk zijn voor de patiënt (zoals ouders van minderjarigen), organisaties met directe financiële verantwoordelijkheid, combinaties van deze of de patiënt zelf."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

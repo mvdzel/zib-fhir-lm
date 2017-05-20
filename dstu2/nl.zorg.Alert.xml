@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="Een alert beschrijft een klinisch of administratief feit dat onder de aandacht van de gebruikers van de klinische systemen wordt gebracht , om er bij het vormen van diagnostisch en therapeutisch beleid of bij de omgang met de patiënt rekening mee te houden, meestal wegens een veiligheidsrisico. &#xA;Aandoeningen, die de overgevoeligheid van het lichaam voor een stof beschrijven, zich uitend in een specifieke fysiologische reactie na blootstelling, worden allergieën genoemd. Deze worden in een aparte bouwsteen beschreven. &#xA;Waarschuwingen voor niet allergische aandoeningen kunnen betreffen:&#xA;-&#x9;een aandoening (conditie of diagnose die beschouwd kan worden als contra-indicatie voor het gebruik van groepen van geneesmiddelen of het ondergaan van een bepaalde therapie), zoals zwangerschap of een verlengd QT-syndroom&#xA;-&#x9;Verminderde functie van een orgaansysteem (hartfalen, verminder lever- of nierfunctie, verminderde afweer) &#xA;-&#x9;Kans op verspreiding van bepaalde micro-organismen (multiresistente bacterie, tuberkelbacterie, HIV, HBV, Ebola virus)&#xA;-&#x9;Andere risico’s"/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

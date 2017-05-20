@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="De pijnscore is een algemene maat voor de pijnbeleving, geen beschrijving van specifieke, gelocaliseerde pijn.&#xA;&#xA;Als goed reproduceerbare maat voor de beleving van pijn worden gebruikt:&#xA;&#xA;1) NRS (Numeric Rating Scale) waarbij de patiënt een cijfer geeft aan de pijn op een schaal van 1 (geen pijn) en 10 (ondraaglijke pijn).&#xA;&#xA;2) VAS (Visual Analogue Score) , waarbij de patiënt op een lat met een lijn aangeeft hoe de pijn ervaren wordt en op de achterkant van de lat staat een schaal van 0 (geen pijn) tot 10 (ondraaglijke pijn).&#xA;&#xA;De uitslag van beide scores hebben dezelfde betekenis, maar de visueel analoge methode (VAS) wordt als betrouwbaarder aangemerkt dan de NRS pijnscore.&#xA;&#xA;"/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

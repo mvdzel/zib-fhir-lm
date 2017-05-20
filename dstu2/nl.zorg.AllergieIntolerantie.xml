@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="Een allergie  of intolerantie beschrijft de geneigdheid tot overgevoeligheid van een patiënt voor een stof,  zodat na blootstelling een ongewenste fysiologische reactie verwacht wordt, terwijl bij de meeste mensen bij die hoeveelheid geen reactie zou optreden. De waargenomen fysiologische veranderingen zijn meestal het resultaat van een immunologische reactie.  &#xA;De stoffen kunnen als volgt worden ingedeeld:&#xA;-&#x9;Geneesmiddel&#xA;-&#x9;Geneesmiddelgroep&#xA;-&#x9;Ingrediënt/toevoeging&#xA;-&#x9;Voeding&#xA;-&#x9;Omgevingsfactor&#xA;-&#x9;Dier&#xA;-&#x9;Planten&#xA;-&#x9;Chemicaliën&#xA;-&#x9;Inhalatieallergenen"/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

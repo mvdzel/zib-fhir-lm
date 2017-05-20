@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="De arteriële zuurstofsaturatie, kortweg saturatie, is een graadmeter voor de hoeveelheid zuurstof die aan het hemoglobine in de rode bloedcellen in de arteriën of slagaders gebonden is. De meting wordt meestal uitgevoerd als een transcutane meting met een saturatiemeter of pulsoximeter. De saturatie wordt uitgedrukt als een percentage en is bij gezonde personen meer dan 95%. &#xA;&#xA;"/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

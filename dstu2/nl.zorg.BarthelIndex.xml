@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="De Barthel-index is een gevalideerd meetinstrument voor het vastleggen en volgen van activiteiten van het dagelijks leven (ADL) van patiënten en indirect de mate van afhankelijk zijn van hulp. &#xA;De lijst bestaat uit 10 onderdelen: darm, blaas, uiterlijke verzorging, toiletgebruik, eten, transfers (bed-stoel en omgekeerd), mobiliteit, aan- en uitkleden, trappen lopen en baden/douchen waaraan een score wordt toegekend. &#xA;De totaalscore is de som van de scores van de 10 onderdelen. "/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

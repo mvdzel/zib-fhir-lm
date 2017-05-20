@@ -14,8 +14,8 @@
    <fhir:contact>
       <fhir:name value="PM"/>
    </fhir:contact>
-   <fhir:description value=""/>
-   <fhir:copyright value=""/>
+   <fhir:description value="Drugs (ook wel: verdovende middelen, stimulerende middelen, bedwelmingsmiddelen, roesmiddelen, geestverruimende middelen, verboden middelen of dope) is een verzamelnaam voor geneesmiddelen en genotsmiddelen die een meer of minder 'drogerende' (verdovende, opwekkende en/of hallucinogene) werking hebben en die tot verslaving kunnen leiden. Drug [Online] Beschikbaar op:  nl.Wikipedia.org/wiki/drug [Geraadpleegd: 11 februari 2015].&#xA;&#xA;Deze bouwsteen beschrijft de bij de patiënt uitgevraagde gegevens over het gebruik van drugs."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
    <fhir:snapshot>

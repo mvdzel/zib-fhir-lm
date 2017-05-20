@@ -22,24 +22,27 @@
 	
 	<xsl:variable name="NL-CM">2.16.840.1.113883.2.4.3.11.60.40.3.</xsl:variable>
 	<xsl:variable name="url-prefix">https://zibs.nl/fhir/logical/</xsl:variable>
+	<!-- 
+		We should use the dcm datatypes, but the DSTU2 fhir-net-api doesnot allow that.
+	 -->
 	<xsl:variable name="datatypes">
-		<datatype id="7887" dcm="TS" fhir="dateTime"/>
-		<datatype id="7906" dcm="CD" fhir="Coding"/>
-		<datatype id="7895" dcm="ST" fhir="string"/>
-		<datatype id="7891" dcm="PQ" fhir="Quantity"/>
-		<datatype id="7892" dcm="BL" fhir="boolean"/>
-		<datatype id="7888" dcm="INT" fhir="integer"/>
-		<datatype id="7886" dcm="CO" fhir="Coding"/>
-		<datatype id="7885" dcm="ED" fhir="base64Binary"/>
-		<datatype id="7889" dcm="II" fhir="Identifier"/>
-		<datatype id="7903" dcm="ANY" fhir="Element"/>
+		<datatype id="7887" dcm="https://zibs.nl/fhir/logical/TS" fhir="dateTime"/>
+		<datatype id="7906" dcm="https://zibs.nl/fhir/logical/CD" fhir="Coding"/>
+		<datatype id="7895" dcm="https://zibs.nl/fhir/logical/ST" fhir="string"/>
+		<datatype id="7891" dcm="https://zibs.nl/fhir/logical/PQ" fhir="Quantity"/>
+		<datatype id="7892" dcm="https://zibs.nl/fhir/logical/BL" fhir="boolean"/>
+		<datatype id="7888" dcm="https://zibs.nl/fhir/logical/INT" fhir="integer"/>
+		<datatype id="7886" dcm="https://zibs.nl/fhir/logical/CO" fhir="Coding"/>
+		<datatype id="7885" dcm="https://zibs.nl/fhir/logical/ED" fhir="base64Binary"/>
+		<datatype id="7889" dcm="https://zibs.nl/fhir/logical/II" fhir="Identifier"/>
+		<datatype id="7903" dcm="https://zibs.nl/fhir/logical/ANY" fhir="Element"/>
 	</xsl:variable>
 
 	<xsl:template match="/">
 		<xsl:for-each select="/max:model/objects/object[stereotype='DCM']">
 			<xsl:variable name="dcm" select="."/>
-			<xsl:variable name="dcmid" select="$dcm/id"/>
-			<xsl:variable name="im" select="/max:model/objects/object[parentId=$dcmid and name='Information Model']"/>
+			<xsl:variable name="dcmpid" select="$dcm/id"/>
+			<xsl:variable name="im" select="/max:model/objects/object[parentId=$dcmpid and name='Information Model']"/>
 			<xsl:variable name="imid" select="$im/id"/>
 			<xsl:variable name="dcmname" select="tag[@name='DCM::Name']/@value"/>
 			<xsl:variable name="dcmid" select="tag[@name='DCM::Id']/@value"/>
@@ -63,8 +66,8 @@
 				  <xsl:variable name="revdate" select="concat(format-number($datecomps[3],'0000'),'-',format-number($datecomps[2],'00'),'-',format-number($datecomps[1],'00'))"/>
 				  <fhir:date><xsl:attribute name="value"><xsl:value-of select="$revdate"/></xsl:attribute></fhir:date>
 			      <fhir:contact><fhir:name><xsl:attribute name="value"><xsl:value-of select="tag[@name='DCM::EndorsingAuthority.Name']/@value"/></xsl:attribute></fhir:name></fhir:contact>
-			      <xsl:variable name="description"><xsl:value-of select="/max:model/objects/object[parentId=$dcmid and name='Concept']/notes" disable-output-escaping="yes"/></xsl:variable>
-			      <xsl:variable name="copyright"><xsl:value-of select="/max:model/objects/object[parentId=$dcmid and name='Copyrights']/notes" disable-output-escaping="yes"/></xsl:variable>
+			      <xsl:variable name="description"><xsl:value-of select="/max:model/objects/object[parentId=$dcmpid and name='Concept']/notes" disable-output-escaping="yes"/></xsl:variable>
+			      <xsl:variable name="copyright"><xsl:value-of select="/max:model/objects/object[parentId=$dcmpid and name='Copyrights']/notes" disable-output-escaping="yes"/></xsl:variable>
 				  <fhir:description><xsl:attribute name="value"><xsl:value-of select="substring-before(substring-after($description,'&lt;nl-NL&gt;'),'&lt;/nl-NL&gt;')"/></xsl:attribute></fhir:description>
 				  <fhir:copyright><xsl:attribute name="value"><xsl:value-of select="substring-before(substring-after($copyright,'&lt;nl-NL&gt;'),'&lt;/nl-NL&gt;')"/></xsl:attribute></fhir:copyright>
 				  <fhir:kind value="logical" />
