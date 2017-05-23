@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.1.1"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.1.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Betaler"/>
+   <fhir:title value="nl.zorg.Betaler"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Betalers zijn organisaties of individuen die betalen voor de aan de patiënt geleverde zorg. Deze organisaties of individuen kunnen zijn: instellingen of personen die financieel garant staan of verantwoordelijk zijn voor de patiënt (zoals ouders van minderjarigen), organisaties met directe financiële verantwoordelijkheid, combinaties van deze of de patiënt zelf."/>
+   <fhir:purpose value="Het vastleggen van de gegevens van de betalende instanties en personen dient om betaling van de kosten van de geleverde zorg te vereenvoudigen en op voorhand inzicht te verkrijgen hoe deze kosten betaald gaan worden, zeker waar het gaat om niet verzekerde zorg."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Verzekeringsgegevens"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:1.1.1">
+         <fhir:path value="Betaler"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Betaler. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Betaler."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.12">
+         <fhir:path value="Betaler.TelefoonEmail::Contactgegevens"/>
+         <fhir:label value="TelefoonEmail::Contactgegevens"/>
+         <fhir:definition value="Telefoonnummer en/of e-mailadres van betaler."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.5"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.2">
+         <fhir:path value="Betaler.BetalerPersoon"/>
+         <fhir:label value="BetalerPersoon"/>
+         <fhir:definition value="Container van het concept BetalerPersoon. Deze container bevat alle gegevenselementen van het concept BetalerPersoon."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.5">
+         <fhir:path value="Betaler.BetalerPersoon.BetalerNaam"/>
+         <fhir:label value="BetalerNaam"/>
+         <fhir:definition value="Naamgegevens van de betalende persoon of organisatie (rechtspersoon)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.4">
+         <fhir:path value="Betaler.BetalerPersoon.Bankgegevens"/>
+         <fhir:label value="Bankgegevens"/>
+         <fhir:definition value="Container van het concept Bankgegevens. Deze container bevat alle gegevenselementen van het concept Bankgegevens."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.9">
+         <fhir:path value="Betaler.BetalerPersoon.Bankgegevens.BankNaam"/>
+         <fhir:label value="BankNaam"/>
+         <fhir:definition value="Naam van de financiële instelling."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.10">
+         <fhir:path value="Betaler.BetalerPersoon.Bankgegevens.Bankcode"/>
+         <fhir:label value="Bankcode"/>
+         <fhir:definition value="Code die de bank en het filiaal aangeven. Voor Europese landen is dat de BIC of SWIFT code van de instelling."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.11">
+         <fhir:path value="Betaler.BetalerPersoon.Bankgegevens.Rekeningnummer"/>
+         <fhir:label value="Rekeningnummer"/>
+         <fhir:definition value="Rekeningnummer van de betaler bij de genoemde instelling. Voor Europese landen is dit het IBAN nummer."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.3">
+         <fhir:path value="Betaler.Verzekeraar"/>
+         <fhir:label value="Verzekeraar"/>
+         <fhir:definition value="Container van het concept Verzekeraar. Deze container bevat alle gegevenselementen van het concept Verzekeraar."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.16">
+         <fhir:path value="Betaler.Verzekeraar.OrganisatieNaam"/>
+         <fhir:label value="OrganisatieNaam"/>
+         <fhir:definition value="De naamgegevens van de zorgverzekeraar. Indien het UZOVI nummer als identificatienummer wordt opgegeven, is dit de naam zoals vermeld in het UZOVI register en ook bij de controle op verzekeringsrecht (COV) wordt teruggegeven."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.8">
+         <fhir:path value="Betaler.Verzekeraar.Verzekering"/>
+         <fhir:label value="Verzekering"/>
+         <fhir:definition value="Container van het concept Verzekering. Deze container bevat alle gegevenselementen van het concept Verzekering."/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.15">
+         <fhir:path value="Betaler.Verzekeraar.Verzekering.VerzekeringsSoort"/>
+         <fhir:label value="VerzekeringsSoort"/>
+         <fhir:definition value="Soort verzekering. Codes zoals geretourneerd bij de controle op verzekeringsrecht"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.13">
+         <fhir:path value="Betaler.Verzekeraar.Verzekering.BeginDatumTijd"/>
+         <fhir:label value="BeginDatumTijd"/>
+         <fhir:definition value="Datum vanaf wanneer de dekking van de verzekering geldt."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.14">
+         <fhir:path value="Betaler.Verzekeraar.Verzekering.EindDatumTijd"/>
+         <fhir:label value="EindDatumTijd"/>
+         <fhir:definition value="Datum tot wanneer de dekking van de verzekering geldt.&#xA;Dit item mapt op het EHIC veld 9 &lt;i&gt;'Expiry date'.&lt;/i&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.6">
+         <fhir:path value="Betaler.Verzekeraar.VerzekerdeNummer"/>
+         <fhir:label value="VerzekerdeNummer"/>
+         <fhir:definition value="Nummer waaronder de verzekerde bekend is bij de verzekeraar&#xA;Dit item mapt op het EHIC veld 8 &lt;i&gt;'Identification number of the card'&lt;/i&gt; "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.7">
+         <fhir:path value="Betaler.Verzekeraar.IdentificatieNummer"/>
+         <fhir:label value="IdentificatieNummer"/>
+         <fhir:definition value="Unieke zorgverzekeraarsidentificatie (het UZOVI-nummer)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/II"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:1.1.17">
+         <fhir:path value="Betaler.Adres::Adresgegevens"/>
+         <fhir:label value="Adres::Adresgegevens"/>
+         <fhir:definition value="Adresgegevens van betaler."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.4"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

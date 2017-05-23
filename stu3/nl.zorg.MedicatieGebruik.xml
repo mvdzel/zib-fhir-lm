@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.9.2"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.2"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.MedicatieGebruik"/>
+   <fhir:title value="nl.zorg.MedicatieGebruik"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="MedicatieGebruik beschrijft de inname of toediening van een medicament, veelal in relatie tot een voorschrift, maar ook op eigen initiatief. Het beschrijft het patroon van inname van medicatie, zoals gerapporteerd door de patiënt zelf, een mantelzorger of een zorgverlener. Het vastleggen van medicatie gebruik geeft naast het gebruik van voorgeschreven medicatie ook inzicht in het gebruik van thuismedicatie."/>
+   <fhir:purpose value="Het vastleggen van medicatiegegevens is zeer belangrijk onderdeel voor de continuïteit van zorg. Het raakt de kern van patiëntveiligheid. Zorgprofessionals in de samenwerkende keten moeten altijd over een actueel medicatieoverzicht beschikken. &#xA;Toepassing van de bouwsteen zal meestal betrekking hebben op:&#xA;•&#x9;Het vastleggen van de inname van zelfmedicatie of ‘drugs’.&#xA;•&#x9;Het vastleggen van de actueel gebruikte medicatie bij opname in een ziekenhuis.&#xA;•&#x9;De medicatieverificatie: het vastleggen van het actieve medicatieprofiel."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Medicatie, Feitelijk Gebruik, Gebruik"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:9.2.1">
+         <fhir:path value="MedicatieGebruik"/>
+         <fhir:definition value="Rootconcept van de bouwsteen MedicatieGebruik. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieGebruik."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.2">
+         <fhir:path value="MedicatieGebruik.GebruiksProduct::Product"/>
+         <fhir:label value="GebruiksProduct::Product"/>
+         <fhir:definition value="Het gebruikte middel. Dit is vrijwel steeds een geneesmiddel. Voedingsmiddelen, bloedproducten, hulp- en verbandmiddelen vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen ook worden worden vastgelegd.&#xA;&#xA;In principe betreft dit het voorgeschreven product, maar het daadwerkelijk gebruikte product kan afwijken van het voorgeschreven product. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.6"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.4">
+         <fhir:path value="MedicatieGebruik.GebruiksDosering::Dosering"/>
+         <fhir:label value="GebruiksDosering::Dosering"/>
+         <fhir:definition value="Bij inventarisatie van medicatiegebruik beschrijft de dosering de hoeveelheid en het gebruikspatroon, gerapporteerd door de patiënt of een zorgverlener.&#xA;&#xA;De gebruiksdosering betreft de gerapporteerde gebruiksdosering. De gebruiksdosering kan qua toedieningsschema van de voorschriftdosering afwijken indien de patiënt bij het gebruik anders besluit en dienovereenkomstig rapporteert."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.4"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.5">
+         <fhir:path value="MedicatieGebruik.MedicatieGebruikStatus"/>
+         <fhir:label value="MedicatieGebruikStatus"/>
+         <fhir:definition value="De status of statuscode is van belang om de planning van het gebruik aan te geven. &#xA;Met dit attribuut wordt aangegeven of het gebruik actueel is, of tijdelijk onderbroken, of inmiddels gestopt. Het onderbreken van (thuis)gebruik vindt veelvuldig plaats bij opname, voorafgaande aan een ingreep en in reactie op monitoring (spiegelbepaling, effectmeting).&#xA;&#xA;Bij de vastlegging worden de volgende interpretaties gehanteerd:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Actief: Het product wordt gebruikt.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Onderbroken: Het gebruik is (tijdelijk) onderbroken , bv. wegens een operatie. Later zal besloten worden tot hervatting of stoppen.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Afgebroken: Het gebruik is gestopt om een specifieke reden.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voltooid: Het gebruik is inmiddels afgesloten (volgens plan, voorschrift of afspraak).]&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Niet gestart: Het gebruik van het product is niet gestart.&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.3">
+         <fhir:path value="MedicatieGebruik.Voorschrift::MedicatieVoorschrift"/>
+         <fhir:label value="Voorschrift::MedicatieVoorschrift"/>
+         <fhir:definition value="De afspraak of order voor het gebruik van de medicatie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.7">
+         <fhir:path value="MedicatieGebruik.MedicatieGebruikRedenVanOnderbreken"/>
+         <fhir:label value="MedicatieGebruikRedenVanOnderbreken"/>
+         <fhir:definition value="Reden dat het gebruik van een medicijn onderbroken is. Hier kan een tekst of een van de codes gekozen worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.6">
+         <fhir:path value="MedicatieGebruik.MedicatieGebruikRedenVanStoppen"/>
+         <fhir:label value="MedicatieGebruikRedenVanStoppen"/>
+         <fhir:definition value="Reden dat het gebruik van een medicijn beëindigd is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.2.8">
+         <fhir:path value="MedicatieGebruik.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerkingen met betrekking tot het medicatie gebruik."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

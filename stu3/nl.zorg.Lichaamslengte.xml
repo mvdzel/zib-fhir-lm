@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.2"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.12.2"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Lichaamslengte"/>
+   <fhir:title value="nl.zorg.Lichaamslengte"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De lichaamslengte van een persoon."/>
+   <fhir:purpose value="De lichaamslengte wordt voor verschillende redenen gebruikt, zoals het meten van de groei, bijvoorbeeld voor een baby, kind of jongere, het berekenen van de lichaamsoppervlakte, bijvoorbeeld voor het berekenen van de juiste hoeveelheid medicatie, of gecombineerd met lichaamsgewicht om de Body Mass Index te berekenen. Ook voor het bepalen van de voedingstoestand van een persoon wordt de lengte gebruikt.&#xA;&#xA;Deze zorginformatiebouwsteen biedt de mogelijkheid om het lichaamslengte van een persoon vast te leggen."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="lichaamslengte, lengte, vitale parameters"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.2.1">
+         <fhir:path value="Lichaamslengte"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Lichaamslengte. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamslengte."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.2.2">
+         <fhir:path value="Lichaamslengte.LengteWaarde"/>
+         <fhir:label value="LengteWaarde"/>
+         <fhir:definition value="Het element bevat de waarde van de gemeten lichaamslengte. &#xA;De lichaamslengte is de lengte van het menselijk lichaam van hielbodem tot kruin, in het algemeen gemeten in staande houding. Bij zeer kleine kinderen of patiënten die niet kunnen staan wordt de lichaamslengte in gestrekte liggende houding gemeten. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.2.4">
+         <fhir:path value="Lichaamslengte.LengteDatumTijd"/>
+         <fhir:label value="LengteDatumTijd"/>
+         <fhir:definition value="Datum en (eventueel) tijd van de waarneming van de lichaamslengte."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.2.3">
+         <fhir:path value="Lichaamslengte.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting op de meting van de lichaamslengte. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.2.5">
+         <fhir:path value="Lichaamslengte.Positie"/>
+         <fhir:label value="Positie"/>
+         <fhir:definition value="De positie tijdens de meting van de gemeten persoon."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

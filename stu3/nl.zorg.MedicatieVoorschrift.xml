@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.9.5"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.9.5"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.MedicatieVoorschrift"/>
+   <fhir:title value="nl.zorg.MedicatieVoorschrift"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een medicatievoorschrift is een afspraak of order voor het gebruik van medicatie, waarin beschreven worden: het voorgeschreven product, instructies voor het gebruik of toediening en (optioneel) een verzoek tot aflevering.&#xA;Van ieder voorgeschreven product wordt de dosisinformatie weergeven: de startdatum en tijd en eventuele stopdatum en tijd of totaal aantal giften, toedieningsschema (frequentie of interval, toedieningstijden, relatie met maaltijden e.d.), de keerdosis, toedieningssnelheid of –duur (voor infusen), en de toedieningsweg. &#xA;Ook wordt eventueel aangegeven of het 'zo nodig' medicatie betreft en onder welke voorwaarde het middel dan gebruikt dient te worden en hoe hoog dan de afgesproken maximale dosis in een periode is. &#xA;Zo mogelijk wordt de reden of indicatie van starten/stoppen/wijzigen van het gebruik vermeld.&#xA;Ook medicatie waarvan het gebruik tijdelijk onderbroken is, kan worden vermeld.&#xA;Wanneer het voorschrift ook de bestelling bevat om een middel aan patiënt of een toediener af te verstrekken, dan kan het voorschrift een recept genoemd worden."/>
+   <fhir:purpose value="Het doel van het medicatievoorschrift is inzicht te geven in de therapeutische intentie van de zorgverlener ten aanzien van de medicamenteuze behandeling. Daarnaast biedt het de mogelijkheid om het eventuele verzoek aan de verstrekker van de medicatie om deze aan de patiënt ter beschikking te stellen vast te leggen."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="Medicatie, Voorschrift"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:9.5.1">
+         <fhir:path value="MedicatieVoorschrift"/>
+         <fhir:definition value="Rootconcept van de bouwsteen MedicatieVoorschrift. Dit rootconcept bevat alle gegevenselementen van de bouwsteen MedicatieVoorschrift."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.6">
+         <fhir:path value="MedicatieVoorschrift.Product"/>
+         <fhir:label value="Product"/>
+         <fhir:definition value="De container van het concept Product. Deze container bevat alle gegevenselementen van de concept Product.&#xA;&#xA;Het voorgeschreven middel is vrijwel steeds een geneesmiddel. Hulp- en verbandmiddelen kunnen echter ook voorgeschreven en via de apotheek geleverd worden. Voedingsmiddelen en bloedproducten vallen strikt genomen niet onder de categorie geneesmiddelen, maar kunnen worden voorgeschreven, en door een apotheek geleverd worden.&#xA;&#xA;Het is mogelijk om met &lt;b&gt;één enkele code &lt;/b&gt;een medicatiesoort aan te duiden, waarbij die code gekozen kan zijn uit meerdere mogelijke coderingssystemen (concreet GPK, PRK, HPK of artikelnummers). Door een juiste toepassing van deze codes in de softwaresystemen leggen deze codes de samenstelling van het gebruikte middel voldoende vast en is een complete productspecificatie niet nodig.&#xA;&#xA;Het is mogelijk om naast een primaire code ook &lt;b&gt;alternatieve codes &lt;/b&gt;uit andere coderingssystemen aan te duiden (zodat bijvoorbeeld de GPK kan worden meegestuurd als is geregistreerd op basis van PRK). &#xA;&#xA;Door meerdere ingrediënten op te geven wordt het mogelijk om een samengesteld product weer te geven. Als een van de samenstellende delen vloeibaar is, dan wordt de dosering in milliliters opgegeven, anders in 'stuks'.&#xA;&#xA;Het is dan mogelijk om zowel impliciet te specificeren (door een medicatiecode te gebruiken) als expliciet de &lt;b&gt;samenstelling van de medicatie &lt;/b&gt;aan te duiden, bijvoorbeeld door de (actieve) ingrediënt(en) van de medicatie te benoemen. &#xA;&#xA;Het is mogelijk om &lt;b&gt;magistrale receptuur &lt;/b&gt;door te geven. Dit kan door bovenbedoelde mogelijkheid om gecodeerd ingrediënten aan te duiden en/of door de samenstelling en bereidingswijze als vrije tekst door te geven. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.33">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductCode"/>
+         <fhir:label value="ProductCode"/>
+         <fhir:definition value="De codering van geneesmiddelen wordt in Nederland ontleend aan de G-standaard (uitgegeven door z-index), die onder regie van de KNMP wordt gevuld.&#xA;&#xA;Het gecodeerde geneesmiddel kan worden uitgedrukt als:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;GTIN International Article Number&lt;/li&gt;&#xA;&#x9;&lt;li&gt;KNMP artikelnummer = ATKODE (2.16.840.1.113883.2.4.4.8)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Handelsproductcode (HPK)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voorschrijfcode (PRK) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Generieke productcode (GPK) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Anatomic Therapeutic Classification code (ATC)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;SNOMED CT code&lt;/li&gt;&#xA;&#x9;&lt;li&gt;90.000.000 nummer (eigen code instelling) (OID van instelling)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;De GTIN maakt het mogelijk het product incl. de herkomst met een barcode te identificeren.&#xA;De ATKODE is het nummer waarmee het artikel in de groothandel aan apotheeksystemen gekoppeld wordt (b.v. een doos met 3 strippen van 10 tabletten).&#xA;De HPK is de code voor het handelsproduct (met merknaam) zoals gebruikt per gift/inname (1 pil, 1 puff, 1 ml)&#xA;De PRK codeert voor hetzelfde product als de HPK, maar niet gekoppeld aan een fabrikant (geen merknaam, geen kenmerken zoals kleur, geometrische vorm enz.). Deze code maakt het mogelijk om generiek voor te schrijven en toch te definiëren welk handelsproduct genomen kan worden (bv. zak 200ml).&#xA;De generieke product code definieert de samenstelling van een product, is voldoende voor vastlegging van het voorschift, maar niet van de bestelling.&#xA;&#xA;De voorschrijfcode (PRK) is ontwikkeld en toegevoegd aan de oudere generieke (GPK) en leverancierspecifieke (HPK, ATKODE) codering om het enerzijds mogelijk te maken, dat een generiek product kan worden doorgegeven zonder een specifiek merk te noemen, maar anderzijds voldoende informatie te bieden om verstrekking door de apotheek te ondersteunen. &#xA;&#xA;De GTIN codering wordt ingevoerd om een standaard voor barcodescanning te implementeren en de herkomst van het middel te kunnen traceren.&#xA;&#xA;Het 90.000.000 nummer wordt gebruikt conform landelijke afspraken."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.34">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie"/>
+         <fhir:label value="ProductSpecificatie"/>
+         <fhir:definition value="De container van het concept ProductSpecificatie. Deze container bevat alle gegevenselementen van de concept ProductSpecificatie.&#xA;&#xA;De productspecificatie is nodig, wanneer de productcode niet volstaat om de werkzame stoffen en de sterkte te achterhalen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.38">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie.Ingredient"/>
+         <fhir:label value="Ingredient"/>
+         <fhir:definition value="De container van het concept Ingredient. Deze container bevat alle gegevenselementen van de concept Ingredient.&#xA;&#xA;Een product bevat één of meer werkzame stoffen en hulpstoffen. Deze zijn meestal al door de productcode bepaald. Voor magistrale medicatie of door de lokale apotheek samengestelde medicamenten moeten de ingrediënten afzonderlijk worden opgegeven.&#xA;&#xA;De werkzame stoffen spelen een bijzondere rol, omdat deze:&#xA;a) bepalend zijn voor de farmacotherapeutische werking van de medicatie en&#xA;b) de basis zijn voor aanduiding van de sterkte van de medicatie (bijv. 200 mg)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.39">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie.Ingredient.Sterkte"/>
+         <fhir:label value="Sterkte"/>
+         <fhir:definition value="De hoeveelheid van de opgenomen werkzame stof of toevoeging per eenheid product. Dit kan b.v. een concentratie zijn als het geneesmiddel is opgelost in een draagvloeistof."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.40">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie.Ingredient.IngredientCode"/>
+         <fhir:label value="IngredientCode"/>
+         <fhir:definition value="Werkzame stof of hulpstof. &#xA;Hier kunnen dezelfde codes worden gebruikt als voor de ProductCode (met name voor verdunningen en samenstellingen), maar nu kunnen ook de ATC, SSK en SNK gebruikt worden om een stof aan te duiden (voor het opgeven van ingrediënten van lokaal magistraal bereide producten).&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;GTIN International Article Number &lt;/li&gt;&#xA;&#x9;&lt;li&gt;KNMP artikelnummer &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Handelsproductcode (HPK) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voorschrijfcode (PRK)  &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Generieke productcode (GPK) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;ATC (anatomic therapeutic classification) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;SSK (stofnaamcode met toedieningsweg) &lt;/li&gt;&#xA;&#x9;&lt;li&gt;SNK (stofnaamcode) &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;De ATC is een internationale classificatie van farmaceutische stoffen zonder referentie aan specifieke producten in de markt. De ATC code van een generiek product bevat dan ook geen verwijzing naar dosering, farmaceutische vorm of toedieningsweg, alleen maar naar de ingrediënten (niet de hoeveelheid/concentratie/sterkte)."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.36">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie.Merknaam"/>
+         <fhir:label value="Merknaam"/>
+         <fhir:definition value="Indien de ProductCode geen merknaam bevat, kan in dit concept de merknaam vermeld worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.37">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie.FarmaceutischeVorm"/>
+         <fhir:label value="FarmaceutischeVorm"/>
+         <fhir:definition value="De farmaceutische vorm geeft de vorm van een geneesmiddel weer overeenkomstig de toedieningsweg. Voorbeelden zijn: tablet, zetpil, infusievloeistof, zalf. Indien het middel een generieke code uit de G-standaard kent dan is de vorm via de G-standaard bekend. Voor producten zonder code (vrije tekst, magistrale bereiding), kan de toedieningsvorm worden opgegeven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.35">
+         <fhir:path value="MedicatieVoorschrift.Product.ProductSpecificatie.ProductNaam"/>
+         <fhir:label value="ProductNaam"/>
+         <fhir:definition value="Voor geneesmiddelen die in vrije tekst zijn opgegeven is geen code voorhanden, en dient de volledige omschrijving hier vermeld te worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.4">
+         <fhir:path value="MedicatieVoorschrift.Dosering"/>
+         <fhir:label value="Dosering"/>
+         <fhir:definition value="De container van het concept Dosering. Deze container bevat alle gegevenselementen van de concept Dosering.&#xA;&#xA;Instructies voor toediening van de medicatie aan de toediener (de patiënt zelf, een verpleegkundige of andere hulpverlener). Bij inventarisatie van medicatiegebruik beschrijft de dosering het gebruikspatroon dat de patiënt met zichzelf heeft afgesproken.&#xA;&#xA;Als het doseerschema (spreiding van toedieningen over de tijd) vast is en de keerdosis ook, dan is er een enkele gebruiksinstructie.&#xA;&#xA;Er kunnen meerdere &lt;i&gt;parallelle&lt;/i&gt; gebruiksinstructies opgenomen worden bij een wisselende doseerhoeveelheid binnen de dag en bij een variabele gebruiksfrequentie.&#xA;&#xA;Er kunnen meerdere &lt;i&gt;sequentiële&lt;/i&gt; gebruiksinstructies opgenomen worden bij wisselende doseerhoeveelheden binnen de periode en/of een wisselend doseerschema."/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.23">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsschema"/>
+         <fhir:label value="Toedieningsschema"/>
+         <fhir:definition value="De container van het concept Toedieningsschema. Deze container bevat alle gegevenselementen van de concept Toedieningsschema.&#xA;&#xA;De specificatie van de tijdsmomenten waarop het medicament toegediend wordt of zal worden. De wijze waarop dit wordt weergegeven is:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Tijdstip(pen) (16:00) of gebeurtenissen (&#34;voor het eten&#34;) waarop het medicament dagelijks ingenomen moet worden. &lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een specifiek aantal keren dat het medicament dagelijks ingenomen moet worden (&#34;3x per dag&#34;), aangeduid met de frequentie&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een tijdsafstand tussen opeenvolgende innames  (&#34;Elke 2 uur&#34;, &#34;elke 3 dagen&#34;), aangeduid met Interval.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Combinaties van periodes met een interval en een duur (&#34;Gedurende drie van vier weken dagelijks 1 : het pilschema&#34;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;Als een medicament niet dagelijks ingenomen moet worden, kan het voorgaande gecombineerd worden met dagaanduidingen:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Een of meerdere weekdagen waarop de toediening moet plaatsvinden (&#34;maandag, woensdag, vrijdag&#34;)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;&#34;3 keer per week&#34;, &#34;2 keer per maand&#34;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;Standaard zal de gespecificeerde toediening &#34;oneindig&#34; herhaal worden  tot: &#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;De einddatum en tijd bereikt is&lt;/li&gt;&#xA;&#x9;&lt;li&gt;De totale toedieningsduur bereikt is (gedurende 14 dagen)&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Een specifiek aantal toedieningen bereikt is (&#34;20 giften&#34;, &#34;eenmalig&#34;), op te geven in het concept AantalToedieningen.&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.27">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsschema.Weekdagen"/>
+         <fhir:label value="Weekdagen"/>
+         <fhir:definition value="Weekdagen definieert een patroon van toedieningen op vaste weekdagen. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.24">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsschema.Frequentie"/>
+         <fhir:label value="Frequentie"/>
+         <fhir:definition value="De frequentie geeft het aantal doseermomenten per tijdseenheid, meestal per dag. Als dit gegeven is opgenomen, dan zal het Interval niet zijn opgegeven.&#xA;&#xA;Er wordt dan een redelijke verdeling over de dag verwacht, maar dit komt niet heel precies en wordt aan de patiënt overgelaten. Het is de gebruikelijke manier van voorschrijven extramuraal. Bij baxteren en intramuraal wordt uit een dergelijk voorschrift daarna een (locatiegebonden) uitwerking gemaakt in uitdeeltijden (logistiek)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.26">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsschema.Toedientijd"/>
+         <fhir:label value="Toedientijd"/>
+         <fhir:definition value="De toedientijd is een specifieke (klok)tijd op de dag. Deze tijd is meestal niet exact (bedoeld). Er kunnen meerdere inname tijdstippen op een dag zijn.&#xA;&#xA;De beoogde toedientijd kan ook als dagdeel worden aangegeven (ochtend, middag, avond, nacht). De toedientijd blijft dan leeg, waarbij het dagdeel vastgelegd kan worden in het concept Dagdeel."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.28">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsschema.Dagdeel"/>
+         <fhir:label value="Dagdeel"/>
+         <fhir:definition value="Om voorschrijven voor de patiënt eenvoudig te maken en overdracht tussen eerste en tweedelijn te faciliteren is er behoefte om in plaats van tijdstippen dagdelen aan te geven. &#xA;&#xA;Voor de codering van dagdeel in het toedieningsschema is een afspraak gemaakt tussen de eerste en tweede lijn om de WCIA 21 codering van de eerste lijn eenduidig te kunnen vertalen naar standaard deeltijden in klinische medicatieopdrachten van de tweede lijn. Hierbij geldt:&#xA;&#xA;WCIA&#x9;        Tweede lijn&#xA;'s ochtends     06.00-12.00&#xA;'s middags      12.00-18.00&#xA;'s avonds         18.00-24.00&#xA;'s nachts          24.00-06.00"/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.25">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsschema.Interval"/>
+         <fhir:label value="Interval"/>
+         <fhir:definition value="Het interval geeft de tijd tussen doseermomenten weer. Als dit gegeven is opgenomen, dan zal de &lt;i&gt;Frequentie &lt;/i&gt;niet zijn opgegeven.&#xA;&#xA;Voorbeelden : elke 4 uur, om de 3 weken.&#xA;&#xA;De tijdstippen kunnen nu vrij gekozen worden, maar de verdeling over de dag komt nauwer en het interval tussen de tijdstippen is belangrijk (bv. antibiotica)&#xA;Bij baxteren en intramuraal wordt uit een dergelijk voorschrift daarna een (locatiegebonden) uitwerking gemaakt in uitdeeltijden (logistiek)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.17">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Inloopsnelheid"/>
+         <fhir:label value="Inloopsnelheid"/>
+         <fhir:definition value="De inloopsnelheid wordt gebruikt bij de langzame toediening van vloeistoffen. De meeteenheid is in de praktijk vrijwel altijd ml/uur.&#xA;Ook het opgeven van een interval (bijv. 0-10 ml/uur) is een gebruikelijke optie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.16">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsweg"/>
+         <fhir:label value="Toedieningsweg"/>
+         <fhir:definition value="De route waarlangs de medicatie wordt toegediend (oraal, nasaal, intraveneus,...). "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.14">
+         <fhir:path value="MedicatieVoorschrift.Dosering.AantalToedieningen"/>
+         <fhir:label value="AantalToedieningen"/>
+         <fhir:definition value="Het totaal aantal toedieningen definieert in veel gevallen de beoogde duur van de gebruiksperiode."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/INT"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.18">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Toedieningsduur"/>
+         <fhir:label value="Toedieningsduur"/>
+         <fhir:definition value="De toedieningsduur definieert de tijdsduur gedurende welke het medicijn wordt toegediend en wordt gebruikt bij de langzame toediening van vloeistoffen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.11">
+         <fhir:path value="MedicatieVoorschrift.Dosering.StartDatum"/>
+         <fhir:label value="StartDatum"/>
+         <fhir:definition value="De datum (en tijd) waarop het gebruik van het middel volgens de gegevens betreffende de dosering gestart is of zal starten."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.22">
+         <fhir:path value="MedicatieVoorschrift.Dosering.ZoNodig"/>
+         <fhir:label value="ZoNodig"/>
+         <fhir:definition value="Indicator die aangeeft of de toediening alleen onder een bepaalde voorwaarde wordt uitgevoerd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/BL"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.19">
+         <fhir:path value="MedicatieVoorschrift.Dosering.AanvullendeToelichting"/>
+         <fhir:label value="AanvullendeToelichting"/>
+         <fhir:definition value="De aanvullende toelichting bevat een aanvullend uitleg over het gebruik of de overwegingen voor het huidige voorschrift.&#xA;&#xA;Het kan hier ook gaan om alle aanwijzingen voor gebruik. De tekst kan afkomstig zijn van het oorspronkelijke &#34;papieren&#34; medicatievoorschrift, maar kan ook gegenereerd worden uit de gecodeerde gegevens. &#xA;&#xA;Dit concept mag meer informatie bevatten dan gestructureerd gecodeerd is in de onderliggende informatie, maar mag er niet mee in tegenspraak zijn.&#xA;De instructies mogen niet conflicteren met andere onderdelen van het toedieningsverzoek.&#xA;&#xA;De instructies kunnen ook verwijzen naar een bestaand protocol.&#xA;&#xA;De G-standaard bevat veel teksten die dit attribuut kunnen ondersteunen, onder andere in G-standaard tabel 362 waar de teksten uit de huisartsenstandaard WCIA tabel 25 zijn opgenomen. Deze teksten kunnen desgewenst gebruikt worden om invulling te geven aan dit concept."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.15">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Keerdosis"/>
+         <fhir:label value="Keerdosis"/>
+         <fhir:definition value="De keerdosis definieert de dosis per inname of toediening.&#xA;&#xA;De dosering wordt beschreven in de bij het product behorende eenheid, zodat het meestal een aantal stuks of doses betreft. Voor vloeistoffen en andere deelbare producten zal meestal een volumemaat (bij voorkeur &#34;ml&#34;) worden gebruikt.&#xA;&#xA;De voorschrijver zal de dosering in veel gevallen willen aangeven in gewichtseenheden van de werkzame stof. &#xA;&#xA;Als niet het product, maar alleen de stof is aangegeven, dan wordt de hoeveelheid van die stof opgegeven. Paracetamol 1000mg is dan equivalent aan Paracetamol 500mg tablet, 2 tabletten (of stuks).&#xA;&#xA;De dosering wordt soms aangegeven in een berekening, waarin vaak het lichaamsgewicht of het lichaamsoppervlak van de patiënt als parameter gebruikt wordt. De berekening blijft echter niet meer dan een hulpmiddel om tot een beslissing te komen.&#xA;&#xA;Bij continue toediening wordt naast de toedieningssnelheid (inloopsnelheid) soms ook de keerdosis opgegeven (bv. 20ml in een spuit of 500ml in een zak), maar vaak ook weggelaten.&#xA;&#xA;Ook een algemeen doseeradvies zoals 'Gebruik volgens protocol' of 'Zie gebruiksaanwijzing' kan adequaat zijn. Ook dan wordt geen keerdosis opgegeven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.20">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Criterium"/>
+         <fhir:label value="Criterium"/>
+         <fhir:definition value="De voorwaarde voor het toedienen van een medicament kan zijn:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;een fysiologische meetwaarde (plasma glucose concentratie, lichaamstemperatuur, bloeddruk);&lt;/li&gt;&#xA;&#x9;&lt;li&gt;een symptoom of andere omstandigheid (bij hoofdpijn, bij jeuk).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;Een dergelijk criterium zal in samenhang met de ZoNodig indicator worden opgegeven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.13">
+         <fhir:path value="MedicatieVoorschrift.Dosering.Gebruiksduur"/>
+         <fhir:label value="Gebruiksduur"/>
+         <fhir:definition value="In sommige gevallen is het nodig de beoogde gebruiksduur aan te geven, en kan deze niet berekend worden uit de startdatum, einddatum en/of het totaal aantal toedieningen. Dit kan bij voorbeeld het geval zijn bij tijdelijke slaapmedicatie die zo nodig wordt ingenomen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.12">
+         <fhir:path value="MedicatieVoorschrift.Dosering.EindDatum"/>
+         <fhir:label value="EindDatum"/>
+         <fhir:definition value="De einddatum van een dosering (specificatie van gebruik). Dit kan een afgesproken datum zjn, maar ook de datum dat het gebruik van het middel werd gestopt (stopdatum, staakdatum)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.21">
+         <fhir:path value="MedicatieVoorschrift.Dosering.MaximumAantalPerTijd"/>
+         <fhir:label value="MaximumAantalPerTijd"/>
+         <fhir:definition value="Het concept MaximumAantalPerTijd maximaliseert in tijd het gebruik van een middel in een 'zo nodig' voorschrift."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.5">
+         <fhir:path value="MedicatieVoorschrift.Afleververzoek"/>
+         <fhir:label value="Afleververzoek"/>
+         <fhir:definition value="De container van het concept Afleververzoek. Deze container bevat alle gegevenselementen van de concept Afleververzoek.&#xA;&#xA;Het afleververzoek is de bestelling (order) die bij de verstrekker geplaatst wordt voor het leveren van medicatie. Het aantal herhaalrecepten (refills) kan worden aangegeven."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.30">
+         <fhir:path value="MedicatieVoorschrift.Afleververzoek.TeVerstrekkenHoeveelheid"/>
+         <fhir:label value="TeVerstrekkenHoeveelheid"/>
+         <fhir:definition value="De te verstrekken hoeveelheid definieert het aantal af te leveren eenheden van het bestelde product. De hoeveelheid wordt aangegeven in de eenheid van het bestelde product. De te verstrekken hoeveelheid betreft altijd de hoeveelheid per deelverstrekking. In het aantal herhalingen wordt aangegeven hoevaak deze hoeveelheid verstrekt mag worden. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.32">
+         <fhir:path value="MedicatieVoorschrift.Afleververzoek.BeoogdVerstrekker::Zorgverlener"/>
+         <fhir:label value="BeoogdVerstrekker::Zorgverlener"/>
+         <fhir:definition value="De beoogde verstrekker is in vrijwel alle gevallen een geregistreerde apotheker."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.31">
+         <fhir:path value="MedicatieVoorschrift.Afleververzoek.AantalDeelVerstrekkingen"/>
+         <fhir:label value="AantalDeelVerstrekkingen"/>
+         <fhir:definition value="Maximaal aantal deelverstrekkingen (herhalingen) dat in het kader van het voorschrift gedaan mag worden. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/INT"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.10">
+         <fhir:path value="MedicatieVoorschrift.DatumMedicatieVoorschrift"/>
+         <fhir:label value="DatumMedicatieVoorschrift"/>
+         <fhir:definition value="Datum waarop het voorschrift is opgesteld."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.8">
+         <fhir:path value="MedicatieVoorschrift.MedicatieVoorschriftRedenVanStoppen"/>
+         <fhir:label value="MedicatieVoorschriftRedenVanStoppen"/>
+         <fhir:definition value="Reden om het gebruik van een medicijn te beëindigen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.2">
+         <fhir:path value="MedicatieVoorschrift.RedenVanVoorschrijven::Probleem"/>
+         <fhir:label value="RedenVanVoorschrijven::Probleem"/>
+         <fhir:definition value="De medische reden voor het voorschrijven of gebruik van de medicatie. Hiermee kan een medische indicatie worden doorgegeven die de directe aanleiding vormde voor het voorschrijven of het gebruik van de betreffende medicatie.&#xA;&#xA;Het kan gaan om ieder type probleem (of conditie) van de patiënt, vrijwel steeds een diagnose, een klacht of een symptoom.&#xA;&#xA;NB: Het bestand BST401T van de G-standaard bevat een &#34;bijzonder kenmerk&#34; om aan te geven dat het &#34;uitwisselen van de reden van voorschrijven noodzakelijk is&#34;."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.41">
+         <fhir:path value="MedicatieVoorschrift.Voorschrijver"/>
+         <fhir:label value="Voorschrijver"/>
+         <fhir:definition value="De container van het concept Voorschrijver. Deze container bevat alle gegevenselementen van de concept Voorschrijver. &#xA;&#xA;De persoon die het voorschrift heeft voorgeschreven."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.43">
+         <fhir:path value="MedicatieVoorschrift.Voorschrijver.Mantelzorger::Contactpersoon"/>
+         <fhir:label value="Mantelzorger::Contactpersoon"/>
+         <fhir:definition value="De mantelzorger die het middel heeft voorgeschreven."/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.3.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.42">
+         <fhir:path value="MedicatieVoorschrift.Voorschrijver.Patiënt"/>
+         <fhir:label value="Patiënt"/>
+         <fhir:definition value="De patiënt die zichzelf een middel heeft voorgeschreven."/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.3">
+         <fhir:path value="MedicatieVoorschrift.Voorschrijver.Zorgverlener"/>
+         <fhir:label value="Zorgverlener"/>
+         <fhir:definition value="De zorgverlener die voor het voorschrift verantwoordelijk is."/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.17.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.7">
+         <fhir:path value="MedicatieVoorschrift.MedicatieVoorschriftStatus"/>
+         <fhir:label value="MedicatieVoorschriftStatus"/>
+         <fhir:definition value="De MedicatieVoorschriftStatus geeft aan of het gebruik actueel is, of tijdelijk onderbroken, of inmiddels gestopt. De status beschrijft de opeenvolgende stadia van het voorschrijfproces en is van belang om de planning van het gebruik aan te geven. &#xA;Het onderbreken van (thuis)gebruik vindt veelvuldig plaats bij opname, voorafgaande aan een ingreep en in reactie op monitoring (spiegelbepaling, effectmeting).&#xA;&#xA;Bij de vastlegging worden de volgende interpretaties gehanteerd:&#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;Actief: Het product wordt gebruikt.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Onderbroken: Het gebruik is (tijdelijk) onderbroken , bv. wegens een operatie . Later zal besloten worden tot hervatting of stoppen.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Afgebroken: Er is een opdracht of afspraak om het gebruik te stoppen.&lt;/li&gt;&#xA;&#x9;&lt;li&gt;Voltooid: Het voorschrift is inmiddels afgesloten (volgens plan, voorschrift of afspraak).&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.9">
+         <fhir:path value="MedicatieVoorschrift.MedicatieVoorschriftRedenVanOnderbreken"/>
+         <fhir:label value="MedicatieVoorschriftRedenVanOnderbreken"/>
+         <fhir:definition value="Reden om het gebruik van een medicijn te onderbreken."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:9.5.44">
+         <fhir:path value="MedicatieVoorschrift.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerkingen met betrekking tot het medicatie voorschrift."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

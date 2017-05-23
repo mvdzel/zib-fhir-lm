@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.15"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.7.15"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Wilsverklaring"/>
+   <fhir:title value="nl.zorg.Wilsverklaring"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een wilsverklaring is een mondelinge of schriftelijke omschrijving van de wens van de patiënt ten aanzien van toekomstig medisch handelen of het levenseinde. Een wilsverklaring is vooral voor situaties waarin de patiënt niet meer over deze beslissingen kan praten met de zorgverlener."/>
+   <fhir:purpose value="Een goed overzicht van wensen van de patiënt  is belangrijk. Een zorgverlener kan de wilsverklaring gebruiken om de bestaande wensen met de betrokkenen te bespreken  en om deze wensen in het eigen beleid op te nemen.  Vooral in de acute situatie is een beknopte en overzichtelijke lijst van belang. "/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="wilsverklaring"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:7.15.1">
+         <fhir:path value="Wilsverklaring"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Wilsverklaring. Dit concept bevat alle gegevenselementen van de bouwsteen Wilsverklaring."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.2">
+         <fhir:path value="Wilsverklaring.WilsverklaringType"/>
+         <fhir:label value="WilsverklaringType"/>
+         <fhir:definition value="Aanduiding van de verschillende soorten wilsverklaringen."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.4">
+         <fhir:path value="Wilsverklaring.Aandoening::Probleem"/>
+         <fhir:label value="Aandoening::Probleem"/>
+         <fhir:definition value="Het probleem of aandoening waar de wilsverklaring betrekking op heeft."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.3">
+         <fhir:path value="Wilsverklaring.Vertegenwoordiger::Contactpersoon"/>
+         <fhir:label value="Vertegenwoordiger::Contactpersoon"/>
+         <fhir:definition value="De persoon die wettelijke vertegerwoordiger is of in de ondertekende volmacht als gevolmachtigde wordt benoemd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.3.1.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.5">
+         <fhir:path value="Wilsverklaring.WilsverklaringDocument"/>
+         <fhir:label value="WilsverklaringDocument"/>
+         <fhir:definition value="Ingescand brondocument met de wilsverklaring en handtekening van de patiënt, bijv. een PDF."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ED"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.6">
+         <fhir:path value="Wilsverklaring.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting bij de wilsverklaring, bijvoorbeeld de vorm, zoals een penning, een tattoo etc. of waar de wilsverklaring te vinden is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.15.7">
+         <fhir:path value="Wilsverklaring.WilsverklaringDatum"/>
+         <fhir:label value="WilsverklaringDatum"/>
+         <fhir:definition value="De datum waarop de wilsverklaring is vastgelegd."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

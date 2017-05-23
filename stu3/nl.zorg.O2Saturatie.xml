@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.10"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.12.10"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.O2Saturatie"/>
+   <fhir:title value="nl.zorg.O2Saturatie"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-04-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De arteriële zuurstofsaturatie, kortweg saturatie, is een graadmeter voor de hoeveelheid zuurstof die aan het hemoglobine in de rode bloedcellen in de arteriën of slagaders gebonden is. De meting wordt meestal uitgevoerd als een transcutane meting met een saturatiemeter of pulsoximeter. De saturatie wordt uitgedrukt als een percentage en is bij gezonde personen meer dan 95%. &#xA;&#xA;"/>
+   <fhir:purpose value="Het meten en bewaken van de zuurstofsaturatie vindt plaats om de oxygenatie, ofwel de hoeveelheid gebonden zuurstof in het slagaderlijke bloed, te monitoren."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="zuurstofsaturatie, vitale parameters, saturatie"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.10.1">
+         <fhir:path value="O2Saturatie"/>
+         <fhir:definition value="Rootconcept van de bouwsteen O2Saturatie. Dit rootconcept bevat alle gegevenselementen van de bouwsteen O2Saturatie."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.2">
+         <fhir:path value="O2Saturatie.SpO2Waarde"/>
+         <fhir:label value="SpO2Waarde"/>
+         <fhir:definition value="Het element bevat de waarde van de indirect, perifeer gemeten O2-saturatie.&#xA;De O2-saturatie geeft in % de mate aan waarin de hemoglobine in het bloed verzadigd is met zuurstof, de ratio van oxy-hemoglobine en hemoglobine.&#xA;De meting wordt uitgevoerd op plaatsen waar de huid voldoende licht doorlaat, zoals een vinger, teen of oorlel."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/PQ"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.3">
+         <fhir:path value="O2Saturatie.O2SaturatieDatumTijd"/>
+         <fhir:label value="O2SaturatieDatumTijd"/>
+         <fhir:definition value="Het moment van waarneming van de SpO2."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.4">
+         <fhir:path value="O2Saturatie.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting op de meting van de saturatie. "/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.10.5">
+         <fhir:path value="O2Saturatie.ExtraZuurstofToediening"/>
+         <fhir:label value="ExtraZuurstofToediening"/>
+         <fhir:definition value="Indicatie of de meting gedaan werd in een situatie waar sprake was van extra zuurstof toediening."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/BL"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

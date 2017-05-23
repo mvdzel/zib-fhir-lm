@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.7.5"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.7.5"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Levensovertuiging"/>
+   <fhir:title value="nl.zorg.Levensovertuiging"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De levens- en/of geloofsovertuiging van de patiënt.  "/>
+   <fhir:purpose value="Levensovertuiging kan implicaties hebben rondom de behandeling en verzorging, zoals bij behandelaanwijzingen, dieet, geestelijke verzorging."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="social history, sociale anamnese, levensovertuiging, geloof "/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:7.5.1">
+         <fhir:path value="LevensovertuigingRC"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Levensovertuiging. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Levensovertuiging."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:7.5.2">
+         <fhir:path value="LevensovertuigingRC.Levensovertuiging"/>
+         <fhir:label value="Levensovertuiging"/>
+         <fhir:definition value="De levens- en/of geloofsovertuiging van de patiënt."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

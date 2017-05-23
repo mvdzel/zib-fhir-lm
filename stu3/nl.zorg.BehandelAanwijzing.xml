@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.2.1"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.2.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.BehandelAanwijzing"/>
+   <fhir:title value="nl.zorg.BehandelAanwijzing"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een behandelaanwijzing bevat een afgesproken beperking in de behandeling gebaseerd op de mondelinge of schriftelijke wilsverklaring van de patiënt. "/>
+   <fhir:purpose value="Een goed overzicht behandelaanwijzingen gebaseerd op de wensen van de patiënt of diens gevolmachtigde over (on)gewenste behandelingen is belangrijk bij de zorg voor de patiënt. Vooral in de acute situatie is een beknopte en overzichtelijke lijst van belang. Door de grote verscheidenheid van ziektebeelden gaat het niet alleen om een reanimatie setting maar ook om situaties waar ten gevolge van een bestaand ziektebeeld de conditie van de patiënt zeer snel achteruit gaat.&#xA;&#xA;Een zorgverlener die deze gegevens raadpleegt kan deze bestaande behandelaanwijzingen met de patiënt, zijn familie of gevolmachtigde bespreken en eventueel in het beleid opnemen.&#xA;&#xA;"/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="advance directives, behandel aanwijzing, wilsverklaring, behandelbeperking"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:2.1.1">
+         <fhir:path value="BehandelAanwijzing"/>
+         <fhir:definition value="Rootconcept van de bouwsteen BehandelAanwijzing. Dit concept bevat alle gegevenselementen van de bouwsteen BehandelAanwijzing.&#xA;&#xA;"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.8">
+         <fhir:path value="BehandelAanwijzing.Verificatie"/>
+         <fhir:label value="Verificatie"/>
+         <fhir:definition value="Container van het concept Verificatie. Deze container bevat alle gegevenselementen van het concept Verificatie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.9">
+         <fhir:path value="BehandelAanwijzing.Verificatie.Geverifieerd"/>
+         <fhir:label value="Geverifieerd"/>
+         <fhir:definition value="Indicatie van het feit dat de behandelaanwijzing geverifieerd is met de patiënt, zijn familie en/of gevolmachtigde."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/BL"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.11">
+         <fhir:path value="BehandelAanwijzing.Verificatie.GeverifieerdBij"/>
+         <fhir:label value="GeverifieerdBij"/>
+         <fhir:definition value="De persoon met wie de behandelaanwijzing is besproken en geverifieerd."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.10">
+         <fhir:path value="BehandelAanwijzing.Verificatie.VerificatieDatum"/>
+         <fhir:label value="VerificatieDatum"/>
+         <fhir:definition value="Datum waarop de verificatie met de patiënt, zijn familie en/of gevolmachtigde heeft plaatsgevonden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.3">
+         <fhir:path value="BehandelAanwijzing.Behandeling"/>
+         <fhir:label value="Behandeling"/>
+         <fhir:definition value="De medische behandeling waarop de behandelaanwijzing betrekking heeft."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.4">
+         <fhir:path value="BehandelAanwijzing.BehandelingToegestaan"/>
+         <fhir:label value="BehandelingToegestaan"/>
+         <fhir:definition value="Indicatie van het al dan niet of met beperkingen toestaan van de behandelingen."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.5">
+         <fhir:path value="BehandelAanwijzing.Beperkingen"/>
+         <fhir:label value="Beperkingen"/>
+         <fhir:definition value="De beperkingen of specifieke omstandigheden die voor een bepaalde behandeling gelden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.6">
+         <fhir:path value="BehandelAanwijzing.BeginDatum"/>
+         <fhir:label value="BeginDatum"/>
+         <fhir:definition value="Datum waarop de behandelaanwijzing van kracht is geworden. Een vage datum, bijv. alleen een jaartal, is toegestaan."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.7">
+         <fhir:path value="BehandelAanwijzing.EindDatum"/>
+         <fhir:label value="EindDatum"/>
+         <fhir:definition value="Datum waarop de behandelaanwijzing eindigt. Een vage datum, bijv. alleen een jaartal, is toegestaan.&#xA;&#xA;Indien de geldigheid van de behandelaanwijzing niet als datum is uit te drukken, bijvoorbeeld &#34;tot aan ontslag uit het ziekenhuis&#34; kan dit in het concept Toelichting vermeld worden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.14">
+         <fhir:path value="BehandelAanwijzing.Wilsverklaring::Wilsverklaring"/>
+         <fhir:label value="Wilsverklaring::Wilsverklaring"/>
+         <fhir:definition value="Een (schriftelijke) verklaring waarin een persoon wensen aangeeft met betrekking tot toekomstig medisch handelen, voor het geval deze persoon op dat moment niet meer in staat is (of wordt geacht) hierover beslissingen te nemen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.7.15.1"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:2.1.15">
+         <fhir:path value="BehandelAanwijzing.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Opmerkingen bij de behandelaanwijzing. Bijvoorbeeld, een tekstuele beschrijving van een einddatum van de behandelaanwijzing die als datum is aan te geven (&#34;tot aan ontslag uit het ziekenhuis&#34;)."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

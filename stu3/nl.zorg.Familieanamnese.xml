@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.6.1"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.6.1"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Familieanamnese"/>
+   <fhir:title value="nl.zorg.Familieanamnese"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2016-05-01"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De familieanamnese beschrijft de gezondheidsproblemen van biologische verwanten die relevant zijn. De familieanamnese bevat informatie over de medische aandoeningen van het familielid en de biologische relatie tussen de patiënt en het beschreven familielid."/>
+   <fhir:purpose value="Het vastleggen van gezondheidsproblemen bij familieleden van de patiënt. Dit gegeven kan relevant zijn bij het inschatten van het risico op het optreden van deze gezondheidsproblemen bij patiënt zelf. Ook kan dit gegeven mede van invloed zijn op de keuze welke diagnostiek wel of niet gedaan hoeft te worden: bij een hoog-risico patiënt zal bijvoorbeeld eerder uitgebreide diagnostiek gedaan worden, terwijl bij een laag-risico patiënt volstaan kan worden met een eenvoudigere test."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="familieanamnese, anamnese"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:6.1.1">
+         <fhir:path value="Familieanamnese"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Familieanamnese. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Familieanamnese."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.2">
+         <fhir:path value="Familieanamnese.Datum"/>
+         <fhir:label value="Datum"/>
+         <fhir:definition value="Datum van afname van de familieanamnese. Een vage datum is toegestaan."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.3">
+         <fhir:path value="Familieanamnese.Familielid"/>
+         <fhir:label value="Familielid"/>
+         <fhir:definition value="Container van het concept familielid. Deze container bevat alle gegevenselementen van het concept familielid. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.5">
+         <fhir:path value="Familieanamnese.Familielid.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting met, voor de familieanamnese relevante, informatie betreffende het familielid."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.10">
+         <fhir:path value="Familieanamnese.Familielid.OverlijdensIndicator"/>
+         <fhir:label value="OverlijdensIndicator"/>
+         <fhir:definition value="Indicator die aangeeft of het familielid overleden is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/BL"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.12">
+         <fhir:path value="Familieanamnese.Familielid.LeeftijdBijOverlijden"/>
+         <fhir:label value="LeeftijdBijOverlijden"/>
+         <fhir:definition value="De leeftijd waarop het familielid overleden is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/INT"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.4">
+         <fhir:path value="Familieanamnese.Familielid.BiologischeRelatie"/>
+         <fhir:label value="BiologischeRelatie"/>
+         <fhir:definition value="Geeft de biologische relatie van het familielid tot de patiënt. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.6">
+         <fhir:path value="Familieanamnese.Familielid.Aandoening"/>
+         <fhir:label value="Aandoening"/>
+         <fhir:definition value="Container van het concept Aandoening. Deze container bevat alle gegevenselementen van het concept Aandoening."/>
+         <fhir:min value="1"/>
+         <fhir:max value="*"/>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.7">
+         <fhir:path value="Familieanamnese.Familielid.Aandoening.Probleem::ProbleemNaam"/>
+         <fhir:label value="Probleem::ProbleemNaam"/>
+         <fhir:definition value="Het gezondheidsprobleem van het betreffende familielid dat in het kader van de familieanamnese wordt vastgelegd."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.5.1.2"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:6.1.9">
+         <fhir:path value="Familieanamnese.Familielid.Aandoening.IsDoodsoorzaak"/>
+         <fhir:label value="IsDoodsoorzaak"/>
+         <fhir:definition value="Aanduiding of het beschreven gezondheidsprobleem de doodsoorzaak is van het familielid."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/BL"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

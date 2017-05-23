@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.12.9"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.12.9"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Pijnscore"/>
+   <fhir:title value="nl.zorg.Pijnscore"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-05-22"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="De pijnscore is een algemene maat voor de pijnbeleving, geen beschrijving van specifieke, gelocaliseerde pijn.&#xA;&#xA;Als goed reproduceerbare maat voor de beleving van pijn worden gebruikt:&#xA;&#xA;1) NRS (Numeric Rating Scale) waarbij de patiënt een cijfer geeft aan de pijn op een schaal van 1 (geen pijn) en 10 (ondraaglijke pijn).&#xA;&#xA;2) VAS (Visual Analogue Score) , waarbij de patiënt op een lat met een lijn aangeeft hoe de pijn ervaren wordt en op de achterkant van de lat staat een schaal van 0 (geen pijn) tot 10 (ondraaglijke pijn).&#xA;&#xA;De uitslag van beide scores hebben dezelfde betekenis, maar de visueel analoge methode (VAS) wordt als betrouwbaarder aangemerkt dan de NRS pijnscore.&#xA;&#xA;"/>
+   <fhir:purpose value="Het doel van de pijnscore is het kwantificeren en objectiveren van de subjectieve pijnbeleving van de patiënt. "/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="pijn, pijnscore, vas, nrs, vitale parameters"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:12.9.1">
+         <fhir:path value="PijnScore"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Pijnscore. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Pijnscore."/>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.9.2">
+         <fhir:path value="PijnScore.PijnscoreWaarde"/>
+         <fhir:label value="PijnscoreWaarde"/>
+         <fhir:definition value="De score is een algemene maat voor de pijnbeleving, geen beschrijving van specifieke, gelocaliseerde pijn.&#xA;&#xA;Afhankelijk van de gebruikte meetmethode geeft het de door de patiënt beleefde mate van pijn aan op een schaal van 0 tot en met 10: 0 = geen pijn en 10 = de ergst voorstelbare pijn. Voor de tussenliggende waarden zijn geen omschrijvingen in gebruik, zodat de waarde als een getal en niet als een code wordt weergegeven. &#xA;&#xA;Soms wordt een waardebereik van 0-100 gebruikt i.p.v. 0-10. "/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/INT"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.9.3">
+         <fhir:path value="PijnScore.PijnscoreDatumTijd"/>
+         <fhir:label value="PijnscoreDatumTijd"/>
+         <fhir:definition value="De datum en het tijdstip waarop de pijnscore gemeten is."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/TS"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.9.4">
+         <fhir:path value="PijnScore.PijnMeetmethode"/>
+         <fhir:label value="PijnMeetmethode"/>
+         <fhir:definition value="De meetmethode beschrijft de gebruikte methodiek om de pijnscore vast te leggen. Bij de meting wordt gebruik gemaakt van een visualisatie van de pijnschaal.&#xA;&#xA;"/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:12.9.5">
+         <fhir:path value="PijnScore.Toelichting"/>
+         <fhir:label value="Toelichting"/>
+         <fhir:definition value="Toelichting op de pijnscore meting, bijvoorbeeld opmerkingen betreffende de omstandigheden en storende factoren die het meetresultaat kunnen beïnvloeden."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>

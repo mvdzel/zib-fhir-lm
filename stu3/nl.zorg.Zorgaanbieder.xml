@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fhir:StructureDefinition xmlns:fhir="http://hl7.org/fhir">
+   <fhir:id value="2.16.840.1.113883.2.4.3.11.60.40.3.17.2"/>
+   <fhir:url value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.17.2"/>
+   <fhir:identifier>
+      <fhir:system value="http://clinfhir.com"/>
+      <fhir:value value="author"/>
+   </fhir:identifier>
+   <fhir:language value="nl"/>
+   <fhir:version value="3.0"/>
+   <fhir:name value="nl.zorg.Zorgaanbieder"/>
+   <fhir:title value="nl.zorg.Zorgaanbieder"/>
+   <fhir:status value="draft"/>
+   <fhir:date value="2015-08-25"/>
+   <fhir:contact>
+      <fhir:name value="PM"/>
+   </fhir:contact>
+   <fhir:description value="Een zorgaanbieder is een organisatie die medische-, paramedische- en/of verpleegkundige zorg aanbiedt, en ook daadwerkelijk verleent, aan cliënten/patiënten. Voorbeelden zijn: ziekenhuis, verpleeghuis, huisartsenpraktijk."/>
+   <fhir:purpose value="Het vastleggen van de relevante gegevens ten behoeve van identificatie van de organisatie, voor administratieve doeleinden."/>
+   <fhir:copyright value="De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)."/>
+   <fhir:keyword>
+      <fhir:display value="zorgverlener, zorgaanbieder"/>
+   </fhir:keyword>
+   <fhir:kind value="logical"/>
+   <fhir:abstract value="false"/>
+   <fhir:type value="ZIB"/>
+   <fhir:snapshot>
+      <fhir:element id="NL-CM:17.2.1">
+         <fhir:path value="Zorgaanbieder"/>
+         <fhir:definition value="Rootconcept van de bouwsteen Zorgaanbieder. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Zorgaanbieder. "/>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.2.7">
+         <fhir:path value="Zorgaanbieder.AfdelingSpecialisme"/>
+         <fhir:label value="AfdelingSpecialisme"/>
+         <fhir:definition value="Het specialisme van de betrokken afdeling van de zorgaanbieder. Het afdelingsspecialisme kan gevuld worden indien bij het vermelden van een zorgaanbieder een nadere aanduiding gewenst is. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.2.4">
+         <fhir:path value="Zorgaanbieder.OrganisatieType"/>
+         <fhir:label value="OrganisatieType"/>
+         <fhir:definition value="De type zorgaanbieder, bijvoorbeeld algemeen ziekenhuis en verpleeghuis. Indien dit veld gevuld is en voor het ZorgaanbiederIdentificatieNummer een AGB code gebruikt wordt dient het type overeen te komen met het type dat impliciet in de AGB code opgenomen is."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/CD"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.2.2">
+         <fhir:path value="Zorgaanbieder.ZorgaanbiederIdentificatieNummer"/>
+         <fhir:label value="ZorgaanbiederIdentificatieNummer"/>
+         <fhir:definition value="Identificerend nummer van de organisatie. Voor Nederlandse zorgaanbieders wordt hiervoor, indien mogelijk, het URA nummer of het AGB nummer gebruikt. Voor buitenlandse of niet aangesloten zorgaanbieders kan een ander uniek identificerend nummer gebruikt worden. Dit moet vergezeld gaan met de naam en/of code van de uitgevende organisatie."/>
+         <fhir:min value="0"/>
+         <fhir:max value="*"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/II"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.2.3">
+         <fhir:path value="Zorgaanbieder.OrganisatieNaam"/>
+         <fhir:label value="OrganisatieNaam"/>
+         <fhir:definition value="Naam van de organisatie. Indien een identificatienummer meegegeven wordt, moet de naam overeenkomen met de naam die bij het identificatienummer hoort."/>
+         <fhir:min value="1"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="https://zibs.nl/fhir/logical/ST"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.2.6">
+         <fhir:path value="Zorgaanbieder.TelefoonEmail::Contactgegevens"/>
+         <fhir:label value="TelefoonEmail::Contactgegevens"/>
+         <fhir:definition value="De gegevens noodzakelijk om via telefoon en/of e-mail met de zorgaanbiedende organisatie contact op te nemen."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.5"/>
+         </fhir:type>
+      </fhir:element>
+      <fhir:element id="NL-CM:17.2.5">
+         <fhir:path value="Zorgaanbieder.Adres::Adresgegevens"/>
+         <fhir:label value="Adres::Adresgegevens"/>
+         <fhir:definition value="Het fysieke adres van de locatie van de orgaanbieder."/>
+         <fhir:min value="0"/>
+         <fhir:max value="1"/>
+         <fhir:type>
+            <fhir:code value="Reference"/>
+            <fhir:profile value="https://zibs.nl/fhir/logical/2.16.840.1.113883.2.4.3.11.60.40.3.0.1.4"/>
+         </fhir:type>
+      </fhir:element>
+   </fhir:snapshot>
+</fhir:StructureDefinition>
