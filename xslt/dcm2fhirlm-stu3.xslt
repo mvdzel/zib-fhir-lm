@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:max="http://www.umcg.nl/MAX"
@@ -10,13 +10,16 @@
 	<xsl:output encoding="utf-8" indent="yes" method="xml" name="xml"/>
 	
 	<!--
-		This generates STU3 Structure Definitions for ZIB's.
+		This generates STU3 Structure Definitions for ZIB's 2015/2016.
+		TODO: The ZIB 2017 put element ID in ConceptId tagged value.
 		For this to work on DSTU2 servers remove:
 		- <title>
 		- <purpose>
 		- <keywords>
 		- <type>
 		- use FHIR datatypes instead of ZIB datatypes
+		
+		!! N.B. Adjust the $outputfolder to your path!
 		
 		Somehow we need to use the FHIR datatypes to make all the tooling work.
 		For ClinFHIR to work we also need:
@@ -26,11 +29,9 @@
 			</identifier>
 	 -->
 	
+	<xsl:variable name="outputfolder">file:/tmp/dcm2fhirlm/</xsl:variable>
 	<xsl:variable name="NL-CM">2.16.840.1.113883.2.4.3.11.60.40.3.</xsl:variable>
 	<xsl:variable name="url-prefix">https://zibs.nl/fhir/logical/</xsl:variable>
-	<!-- 
-		We should use the dcm datatypes, but the DSTU2 fhir-net-api doesnot allow that.
-	 -->
 	<xsl:variable name="datatypes">
 		<datatype id="7887" dcm="https://zibs.nl/fhir/logical/TS" fhir="dateTime"/>
 		<datatype id="7906" dcm="https://zibs.nl/fhir/logical/CD" fhir="Coding"/>
@@ -53,7 +54,7 @@
 			<xsl:variable name="dcmname" select="tag[@name='DCM::Name']/@value"/>
 			<xsl:variable name="dcmid" select="tag[@name='DCM::Id']/@value"/>
 			
-			<xsl:variable name="href" select="concat('file:/c:/temp/dcm2fhirlm/',$dcmname,'.xml')"/>
+			<xsl:variable name="href" select="concat($outputfolder,$dcmname,'.xml')"/>
 			<xsl:value-of select="$href"/><xsl:text>
 </xsl:text>
 			<xsl:result-document href="{$href}" format="xml">
@@ -70,7 +71,7 @@
 				  <fhir:title><xsl:attribute name="value"><xsl:value-of select="$dcmname"/></xsl:attribute></fhir:title>
 				  <fhir:status value="draft" />
 				  <xsl:variable name="datecomps" select="tokenize(tag[@name='DCM::RevisionDate']/@value,'-')"/>
-				  <xsl:variable name="revdate" select="concat(format-number($datecomps[3],'0000'),'-',format-number($datecomps[2],'00'),'-',format-number($datecomps[1],'00'))"/>
+				  <xsl:variable name="revdate" select="concat(format-number(number($datecomps[3]) ,'0000'),'-',format-number(number($datecomps[2]),'00'),'-',format-number(number($datecomps[1]),'00'))"/>
 				  <fhir:date><xsl:attribute name="value"><xsl:value-of select="$revdate"/></xsl:attribute></fhir:date>
 			      <fhir:contact><fhir:name><xsl:attribute name="value"><xsl:value-of select="tag[@name='DCM::EndorsingAuthority.Name']/@value"/></xsl:attribute></fhir:name></fhir:contact>
 			      <xsl:variable name="description"><xsl:value-of select="/max:model/objects/object[parentId=$dcmpid and name='Concept']/notes" disable-output-escaping="yes"/></xsl:variable>
@@ -116,7 +117,20 @@
   	  	  <xsl:attribute name="id"><xsl:value-of select="$concept/tag[@name='DCM::DefinitionCode' and starts-with(@value,'NL-CM:')]/@value"/></xsl:attribute>
 	      <fhir:path><xsl:attribute name="value"><xsl:value-of select="concat($path-prefix,'.',$cname)"/></xsl:attribute></fhir:path>
 	      <fhir:label><xsl:attribute name="value"><xsl:value-of select="$cname"/></xsl:attribute></fhir:label>
+
 	      <!-- obv DefinitionCodes <fhir:code></fhir:code> -->
+	      <xsl:for-each select="$concept/tag[@name='DCM::DefinitionCode' and not(starts-with(@value,'NL-CM:'))]">
+		      <xsl:variable name="defCode1" select="./@value"/>
+		      <xsl:variable name="defCode1_system" select="normalize-space(substring-before($defCode1,':'))"/>
+		      <xsl:variable name="defCode1_codedisplay" select="normalize-space(substring-after($defCode1,':'))"/>
+		      <xsl:variable name="defCode1_code" select="normalize-space(substring-before($defCode1_codedisplay,' '))"/>
+		      <xsl:variable name="defCode1_display" select="normalize-space(substring-after($defCode1_codedisplay,' '))"/>
+		      <fhir:code>
+		      	<fhir:system><xsl:attribute name="value" select="$defCode1_system"/></fhir:system>
+		      	<fhir:code><xsl:attribute name="value" select="$defCode1_code"/></fhir:code>
+		      	<fhir:display><xsl:attribute name="value" select="$defCode1_display"/></fhir:display>
+		      </fhir:code>
+		  </xsl:for-each>
 	      <fhir:definition><xsl:attribute name="value"><xsl:value-of select="substring-before(substring-after($concept/notes,'&lt;nl-NL&gt;'),'&lt;/nl-NL&gt;')"/></xsl:attribute></fhir:definition>
 	      <xsl:variable name="card" select="$relationship/sourceCard"/>
 	      <xsl:choose>
