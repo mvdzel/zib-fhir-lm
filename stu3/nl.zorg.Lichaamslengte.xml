@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Lichaamslengte"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.2.1">
          <fhir:path value="Lichaamslengte"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.2.2">
          <fhir:path value="Lichaamslengte.LengteWaarde"/>
          <fhir:label value="LengteWaarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="50373000"/>
+            <fhir:display value="Body height measure (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="Het element bevat de waarde van de gemeten lichaamslengte. &#xA;De lichaamslengte is de lengte van het menselijk lichaam van hielbodem tot kruin, in het algemeen gemeten in staande houding. Bij zeer kleine kinderen of patiënten die niet kunnen staan wordt de lichaamslengte in gestrekte liggende houding gemeten. "/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

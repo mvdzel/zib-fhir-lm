@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="BehandelAanwijzing"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:2.1.1">
          <fhir:path value="BehandelAanwijzing"/>
@@ -69,6 +69,11 @@
       <fhir:element id="NL-CM:2.1.3">
          <fhir:path value="BehandelAanwijzing.Behandeling"/>
          <fhir:label value="Behandeling"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="50731006"/>
+            <fhir:display value="Medical procedure (procedure)"/>
+         </fhir:code>
          <fhir:definition value="De medische behandeling waarop de behandelaanwijzing betrekking heeft."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

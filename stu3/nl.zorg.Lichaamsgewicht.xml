@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Lichaamsgewicht"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.1.1">
          <fhir:path value="Lichaamsgewicht"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.1.2">
          <fhir:path value="Lichaamsgewicht.GewichtWaarde"/>
          <fhir:label value="GewichtWaarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="27113001"/>
+            <fhir:display value="Body weight"/>
+         </fhir:code>
          <fhir:definition value="Het lichaamsgewicht van de patiënt. Het gewicht wordt uitgedrukt in kilogram (kg). Bij pasgeborenen onder 3 kg wordt het gewicht veelal in grammen uitgedrukt.&#xA;&#xA;Dit concept kan ook gebruikt worden om een geschat lichaamsgewicht vast te leggen als het niet mogelijk is om het exacte lichaamsgewicht te meten - bijvoorbeeld, het wegen van een tegenwerkend kind, of een schatting van het gewicht van een ongeboren kind."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

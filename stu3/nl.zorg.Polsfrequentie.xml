@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Polsfrequentie"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.7.1">
          <fhir:path value="Polsfrequentie"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.7.2">
          <fhir:path value="Polsfrequentie.PolsfrequentieWaarde"/>
          <fhir:label value="PolsfrequentieWaarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="78564009"/>
+            <fhir:display value="Pulse rate (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="Het element bevat de waarde van de gemeten polsfrequentie. De polsfrequentie wordt uitgedrukt in het aantal voelbare pulsaties van een slagader per minuut, meestal de a. radialis, a. carotis of a. femoralis."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

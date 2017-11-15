@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Zorgverlener"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:17.1.1">
          <fhir:path value="Zorgverlener"/>
@@ -75,6 +75,11 @@
       <fhir:element id="NL-CM:17.1.4">
          <fhir:path value="Zorgverlener.Specialisme"/>
          <fhir:label value="Specialisme"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="394658006"/>
+            <fhir:display value="clinical speciality"/>
+         </fhir:code>
          <fhir:definition value="Medisch specialisme van de zorgverlener. Het betreft hierbij de erkende medische specialismen zoals vermeld in de wet BIG."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

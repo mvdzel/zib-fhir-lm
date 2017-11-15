@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="NationaliteitRC"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.6.1">
          <fhir:path value="NationaliteitRC"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:7.6.3">
          <fhir:path value="NationaliteitRC.Nationaliteit"/>
          <fhir:label value="Nationaliteit"/>
+         <fhir:code>
+            <fhir:system value="LOINC"/>
+            <fhir:code value="66476-3"/>
+            <fhir:display value="Country of citizenship"/>
+         </fhir:code>
          <fhir:definition value="De aanduiding van het land van staatsburgerschap."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

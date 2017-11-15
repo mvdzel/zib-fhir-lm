@@ -23,10 +23,15 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="GlasgowComaScale"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.8.1">
          <fhir:path value="GlasgowComaScale"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="386554004"/>
+            <fhir:display value="Glasgow coma scale (assessment scale)"/>
+         </fhir:code>
          <fhir:definition value="Rootconcept van de bouwsteen GlasgowComaScale. Dit rootconcept bevat alle gegevenselementen van de bouwsteen GlasgowComaScale."/>
       </fhir:element>
       <fhir:element id="NL-CM:12.8.8">
@@ -62,6 +67,11 @@
       <fhir:element id="NL-CM:12.8.2">
          <fhir:path value="GlasgowComaScale.GCS_Eyes"/>
          <fhir:label value="GCS_Eyes"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="281395000"/>
+            <fhir:display value="Glasgow coma score eye opening subscore (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="Beste response van de ogen op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingEscore."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -82,6 +92,11 @@
       <fhir:element id="NL-CM:12.8.4">
          <fhir:path value="GlasgowComaScale.GCS_Motor"/>
          <fhir:label value="GCS_Motor"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="281396004"/>
+            <fhir:display value="Glasgow Coma Score motor response subscore"/>
+         </fhir:code>
          <fhir:definition value="Beste motorische response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingMscore."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -102,6 +117,11 @@
       <fhir:element id="NL-CM:12.8.6">
          <fhir:path value="GlasgowComaScale.GCS_Verbal"/>
          <fhir:label value="GCS_Verbal"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="281397008"/>
+            <fhir:display value="Glasgow coma score verbal response subscore (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="Beste verbale response op een stimulus. Het element is verplicht, maar er hoeft geen getalmatige waarde toegekend te zijn. Als er geen waarde is toegekend, dan wordt de reden hiervan vermeld in het concept ToelichtingVscore."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

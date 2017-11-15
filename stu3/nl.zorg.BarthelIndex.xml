@@ -23,10 +23,15 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="BarthelIndex"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:4.2.1">
          <fhir:path value="BarthelIndex"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="273302005"/>
+            <fhir:display value="Barthel index (assessment scale)"/>
+         </fhir:code>
          <fhir:definition value="Rootconcept van de bouwsteen BarthelIndex. Dit rootconcept bevat alle gegevenselementen van de bouwsteen BarthelIndex."/>
       </fhir:element>
       <fhir:element id="NL-CM:4.2.4">

@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="O2Saturatie"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.10.1">
          <fhir:path value="O2Saturatie"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.10.2">
          <fhir:path value="O2Saturatie.SpO2Waarde"/>
          <fhir:label value="SpO2Waarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="250554003"/>
+            <fhir:display value="Measurement of oxygen saturation at periphery"/>
+         </fhir:code>
          <fhir:definition value="Het element bevat de waarde van de indirect, perifeer gemeten O2-saturatie.&#xA;De O2-saturatie geeft in % de mate aan waarin de hemoglobine in het bloed verzadigd is met zuurstof, de ratio van oxy-hemoglobine en hemoglobine.&#xA;De meting wordt uitgevoerd op plaatsen waar de huid voldoende licht doorlaat, zoals een vinger, teen of oorlel."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

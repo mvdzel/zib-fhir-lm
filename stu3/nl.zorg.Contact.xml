@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Contact"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:15.1.1">
          <fhir:path value="Contact"/>

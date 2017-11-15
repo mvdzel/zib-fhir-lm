@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="DrugsGebruik"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.4.1">
          <fhir:path value="DrugsGebruik"/>

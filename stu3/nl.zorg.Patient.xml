@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Patient"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:0.1.1">
          <fhir:path value="Patient"/>
@@ -331,6 +331,11 @@
       <fhir:element id="NL-CM:0.1.10">
          <fhir:path value="Patient.Geboortedatum"/>
          <fhir:label value="Geboortedatum"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="184099003"/>
+            <fhir:display value="Date of birth"/>
+         </fhir:code>
          <fhir:definition value="Geboortedatum van de patiënt. Bij een patiënt is de geboortedatum verplicht. Vage datum (bv. alleen jaar) is toegestaan."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
@@ -351,6 +356,11 @@
       <fhir:element id="NL-CM:0.1.9">
          <fhir:path value="Patient.Geslacht"/>
          <fhir:label value="Geslacht"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="263495000"/>
+            <fhir:display value="Gender"/>
+         </fhir:code>
          <fhir:definition value="Administratief geslacht van de patiënt."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Betaler"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:1.1.1">
          <fhir:path value="Betaler"/>

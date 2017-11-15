@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="LaboratoriumUitslag"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:13.1.1">
          <fhir:path value="LaboratoriumUitslag"/>
@@ -39,6 +39,11 @@
       <fhir:element id="NL-CM:13.1.19">
          <fhir:path value="LaboratoriumUitslag.Monster.Toelichting"/>
          <fhir:label value="Toelichting"/>
+         <fhir:code>
+            <fhir:system value="LOINC"/>
+            <fhir:code value="48767-8"/>
+            <fhir:display value="Annotation comment"/>
+         </fhir:code>
          <fhir:definition value="Opmerking over de afname, bijv. afname na (glucose)stimulus of medicijn inname."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -49,6 +54,11 @@
       <fhir:element id="NL-CM:13.1.17">
          <fhir:path value="LaboratoriumUitslag.Monster.AfnameDatumTijd"/>
          <fhir:label value="AfnameDatumTijd"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="399445004"/>
+            <fhir:display value="specimen collection date"/>
+         </fhir:code>
          <fhir:definition value="Tijdstip van afname van het materiaal. "/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>
@@ -196,6 +206,11 @@
       <fhir:element id="NL-CM:13.1.5">
          <fhir:path value="LaboratoriumUitslag.Toelichting"/>
          <fhir:label value="Toelichting"/>
+         <fhir:code>
+            <fhir:system value="LOINC"/>
+            <fhir:code value="48767-8"/>
+            <fhir:display value="Annotation comment"/>
+         </fhir:code>
          <fhir:definition value="Opmerkingen, zoals bv. tekstuele interpretatie of advies bij de uitslag."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

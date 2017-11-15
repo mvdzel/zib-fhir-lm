@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Concern"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:5.1.1">
          <fhir:path value="Concern"/>
@@ -99,6 +99,11 @@
       <fhir:element id="NL-CM:5.1.5">
          <fhir:path value="Concern.Probleem.Toelichting"/>
          <fhir:label value="Toelichting"/>
+         <fhir:code>
+            <fhir:system value="LOINC"/>
+            <fhir:code value="48767-8"/>
+            <fhir:display value="Annotation comment"/>
+         </fhir:code>
          <fhir:definition value="Toelichting van diegene die het Probleem heeft vastgesteld of bijgewerkt."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

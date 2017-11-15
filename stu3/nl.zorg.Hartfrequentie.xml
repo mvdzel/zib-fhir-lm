@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Hartfrequentie"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.3.1">
          <fhir:path value="Hartfrequentie"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.3.2">
          <fhir:path value="Hartfrequentie.HartfrequentieWaarde"/>
          <fhir:label value="HartfrequentieWaarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="364075005"/>
+            <fhir:display value="Heart Rate (Observable Entity)"/>
+         </fhir:code>
          <fhir:definition value="De hartfrequentie gemeten als aantal slagen per minuut."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

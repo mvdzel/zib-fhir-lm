@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="TabakGebruik"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.2.1">
          <fhir:path value="TabakGebruik"/>
@@ -79,6 +79,11 @@
       <fhir:element id="NL-CM:7.2.7">
          <fhir:path value="TabakGebruik.WaarnemingGebruik.PackYears"/>
          <fhir:label value="PackYears"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="401201003"/>
+            <fhir:display value="Cigarette pack-years"/>
+         </fhir:code>
          <fhir:definition value="De eenheid waarin de totale blootstelling aan tabaksrook bij rokers beschreven wordt.  Bij sigaretten wordt dit berekend aan de hand van het aantal gerookte pakjes sigaretten per dag (inhoud pakje is 20 stuks) en het aantal jaren dat werd gerookt. Bij andere rookwaren wordt vaak een omrekening naar equivalente sigarettenconsumptie gehanteerd. Vaak wordt ook alleen het aantal packyears geschat."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

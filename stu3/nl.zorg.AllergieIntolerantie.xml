@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="AllergieIntolerantie"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:8.2.1">
          <fhir:path value="AllergieIntolerantie"/>
@@ -169,6 +169,11 @@
       <fhir:element id="NL-CM:8.2.18">
          <fhir:path value="AllergieIntolerantie.Reactie.Waarschijnlijkheid"/>
          <fhir:label value="Waarschijnlijkheid"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="408729009"/>
+            <fhir:display value="Finding context"/>
+         </fhir:code>
          <fhir:definition value="Aanduiding van de waarschijnlijkheid dat de stof die beschreven is in het concept 'SpecifiekeStof' de reactie veroorzaakt heeft."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -179,6 +184,11 @@
       <fhir:element id="NL-CM:8.2.7">
          <fhir:path value="AllergieIntolerantie.MateVanKritiekZijn"/>
          <fhir:label value="MateVanKritiekZijn"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="246112005"/>
+            <fhir:display value="Severity"/>
+         </fhir:code>
          <fhir:definition value="Mate van kritiek zijn wordt gedefinieerd als &#34;de potentiële ernst van toekomstige reacties.&#34;&#xA;Dit vertegenwoordigt een klinisch oordeel over het worst case scenario voor een toekomstige reactie. Het kan worden gebaseerd op de ernst van de reacties in het verleden, de dosis en de wijze van blootstelling die in het verleden reacties veroorzaakten, en de levensbedreigende potentie van het type reactie. Mate van kritiek zijn is een kenmerk van de allergische aandoening, niet van de reactie."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

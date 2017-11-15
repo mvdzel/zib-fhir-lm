@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Lichaamstemperatuur"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.6.1">
          <fhir:path value="Lichaamstemperatuur"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.6.2">
          <fhir:path value="Lichaamstemperatuur.TemperatuurWaarde"/>
          <fhir:label value="TemperatuurWaarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="386725007"/>
+            <fhir:display value="Body temperature (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="LevensovertuigingRC"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.5.1">
          <fhir:path value="LevensovertuigingRC"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:7.5.2">
          <fhir:path value="LevensovertuigingRC.Levensovertuiging"/>
          <fhir:label value="Levensovertuiging"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="160538000"/>
+            <fhir:display value="Religious affiliation (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="De levens- en/of geloofsovertuiging van de patiënt."/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

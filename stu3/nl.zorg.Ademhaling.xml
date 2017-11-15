@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Ademhaling"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.5.1">
          <fhir:path value="Ademhaling"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.5.2">
          <fhir:path value="Ademhaling.Ademfrequentie"/>
          <fhir:label value="Ademfrequentie"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="86290005"/>
+            <fhir:display value="Respiratory rate (observable entity)"/>
+         </fhir:code>
          <fhir:definition value="De waarde van de gemeten ademhalingsfrequentie. De ademhalingsfrequentie betreft het aantal ademhalingen per minuut."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -52,6 +57,11 @@
       <fhir:element id="NL-CM:12.5.5">
          <fhir:path value="Ademhaling.Ritme"/>
          <fhir:label value="Ritme"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="48064009"/>
+            <fhir:display value="Respiratory rhythm"/>
+         </fhir:code>
          <fhir:definition value="Het ritme of de regelmaat van de ademhaling."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -62,6 +72,11 @@
       <fhir:element id="NL-CM:12.5.6">
          <fhir:path value="Ademhaling.Diepte"/>
          <fhir:label value="Diepte"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="271626009"/>
+            <fhir:display value="Depth of respiration"/>
+         </fhir:code>
          <fhir:definition value="De diepte van de ademteugen."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -72,6 +87,11 @@
       <fhir:element id="NL-CM:12.5.7">
          <fhir:path value="Ademhaling.AfwijkendAdemhalingspatroon"/>
          <fhir:label value="AfwijkendAdemhalingspatroon"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="278907009"/>
+            <fhir:display value="Respiratory pattern"/>
+         </fhir:code>
          <fhir:definition value="Specifieke, abnormale ademhalingspatronen."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -99,6 +119,11 @@
       <fhir:element id="NL-CM:12.5.10">
          <fhir:path value="Ademhaling.ToegediendeZuurstof.FlowRate"/>
          <fhir:label value="FlowRate"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="165033004"/>
+            <fhir:display value="Respiratory flow rate"/>
+         </fhir:code>
          <fhir:definition value="De hoeveelheid toegediende zuurstof. De waarde ligt tussen 0.0 en 50.0 l/min."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
@@ -109,6 +134,11 @@
       <fhir:element id="NL-CM:12.5.9">
          <fhir:path value="Ademhaling.ToegediendeZuurstof.FiO2"/>
          <fhir:label value="FiO2"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="250774007"/>
+            <fhir:display value="Inspired oxygen concentration"/>
+         </fhir:code>
          <fhir:definition value="De fractionele inspiratoire zuurstof concentratie. Waarde ligt tussen 0.0 en 1.0, met een normale waarde van 0.21 (geen extra zuurstoftoediening)."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="FunctioneleOfMentaleStatus"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:4.26.1">
          <fhir:path value="FunctioneleOfMentaleStatus"/>
@@ -63,6 +63,11 @@
       <fhir:element id="NL-CM:4.26.4">
          <fhir:path value="FunctioneleOfMentaleStatus.Toelichting"/>
          <fhir:label value="Toelichting"/>
+         <fhir:code>
+            <fhir:system value="LOINC"/>
+            <fhir:code value="48767-8"/>
+            <fhir:display value="Annotation comment"/>
+         </fhir:code>
          <fhir:definition value="Toelichtende opmerking als omschrijving van de functionele of mentale status."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

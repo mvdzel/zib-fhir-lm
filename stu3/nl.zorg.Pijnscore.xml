@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="PijnScore"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:12.9.1">
          <fhir:path value="PijnScore"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:12.9.2">
          <fhir:path value="PijnScore.PijnscoreWaarde"/>
          <fhir:label value="PijnscoreWaarde"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="225908003"/>
+            <fhir:display value="Pain score"/>
+         </fhir:code>
          <fhir:definition value="De score is een algemene maat voor de pijnbeleving, geen beschrijving van specifieke, gelocaliseerde pijn.&#xA;&#xA;Afhankelijk van de gebruikte meetmethode geeft het de door de patiënt beleefde mate van pijn aan op een schaal van 0 tot en met 10: 0 = geen pijn en 10 = de ergst voorstelbare pijn. Voor de tussenliggende waarden zijn geen omschrijvingen in gebruik, zodat de waarde als een getal en niet als een code wordt weergegeven. &#xA;&#xA;Soms wordt een waardebereik van 0-100 gebruikt i.p.v. 0-10. "/>
          <fhir:min value="1"/>
          <fhir:max value="1"/>

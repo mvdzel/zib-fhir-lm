@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Familieanamnese"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:6.1.1">
          <fhir:path value="Familieanamnese"/>
@@ -49,6 +49,11 @@
       <fhir:element id="NL-CM:6.1.5">
          <fhir:path value="Familieanamnese.Familielid.Toelichting"/>
          <fhir:label value="Toelichting"/>
+         <fhir:code>
+            <fhir:system value="LOINC"/>
+            <fhir:code value="48767-8"/>
+            <fhir:display value="Annotation comment"/>
+         </fhir:code>
          <fhir:definition value="Toelichting met, voor de familieanamnese relevante, informatie betreffende het familielid."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>

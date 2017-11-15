@@ -23,7 +23,7 @@
    </fhir:keyword>
    <fhir:kind value="logical"/>
    <fhir:abstract value="false"/>
-   <fhir:type value="ZIB"/>
+   <fhir:type value="Opleiding"/>
    <fhir:snapshot>
       <fhir:element id="NL-CM:7.10.1">
          <fhir:path value="Opleiding"/>
@@ -32,6 +32,11 @@
       <fhir:element id="NL-CM:7.10.2">
          <fhir:path value="Opleiding.Schooltype"/>
          <fhir:label value="Schooltype"/>
+         <fhir:code>
+            <fhir:system value="SNOMED CT"/>
+            <fhir:code value="105421008"/>
+            <fhir:display value="educational qualification"/>
+         </fhir:code>
          <fhir:definition value="Typering van de hoogst genoten opleiding."/>
          <fhir:min value="0"/>
          <fhir:max value="1"/>
