@@ -83,15 +83,27 @@
 				  <fhir:keyword><fhir:display><xsl:attribute name="value"><xsl:value-of select="tag[@name='DCM::KeywordList']/@value"/></xsl:attribute></fhir:display></fhir:keyword>
 				  <fhir:kind value="logical" />
 				  <fhir:abstract value="false" />
-				  <fhir:type value="ZIB" />
+				  <xsl:variable name="rootconcept" select="/max:model/objects/object[parentId=$imid and stereotype='rootconcept']"/>
+				  <xsl:variable name="rcid" select="$rootconcept/id"/>
+				  <xsl:variable name="rcname" select="$rootconcept/name"/>
+				  <fhir:type><xsl:attribute name="value" select="$rcname"/></fhir:type>
 				  <fhir:snapshot>
-				  	<xsl:variable name="rootconcept" select="/max:model/objects/object[parentId=$imid and stereotype='rootconcept']"/>
-				  	<xsl:variable name="rcid" select="$rootconcept/id"/>
-				  	<xsl:variable name="rcname" select="$rootconcept/name"/>
-				  	 <fhir:element>
+				  	<fhir:element>
 				  	  <xsl:attribute name="id"><xsl:value-of select="$rootconcept/tag[@name='DCM::DefinitionCode' and starts-with(@value,'NL-CM:')]/@value"/></xsl:attribute>
 				      <fhir:path><xsl:attribute name="value"><xsl:value-of select="$rcname"/></xsl:attribute></fhir:path>
-				      <!-- obv DefinitionCodes <fhir:code></fhir:code> -->
+				      <!-- obv DefinitionCodes -->
+				      <xsl:for-each select="$rootconcept/tag[@name='DCM::DefinitionCode' and not(starts-with(@value,'NL-CM:'))]">
+					      <xsl:variable name="defCode1" select="./@value"/>
+					      <xsl:variable name="defCode1_system" select="normalize-space(substring-before($defCode1,':'))"/>
+					      <xsl:variable name="defCode1_codedisplay" select="normalize-space(substring-after($defCode1,':'))"/>
+					      <xsl:variable name="defCode1_code" select="normalize-space(substring-before($defCode1_codedisplay,' '))"/>
+					      <xsl:variable name="defCode1_display" select="normalize-space(substring-after($defCode1_codedisplay,' '))"/>
+					      <fhir:code>
+					      	<fhir:system><xsl:attribute name="value" select="$defCode1_system"/></fhir:system>
+					      	<fhir:code><xsl:attribute name="value" select="$defCode1_code"/></fhir:code>
+					      	<fhir:display><xsl:attribute name="value" select="$defCode1_display"/></fhir:display>
+					      </fhir:code>
+					  </xsl:for-each>
 				      <fhir:definition><xsl:attribute name="value"><xsl:value-of select="substring-before(substring-after($rootconcept/notes,'&lt;nl-NL&gt;'),'&lt;/nl-NL&gt;')"/></xsl:attribute></fhir:definition>
 				    </fhir:element>
 				    
@@ -117,8 +129,7 @@
   	  	  <xsl:attribute name="id"><xsl:value-of select="$concept/tag[@name='DCM::DefinitionCode' and starts-with(@value,'NL-CM:')]/@value"/></xsl:attribute>
 	      <fhir:path><xsl:attribute name="value"><xsl:value-of select="concat($path-prefix,'.',$cname)"/></xsl:attribute></fhir:path>
 	      <fhir:label><xsl:attribute name="value"><xsl:value-of select="$cname"/></xsl:attribute></fhir:label>
-
-	      <!-- obv DefinitionCodes <fhir:code></fhir:code> -->
+	      <!-- obv DefinitionCodes -->
 	      <xsl:for-each select="$concept/tag[@name='DCM::DefinitionCode' and not(starts-with(@value,'NL-CM:'))]">
 		      <xsl:variable name="defCode1" select="./@value"/>
 		      <xsl:variable name="defCode1_system" select="normalize-space(substring-before($defCode1,':'))"/>
