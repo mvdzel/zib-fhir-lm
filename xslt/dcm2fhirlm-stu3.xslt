@@ -61,11 +61,11 @@
 				<fhir:StructureDefinition>
 			      <fhir:id><xsl:attribute name="value"><xsl:value-of select="$dcmid"/></xsl:attribute></fhir:id>
 				  <fhir:url><xsl:attribute name="value"><xsl:value-of select="concat($url-prefix,$dcmid)"/></xsl:attribute></fhir:url>
+				  <fhir:language value="nl"/>
 				  <fhir:identifier>
 				    <fhir:system value="http://clinfhir.com" />
 				    <fhir:value value="author" />
 				  </fhir:identifier>
-				  <fhir:language value="nl"/>
 			      <fhir:version><xsl:attribute name="value"><xsl:value-of select="tag[@name='DCM::Version']/@value"/></xsl:attribute></fhir:version>
 				  <fhir:name><xsl:attribute name="value"><xsl:value-of select="$dcmname"/></xsl:attribute></fhir:name>
 				  <fhir:title><xsl:attribute name="value"><xsl:value-of select="$dcmname"/></xsl:attribute></fhir:title>
@@ -87,7 +87,9 @@
 				  <xsl:variable name="rcid" select="$rootconcept/id"/>
 				  <xsl:variable name="rcname" select="$rootconcept/name"/>
 				  <fhir:type><xsl:attribute name="value" select="$rcname"/></fhir:type>
-				  <fhir:snapshot>
+				  <fhir:baseDefinition value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+				  <fhir:derivation value="specialization"/>
+				  <fhir:differential>
 				  	<fhir:element>
 				  	  <xsl:attribute name="id"><xsl:value-of select="$rootconcept/tag[@name='DCM::DefinitionCode' and starts-with(@value,'NL-CM:')]/@value"/></xsl:attribute>
 				      <fhir:path><xsl:attribute name="value"><xsl:value-of select="$rcname"/></xsl:attribute></fhir:path>
@@ -113,7 +115,7 @@
 				    		<xsl:with-param name="relationship" select="."/>
 				    	</xsl:call-template>
 				    </xsl:for-each>
-				  </fhir:snapshot>
+				  </fhir:differential>
 				</fhir:StructureDefinition>
 			</xsl:result-document>
 		</xsl:for-each>
@@ -127,7 +129,7 @@
 	  	<xsl:variable name="cname" select="$concept/name"/>
 	  	<fhir:element>
   	  	  <xsl:attribute name="id"><xsl:value-of select="$concept/tag[@name='DCM::DefinitionCode' and starts-with(@value,'NL-CM:')]/@value"/></xsl:attribute>
-	      <fhir:path><xsl:attribute name="value"><xsl:value-of select="concat($path-prefix,'.',$cname)"/></xsl:attribute></fhir:path>
+	      <fhir:path><xsl:attribute name="value"><xsl:value-of select="concat($path-prefix,'.',translate($cname,':','_'))"/></xsl:attribute></fhir:path>
 	      <fhir:label><xsl:attribute name="value"><xsl:value-of select="$cname"/></xsl:attribute></fhir:label>
 	      <!-- obv DefinitionCodes -->
 	      <xsl:for-each select="$concept/tag[@name='DCM::DefinitionCode' and not(starts-with(@value,'NL-CM:'))]">
