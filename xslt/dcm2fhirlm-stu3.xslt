@@ -33,16 +33,16 @@
 	<xsl:variable name="NL-CM">2.16.840.1.113883.2.4.3.11.60.40.3.</xsl:variable>
 	<xsl:variable name="url-prefix">https://zibs.nl/fhir/logical/</xsl:variable>
 	<xsl:variable name="datatypes">
-		<datatype id="7887" dcm="https://zibs.nl/fhir/logical/TS" fhir="dateTime"/>
-		<datatype id="7906" dcm="https://zibs.nl/fhir/logical/CD" fhir="Coding"/>
-		<datatype id="7895" dcm="https://zibs.nl/fhir/logical/ST" fhir="string"/>
-		<datatype id="7891" dcm="https://zibs.nl/fhir/logical/PQ" fhir="Quantity"/>
-		<datatype id="7892" dcm="https://zibs.nl/fhir/logical/BL" fhir="boolean"/>
-		<datatype id="7888" dcm="https://zibs.nl/fhir/logical/INT" fhir="integer"/>
-		<datatype id="7886" dcm="https://zibs.nl/fhir/logical/CO" fhir="Coding"/>
-		<datatype id="7885" dcm="https://zibs.nl/fhir/logical/ED" fhir="base64Binary"/>
-		<datatype id="7889" dcm="https://zibs.nl/fhir/logical/II" fhir="Identifier"/>
-		<datatype id="7903" dcm="https://zibs.nl/fhir/logical/ANY" fhir="Element"/>
+		<datatype id="7887" dcm="TS" fhir="dateTime"/>
+		<datatype id="7906" dcm="CD" fhir="Coding"/>
+		<datatype id="7895" dcm="ST" fhir="string"/>
+		<datatype id="7891" dcm="PQ" fhir="Quantity"/>
+		<datatype id="7892" dcm="BL" fhir="boolean"/>
+		<datatype id="7888" dcm="INT" fhir="integer"/>
+		<datatype id="7886" dcm="CO" fhir="Coding"/>
+		<datatype id="7885" dcm="ED" fhir="base64Binary"/>
+		<datatype id="7889" dcm="II" fhir="Identifier"/>
+		<datatype id="7903" dcm="ANY" fhir="Element"/>
 	</xsl:variable>
 
 	<xsl:template match="/">
@@ -59,7 +59,7 @@
 </xsl:text>
 			<xsl:result-document href="{$href}" format="xml">
 				<fhir:StructureDefinition>
-			      <fhir:id><xsl:attribute name="value"><xsl:value-of select="$dcmid"/></xsl:attribute></fhir:id>
+			      <fhir:id><xsl:attribute name="value"><xsl:value-of select="translate($dcmname,'+','')"/></xsl:attribute></fhir:id>
 				  <fhir:url><xsl:attribute name="value"><xsl:value-of select="concat($url-prefix,$dcmid)"/></xsl:attribute></fhir:url>
 				  <fhir:language value="nl"/>
 				  <fhir:identifier>
@@ -128,7 +128,7 @@
 	  	<xsl:variable name="concept" select="/max:model/objects/object[id=$cid]"/>
 	  	<xsl:variable name="cname" select="$concept/name"/>
 	  	<fhir:element>
-  	  	  <xsl:attribute name="id"><xsl:value-of select="$concept/tag[@name='DCM::DefinitionCode' and starts-with(@value,'NL-CM:')]/@value"/></xsl:attribute>
+  	  	  <xsl:attribute name="id"><xsl:value-of select="$concept/tag[@name='DCM::ConceptId']/@value"/></xsl:attribute>
 	      <fhir:path><xsl:attribute name="value"><xsl:value-of select="concat($path-prefix,'.',translate($cname,':','_'))"/></xsl:attribute></fhir:path>
 	      <fhir:label><xsl:attribute name="value"><xsl:value-of select="$cname"/></xsl:attribute></fhir:label>
 	      <!-- obv DefinitionCodes -->
@@ -161,6 +161,12 @@
 		      	<xsl:variable name="datatypeid" select="/max:model/relationships/relationship[sourceId=$cid and type='Generalization']/destId"/>
 	      		<fhir:code><xsl:attribute name="value"><xsl:value-of select="$datatypes/datatype[@id=$datatypeid]/@dcm"/></xsl:attribute></fhir:code>
 		      </fhir:type>
+	      </xsl:if>
+	      <xsl:if test="exists($concept/tag[@name='DCM::ReferencedConceptId'])">
+	      	  <fhir:type>
+		      	<fhir:code value="Reference"/>
+		      	<fhir:profile><xsl:attribute name="value"><xsl:value-of select="concat($url-prefix,replace($concept/tag[@name='DCM::ReferencedConceptId']/@value,'NL-CM:',$NL-CM))"/></xsl:attribute></fhir:profile>
+	      	  </fhir:type>
 	      </xsl:if>
 	      <xsl:if test="exists($concept/tag[@name='DCM::ReferencedDefinitionCode'])">
 	      	  <fhir:type>

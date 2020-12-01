@@ -24,3 +24,6 @@ Output (FHIR Logical Model Structuredefinitions XMLs) will be in /tmp/dcm2fhirlm
 # TODO xslt
 * Translate codesystem name to URI
 * Replace 'ë' special chars in paths! Now replaced in input max file.
+* Put ZIB:ConceptId in mapping?
+* Convert <reference> to FHIR reference
+* There is something wrong with some descriptions. E.g. nl.zorg.Alert, nl.zorg.Contact, ..
