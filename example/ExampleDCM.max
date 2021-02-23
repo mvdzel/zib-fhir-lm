@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exportDate="23-2-2021 08:00:24" xmlns="http://www.umcg.nl/MAX">
+  <objects xmlns="">
+    <object>
+      <id>1</id>
+      <name>ExampleDCM</name>
+      <alias />
+      <stereotype />
+      <type>Package</type>
+      <modified>2021-02-23T00:00:00</modified>
+    </object>
+    <object>
+      <id>2</id>
+      <name>nl.zorg.Lichaamstemperatuur-v3.1</name>
+      <alias>EN: nl.zorg.BodyTemperature</alias>
+      <stereotype>DCM</stereotype>
+      <type>Package</type>
+      <parentId>1</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::CoderList" value="Kerngroep Registratie aan de Bron"></tag>
+      <tag name="DCM::ContactInformation.Address" value="*"></tag>
+      <tag name="DCM::ContactInformation.Name" value="*">The contact information where questions can be asked or feedback can be send to.</tag>
+      <tag name="DCM::ContactInformation.Telecom" value="*"></tag>
+      <tag name="DCM::ContentAuthorList" value="Projectgroep Generieke Overdrachtsgegevens &amp; Kerngroep Registratie aan de Bron">Names of the people that contributed to the development of the DCM. The organization these people work for is also mentioned. The position of the author can be mentioned.</tag>
+      <tag name="DCM::CreationDate" value="12-11-2012"></tag>
+      <tag name="DCM::DeprecatedDate" value=""></tag>
+      <tag name="DCM::DescriptionLanguage" value="nl">The languages in which the DCM is developed. This can be only Dutch or English, or both, or other languages.</tag>
+      <tag name="DCM::EndorsingAuthority.Address" value=""></tag>
+      <tag name="DCM::EndorsingAuthority.Name" value="PM">This is the authority that approved the clinical contents of the DCM. This can be scientific or professional organisations, or institutes of quality, normalisation institutes, governments etc.</tag>
+      <tag name="DCM::EndorsingAuthority.Telecom" value=""></tag>
+      <tag name="DCM::Id" value="2.16.840.1.113883.2.4.3.11.60.40.3.12.6"></tag>
+      <tag name="DCM::KeywordList" value="temperatuur, lichaamstemperatuur">Here keywords and codes for keywords are mentioned. This concerns keywords by which the DCM can be found in a repository. A keyword can be a synonym, a derivative term or a generic ( like the Bradenscale with a keyword Pressure Ulcer Risk).
+Concepts and identifications from MeSH Heading can also be mentioned here.</tag>
+      <tag name="DCM::LifecycleStatus" value="Final"></tag>
+      <tag name="DCM::ModelerList" value="Kerngroep Registratie aan de Bron"></tag>
+      <tag name="DCM::Name" value="nl.zorg.Lichaamstemperatuur"></tag>
+      <tag name="DCM::PublicationDate" value="31-12-2017">The date this version was made.</tag>
+      <tag name="DCM::PublicationStatus" value="Published">The status of the DCM on that moment. Strike out the other status.
+All status levels are mentioned after the process of development and review are clear (concept).
+
+Author Draft(en);
+Committee Draft(en);
+Organisation Draft(en);
+Submitted(en);
+Withdrawn
+Rejected(en) 
+Obsolete
+Approved for testing
+Approved for Production Use
+Superseded</tag>
+      <tag name="DCM::ReviewerList" value="Projectgroep Generieke Overdrachtsgegevens &amp; Kerngroep Registratie aan de Bron"></tag>
+      <tag name="DCM::RevisionDate" value="31-12-2017"></tag>
+      <tag name="DCM::Superseeds" value="nl.zorg.Lichaamstemperatuur-v3.0"></tag>
+      <tag name="DCM::Version" value="3.1"></tag>
+    </object>
+    <object>
+      <id>12</id>
+      <name>Revision History</name>
+      <alias />
+      <notes>&lt;u&gt;Publicatieversie 1.0&lt;/u&gt; (15-02-2013)
+
+&lt;u&gt;Publicatieversie 1.1&lt;/u&gt; (01-07-2013)
+
+&lt;u&gt;Publicatieversie 1.2&lt;/u&gt; (01-04-2015)
+Bevat: ZIB-147, ZIB-276, ZIB-308, ZIB-355, ZIB-359.
+
+Incl. algemene wijzigingsverzoeken: 
+ZIB-94, ZIB-154, ZIB-200, ZIB-201, ZIB-309, ZIB-324, ZIB-326.
+
+&lt;u&gt;Publicatieversie 1.2.1&lt;/u&gt; (16-07-2015)
+Bevat: ZIB-419.
+
+&lt;u&gt;Publicatieversie 3.0&lt;/u&gt; (01-05-2016)
+Bevat: ZIB-453
+
+&lt;u&gt;Publicatieversie 3.1&lt;/u&gt; (04-09-2017)
+Bevat: ZIB-431, ZIB-564.</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2017-09-05T00:00:00</modified>
+    </object>
+    <object>
+      <id>14</id>
+      <name>Concept</name>
+      <alias />
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;Het meten en vastleggen van de lichaamstemperatuur van een persoon als surrogaat voor de centrale lichaamstemperatuur (de hoogste temperatuur midden in de romp) van een persoon&lt;/nl-NL&gt;
+&lt;en-US&gt;Measuring and documenting the body temperature of a person as a surrogate for a person’s central body temperature (the highest temperature at the centre of the torso)&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2016-07-01T00:00:00</modified>
+    </object>
+    <object>
+      <id>18</id>
+      <name>Purpose</name>
+      <alias>Doel</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;Het meten van de lichaamstemperatuur is van medisch belang. Een aantal ziekten gaat gepaard met karakteristieke veranderingen in de lichaamstemperatuur. Ook kan het verloop van sommige ziekten worden gevolgd door het meten van de lichaamstemperatuur en de zorgverlener kan aan de hand van het temperatuurverloop het effect van de behandeling beoordelen.&lt;/nl-NL&gt;
+&lt;en-US&gt;Measuring the body temperature is of medical importance. A number of diseases are accompanied by characteristic changes in body temperature. The symptoms of some diseases can be tracked by measuring the body temperature. The healthcare provider can use this temperature development to determine the effect of the treatment.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2016-07-01T00:00:00</modified>
+    </object>
+    <object>
+      <id>21</id>
+      <name>Mindmap</name>
+      <alias>Mindmap</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>10</id>
+      <name>Patient Population</name>
+      <alias>Groep cliënten</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>11</id>
+      <name>Evidence Base</name>
+      <alias>Wetenschappelijke onderbouwing</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2015-02-11T00:00:00</modified>
+    </object>
+    <object>
+      <id>6</id>
+      <name>Information Model</name>
+      <alias>Informatie Model</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>28</id>
+      <name>Legend</name>
+      <alias />
+      <stereotype />
+      <type>Text</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+    </object>
+    <object>
+      <id>27</id>
+      <name>Lichaamstemperatuur</name>
+      <alias>EN: BodyTemperature</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;Rootconcept van de bouwsteen Lichaamstemperatuur. Dit rootconcept bevat alle gegevenselementen van de bouwsteen Lichaamstemperatuur.&lt;/nl-NL&gt;
+&lt;en-US&gt;Root concept of the BodyTemperature information model. This root concept contains all data elements of the BodyTemperature information model.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype>rootconcept</stereotype>
+      <type>Class</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::ConceptId" value="NL-CM:12.6.1"></tag>
+    </object>
+    <object>
+      <id>23</id>
+      <name>TemperatuurWaarde</name>
+      <alias>EN: TemperatureValue</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;De lichaamstemperatuur is de temperatuur, gemeten in °C (graden Celsius), die binnen in het menselijk lichaam heerst. Voor een juiste interpretatie van de gemeten waarde, moet de meetmethodiek worden gespecificeerd.&lt;/nl-NL&gt;
+&lt;en-US&gt;Body temperature is the temperature inside the body, measured in °C (degrees Celsius). The measurement method must be specified for a correct interpretation of the measurement value.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype>data</stereotype>
+      <type>Class</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::ConceptId" value="NL-CM:12.6.2"></tag>
+      <tag name="DCM::DefinitionCode" value="LOINC: 8310-5 Body temperature"></tag>
+      <tag name="DCM::ExampleValue" value="37,3 °C (graden Celcius)"></tag>
+    </object>
+    <object>
+      <id>29</id>
+      <name>TemperatuurDatumTijd</name>
+      <alias>EN: TemperatureDateTime</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;Datum en tijd van de meting.&lt;/nl-NL&gt;
+&lt;en-US&gt;Date and time of measurement.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype>data</stereotype>
+      <type>Class</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::ConceptId" value="NL-CM:12.6.4"></tag>
+    </object>
+    <object>
+      <id>24</id>
+      <name>Toelichting</name>
+      <alias>EN: Comment</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;Opmerkingen of bijzonderheden, die van belang zijn om de meetwaarde te interpreteren.&lt;/nl-NL&gt;
+&lt;en-US&gt;Comments or details that may be of importance in interpreting the measurement value.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype>data</stereotype>
+      <type>Class</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::ConceptId" value="NL-CM:12.6.3"></tag>
+    </object>
+    <object>
+      <id>26</id>
+      <name>TemperatuurType</name>
+      <alias>EN: TemperatureType</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;De anatomische plaats waar de lichaamstemperatuur is gemeten.&lt;/nl-NL&gt;
+&lt;en-US&gt;The anatomical location where the body temperature was measured.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype>data</stereotype>
+      <type>Class</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::ConceptId" value="NL-CM:12.6.5"></tag>
+      <tag name="DCM::ValueSet" value="TemperatuurTypeCodelijst">OID: 2.16.840.1.113883.2.4.3.11.60.40.2.12.6.1</tag>
+    </object>
+    <object>
+      <id>25</id>
+      <name>TemperatuurTypeCodelijst</name>
+      <alias>EN: TemperatureTypeCodelist</alias>
+      <notes>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
+AAcI46dVUEsFBgAAAAABAAEAPgAAAFIGAAAAAA==</notes>
+      <stereotype>document</stereotype>
+      <type>Artifact</type>
+      <parentId>6</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+      <tag name="DCM::ValueSetId" value="2.16.840.1.113883.2.4.3.11.60.40.2.12.6.1"></tag>
+    </object>
+    <object>
+      <id>16</id>
+      <name>Example Instances</name>
+      <alias>Voorbeeld scenario</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>30</id>
+      <name />
+      <alias />
+      <stereotype />
+      <type>Boundary</type>
+      <parentId>16</parentId>
+      <modified>2021-02-23T00:00:00</modified>
+    </object>
+    <object>
+      <id>13</id>
+      <name>Instructions</name>
+      <alias>Werkwijze</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>7</id>
+      <name>Interpretation</name>
+      <alias>Interpretatierichtlijnen</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>4</id>
+      <name>Care Process</name>
+      <alias>Zorgproces / afhankelijkheid</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>5</id>
+      <name>Example of the Instrument</name>
+      <alias>Een voorbeeld van het instrument</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>19</id>
+      <name>Constraints</name>
+      <alias>Inperkingen</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2015-02-11T00:00:00</modified>
+    </object>
+    <object>
+      <id>3</id>
+      <name>Issues</name>
+      <alias>Issues en openstaande vragen</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2013-01-16T00:00:00</modified>
+    </object>
+    <object>
+      <id>17</id>
+      <name>References</name>
+      <alias>Referenties</alias>
+      <notes>1. Parelsnoer DCM Lichaamstemperatuur v0.10 [Online] Beschikbaar op: http://www.nictiz.nl/uploaded/FILES/htmlcontent/dcm/parelsnoer/nl.parelsnoer.Lichaamstemperatuur.v0.10.pdf [Geraadpleegd: 23 februari 2015].
+
+2. openEHR-EHR-OBSERVATION.temperature.v1[Online] Beschikbaar op: http://www.openehr.org/knowledge/ [Geraadpleegd: 23 februari 2015].</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2013-01-15T00:00:00</modified>
+    </object>
+    <object>
+      <id>8</id>
+      <name>Functional Model</name>
+      <alias />
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>9</id>
+      <name>Traceability to other Standards</name>
+      <alias>Traceerbaarheid naar andere standaarden</alias>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2012-11-26T00:00:00</modified>
+    </object>
+    <object>
+      <id>20</id>
+      <name>Disclaimer</name>
+      <alias>Disclaimer</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;Deze Zorginformatiebouwsteen is in samenwerking gemaakt door diverse partijen en zij hebben deze in beheer gegeven bij Nictiz (al deze partijen samen hierna de samenwerkende partijen genoemd). De samenwerkende partijen hebben de grootst mogelijke zorg besteed aan de betrouwbaarheid en actualiteit van de gegevens in deze Zorginformatiebouwsteen. Onjuistheden en onvolledigheden kunnen echter voorkomen. De samenwerkende partijen zijn niet aansprakelijk voor schade als gevolg van onjuistheden of onvolledigheden in de  aangeboden informatie, noch voor schade die het gevolg is van problemen veroorzaakt door, of inherent aan het verspreiden van informatie via het internet, zoals storingen of onderbrekingen van of fouten of vertraging in het verstrekken van informatie of diensten door de samenwerkende partijen of door u aan de samenwerkende partijen via een website of via e-mail, of anderszins. Tevens aanvaarden de samenwerkende partijen geen aansprakelijkheid voor eventuele schade die geleden wordt als gevolg van het gebruik van gegevens, adviezen of ideeën verstrekt door of namens de samenwerkende partijen via deze Zorginformatiebouwsteen. De samenwerkende partijen aanvaarden geen verantwoordelijkheid voor de inhoud van informatie in deze Zorginformatiebouwsteen waarnaar of waarvan met een hyperlink of anderszins wordt verwezen. In geval van tegenstrijdigheden in de genoemde Zorginformatiebouwsteen documenten en bestanden geeft de meest recente en hoogste versie van de vermelde volgorde in de revisies de prioriteit van de desbetreffende documenten weer. Indien informatie die in de elektronische versie van deze Zorginformatiebouwsteen is opgenomen ook schriftelijk wordt verstrekt, zal in geval van tekstverschillen de schriftelijke versie bepalend zijn. Dit geldt indien de versieaanduiding en datering van beiden gelijk is. Een definitieve versie heeft echter prioriteit boven een conceptversie. Een gereviseerde versie heeft prioriteit boven een eerdere versie.&lt;/nl-NL&gt;
+&lt;en-US&gt;This Health and Care Information Model (a.k.a Clinical Building Block) has been made in collaboration with several different parties in healthcare. These parties asked Nictiz to manage good maintenance and development of the information models. Hereafter, these parties and Nictiz are referred to as the collaborating parties. The collaborating parties paid utmost attention to the reliability and topicality of the data in these Health and Care Information Models. Omissions and inaccuracies may however occur. The collaborating parties are not liable for any damages resulting from omissions or inaccuracies in the information provided, nor are they liable for damages resulting from problems caused by or inherent to distributing information on the internet, such as malfunctions, interruptions, errors or delays in information or services provide by the parties to you or by you to the parties via a website or via e-mail, or any other digital means. The collaborating parties will also not accept liability for any damages resulting from the use of data, advice or ideas provided by or on behalf of the parties by means of this Health and Care Information Model. The parties will not accept any liability for the content of information in this Health and Care Information Model to which or from which a hyperlink is referred. In the event of contradictions in mentioned Health and Care Information Model documents and files, the most recent and highest version of the listed order in the revisions will indicate the priority of the documents in question. If information included in the digital version of this Health and Care Information Model is also distributed in writing, the written version will be leading in case of textual differences. This will apply if both have the same version number and date. A definitive version has priority over a draft version. A revised version has priority over previous versions.&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2017-04-20T00:00:00</modified>
+    </object>
+    <object>
+      <id>15</id>
+      <name>Terms of Use</name>
+      <alias>Gebruiksvoorwaarden</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen zonder beperking gebruiken. Voor het kopiëren, verspreiden en doorgeven van de informatie van deze Zorginformatiebouwsteen gelden de copyrightbepalingen uit de betreffende paragraaf. &lt;/nl-NL&gt;
+&lt;en-US&gt;The user may use the information in this Health and Care Information Model without limitations. The copyright provisions in the paragraph concerned apply to copying, distributing and passing on information from this Health and Care Information Model. &lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2016-07-01T00:00:00</modified>
+    </object>
+    <object>
+      <id>22</id>
+      <name>Copyrights</name>
+      <alias>Copyrights</alias>
+      <notes>&lt;languages xml:space="preserve"&gt;
+&lt;nl-NL&gt;De gebruiker mag de informatie van deze Zorginformatiebouwsteen kopiëren, verspreiden en doorgeven, onder de voorwaarden, die gelden voor Creative Commons licentie Naamsvermelding-NietCommercieel-GelijkDelen 3.0 Nederland (CC BY-NC-SA-3.0).De inhoud is beschikbaar onder de Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0 (zie ook http://creativecommons.org/licenses/by-nc-sa/3.0/nl/).&lt;/nl-NL&gt;
+&lt;en-US&gt;The user may copy, distribute and pass on the information in this Health and Care Information Model under the conditions that apply for Creative Commons license Attribution-NonCommercial-ShareAlike 3.0 Netherlands (CC BY-NCSA-3.0). The content is available under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 (see also http://creativecommons.org/licenses/by-nc-sa/3.0/nl/)&lt;/en-US&gt;
+&lt;/languages&gt;</notes>
+      <stereotype />
+      <type>Package</type>
+      <parentId>2</parentId>
+      <modified>2016-07-01T00:00:00</modified>
+    </object>
+  </objects>
+  <relationships xmlns="">
+    <relationship>
+      <label />
+      <sourceId>29</sourceId>
+      <sourceLabel />
+      <sourceCard>1</sourceCard>
+      <destId>27</destId>
+      <destLabel />
+      <destCard />
+      <notes></notes>
+      <stereotype />
+      <type>Aggregation</type>
+    </relationship>
+    <relationship>
+      <label />
+      <sourceId>26</sourceId>
+      <sourceLabel />
+      <sourceCard>0..1</sourceCard>
+      <destId>27</destId>
+      <destLabel />
+      <destCard />
+      <notes></notes>
+      <stereotype />
+      <type>Aggregation</type>
+    </relationship>
+    <relationship>
+      <label />
+      <sourceId>25</sourceId>
+      <sourceLabel />
+      <sourceCard />
+      <destId>26</destId>
+      <destLabel />
+      <destCard />
+      <notes></notes>
+      <stereotype />
+      <type>Dependency</type>
+    </relationship>
+    <relationship>
+      <label />
+      <sourceId>24</sourceId>
+      <sourceLabel />
+      <sourceCard>0..1</sourceCard>
+      <destId>27</destId>
+      <destLabel />
+      <destCard />
+      <notes></notes>
+      <stereotype />
+      <type>Aggregation</type>
+    </relationship>
+    <relationship>
+      <label />
+      <sourceId>23</sourceId>
+      <sourceLabel />
+      <sourceCard>1</sourceCard>
+      <destId>27</destId>
+      <destLabel />
+      <destCard />
+      <notes></notes>
+      <stereotype />
+      <type>Aggregation</type>
+    </relationship>
+  </relationships>
+</model>

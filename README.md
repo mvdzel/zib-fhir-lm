@@ -9,8 +9,7 @@ Export the whole DCM Profile compliant EA model(s), including the <<DCM>> packag
 
 Run saxon example
 ```
-> java -jar saxon9he.jar -s:ZIBS\ Publicatieversie\ 2017.max -xsl:xslt/dcm2fhirlm-stu3.xslt
-> java -jar ~/Develop/saxon9he.jar -s:ZIBS\ Publicatieversie\ 2017.max -xsl:xslt/dcm2fhirlm-stu3.xslt
+> java -jar saxon9he.jar -s:example/ExampleDCM.max -xsl:xslt/dcm2fhirlm-stu3.xslt
 ```
 Output (FHIR Logical Model Structuredefinitions XMLs) will be in /tmp/dcm2fhirlm.
 
